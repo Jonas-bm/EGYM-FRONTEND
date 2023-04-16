@@ -7,13 +7,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { AlumnoComponent } from './component/alumno/alumno.component';
 import { AlumnoListarComponent } from './component/alumno/alumno-listar/alumno-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table'
+import {MatTableModule} from '@angular/material/table';
+import { NutricionistaListarComponent } from './component/alumno/nutricionista-listar/nutricionista-listar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AlumnoComponent,
     AlumnoListarComponent,
+    NutricionistaListarComponent,
 
   ],
   imports: [
