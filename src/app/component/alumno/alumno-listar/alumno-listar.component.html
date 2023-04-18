@@ -7,84 +7,85 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-        <!--- Note that these columns can be defined in any order.
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+      <div style="width: 80%;">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!--- Note that these columns can be defined in any order.
+               The actual rendered columns are set as a property on the row definition" -->
 
-         The actual rendered columns are set as a property on the row definition" -->
+          <!-- Position Column -->
 
-        <!-- Position Column -->
+          <ng-container matColumnDef="codigo">
+            <th mat-header-cell *matHeaderCellDef class="header-border">CODIGO</th>
 
-        <ng-container matColumnDef="codigo">
-          <th mat-header-cell *matHeaderCellDef>CODIGO</th>
+            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-        </ng-container>
+          <!-- Name Column -->
 
-        <!-- Name Column -->
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef class="header-border">NOMBRE</th>
 
-        <ng-container matColumnDef="nombre">
-          <th mat-header-cell *matHeaderCellDef>NOMBRE</th>
+            <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
-        </ng-container>
+          <!-- Weight Column -->
 
-        <!-- Weight Column -->
+          <ng-container matColumnDef="apellidoPaterno">
+            <th mat-header-cell *matHeaderCellDef class="header-border">APELLIDO PATERNO</th>
 
-        <ng-container matColumnDef="apellidoPaterno">
-          <th mat-header-cell *matHeaderCellDef>APELLIDO PATERNO</th>
+            <td mat-cell *matCellDef="let element">{{ element.apellidoPaterno }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.apellidoPaterno }}</td>
-        </ng-container>
+          <!-- Symbol Column -->
 
-        <!-- Symbol Column -->
+          <ng-container matColumnDef="apellidoMaterno">
+            <th mat-header-cell *matHeaderCellDef class="header-border">APELLIDO MATERNO</th>
 
-        <ng-container matColumnDef="apellidoMaterno">
-          <th mat-header-cell *matHeaderCellDef>APELLIDO MATERNO</th>
+            <td mat-cell *matCellDef="let element">{{ element.apellidoMaterno}}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.apellidoMaterno}}</td>
-        </ng-container>
+          <ng-container matColumnDef="dni">
+            <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
 
-        <ng-container matColumnDef="dni">
-          <th mat-header-cell *matHeaderCellDef>DNI</th>
+            <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
-        </ng-container>
+          <ng-container matColumnDef="direccion">
+            <th mat-header-cell *matHeaderCellDef class="header-border">DIRECCION</th>
 
-        <ng-container matColumnDef="direccion">
-          <th mat-header-cell *matHeaderCellDef>DIRECCION</th>
+            <td mat-cell *matCellDef="let element">{{ element.direccion }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.direccion }}</td>
-        </ng-container>
+          <ng-container matColumnDef="celular">
+            <th mat-header-cell *matHeaderCellDef class="header-border">CELULAR</th>
 
-        <ng-container matColumnDef="celular">
-          <th mat-header-cell *matHeaderCellDef>CELULAR</th>
+            <td mat-cell *matCellDef="let element">{{ element.celular }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.celular }}</td>
-        </ng-container>
+          <ng-container matColumnDef="fechaNacimiento">
+            <th mat-header-cell *matHeaderCellDef class="header-border">FECHA DE NACIMIENTO</th>
 
-        <ng-container matColumnDef="fechaNacimiento">
-          <th mat-header-cell *matHeaderCellDef>DECHA DE VENCIMIENTO</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento}}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento}}</td>
-        </ng-container>
+          <ng-container matColumnDef="peso">
+            <th mat-header-cell *matHeaderCellDef class="header-border">PESO</th>
 
-        <ng-container matColumnDef="peso">
-          <th mat-header-cell *matHeaderCellDef>PESO</th>
+            <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
-        </ng-container>
+          <ng-container matColumnDef="talla">
+            <th mat-header-cell *matHeaderCellDef class="header-border">TALLA</th>
 
-        <ng-container matColumnDef="talla">
-          <th mat-header-cell *matHeaderCellDef>TALLA</th>
+            <td mat-cell *matCellDef="let element">{{ element.talla }}</td>
+          </ng-container>
 
-          <td mat-cell *matCellDef="let element">{{ element.talla }}</td>
-        </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-
-        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-      </table>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
     </div>
   </body>
 </html>
