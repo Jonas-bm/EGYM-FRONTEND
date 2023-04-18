@@ -9,6 +9,15 @@ import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NutricionistaComponent } from './component/nutricionista/nutricionista.component';
+import { NutricionistaListarComponent } from './component/nutricionista/nutricionista-listar/nutricionista-listar.component';
+import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import {MatInputModule,} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import{MatDatepickerModule} from '@angular/material/datepicker';
+import{MatNativeDateModule}from '@angular/material/core';
+import{MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,6 +26,9 @@ import { BrowserModule } from '@angular/platform-browser';
     AlumnoListarComponent,
     EntrenadorListarComponent,
     EntrenadorComponent,
+    NutricionistaComponent,
+    NutricionistaListarComponent,
+    NutricionistaCreaeditaComponent,
 
   ],
   imports: [
@@ -24,7 +36,14 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
