@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NutricionistaComponent } from './componentN/nutricionista/nutricionista.component';
-import { ListarNutricionistaComponent } from './componentN/nutricionista/listar-nutricionista/listar-nutricionista.component';
+import { ProductComponent } from './component/product/product.component';
+import { ProductCreaeditaComponent } from './component/product/product-creaedita/product-creaedita.component';
 
 const routes: Routes = [
+
   {
-    path:'nutricionista',component:NutricionistaComponent,children:[
+    path:'products', component: ProductComponent, children: [
       {
-        path: 'nuevo',component:ListarNutricionistaComponent
+        path: 'new', component: ProductCreaeditaComponent
       }
     ]
   }
+
 ];
 
 @NgModule({
