@@ -1,1 +1,78 @@
-<p>nutricionista-creaedita works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <form [formGroup]="form" (submit)="aceptar()">
+
+      <h1 class="text-center">Registro de Nutricionistas</h1>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Código" formControlName="idNutricionista">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombreNutricionista">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Apellidos</mat-label>
+        <input matInput placeholder="Apellidos" formControlName="apellidosNutricionista">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>DNI</mat-label>
+        <input matInput placeholder="DNI" formControlName="dni">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Teléfono</mat-label>
+        <input matInput placeholder="Teléfono" formControlName="telefono">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Sexo</mat-label>
+        <input matInput placeholder="Sexo" formControlName="sexo">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripción</mat-label>
+        <input matInput placeholder="Descripción" formControlName="Descripcion">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Estado" formControlName="Estado">
+      </mat-form-field>
+      <br>
+      <div class="d-flex justify-content-center gap-4">
+        <button mat-raised-button color="primary">Aceptar</button>
+        <br>
+        <button mat-raised-button color="warn" routerLink="/nutricionista">Cancelar</button>
+        <br>
+      </div>
+
+      <p>{{mensaje}}</p>
+      <br>
+
+    </form>
+  </div>
+</body>
+
+</html>

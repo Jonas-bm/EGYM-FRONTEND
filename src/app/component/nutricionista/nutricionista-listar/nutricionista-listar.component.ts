@@ -19,7 +19,11 @@ export class NutricionistaListarComponent implements OnInit {
   ngOnInit(): void {
     this.aS.list().subscribe((data)=>{
       this.dataSource=new MatTableDataSource(data);
-    });
+    })
+
+    this.aS.getList().subscribe(data=>{
+      this.dataSource=new MatTableDataSource(data);
+    })
 }
 
 }

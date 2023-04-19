@@ -11,13 +11,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NutricionistaComponent } from './component/nutricionista/nutricionista.component';
 import { NutricionistaListarComponent } from './component/nutricionista/nutricionista-listar/nutricionista-listar.component';
-import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import {MatInputModule,} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
 import{MatDatepickerModule} from '@angular/material/datepicker';
 import{MatNativeDateModule}from '@angular/material/core';
 import{MatButtonModule} from '@angular/material/button';
+import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,6 @@ import{MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
-    MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule

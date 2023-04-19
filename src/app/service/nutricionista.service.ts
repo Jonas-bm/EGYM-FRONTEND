@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ClassNutricionista } from '../model/nutricionista';
 import { Subject } from 'rxjs';
-
 const base_url=environment.base
 
 @Injectable({
@@ -11,20 +10,19 @@ const base_url=environment.base
 })
 export class NutricionistaService {
   private url=`${base_url}/Nutricionista`
-  private listacambio=new Subject<ClassNutricionista[]>();
-
+  private listaCambio=new Subject<ClassNutricionista[]>();
   constructor(private http:HttpClient) { }
-
   list(){
-    return this.http.get<ClassNutricionista[]>(this.url)
+    return this.http.get<ClassNutricionista[]>(this.url);
   }
+  //metodo de insertar
   insert(nutricionista:ClassNutricionista){
-    return this.http.post(this.url,nutricionista)
+    return this.http.post(this.url, nutricionista);
   }
-  set(listanutri:ClassNutricionista[]){
-    this.listacambio.next(listanutri);
+  setList(listanueva:ClassNutricionista[]){
+    this.listaCambio.next(listanueva);
   }
-  get(){
-    return this.listacambio.asObservable();
+  getList(){
+    return this.listaCambio.asObservable();
   }
 }
