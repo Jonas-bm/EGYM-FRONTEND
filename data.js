@@ -124,7 +124,7 @@ module.exports = function () {
             telefono:"987654122",
             sexo:"Femenino",
             Descripcion:"Novata",
-            Estado:"Ocupada",
+            Estado:"Ocupado",
           },
           {
             id:4,

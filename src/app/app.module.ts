@@ -17,6 +17,7 @@ import{MatDatepickerModule} from '@angular/material/datepicker';
 import{MatNativeDateModule}from '@angular/material/core';
 import{MatButtonModule} from '@angular/material/button';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutri
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
