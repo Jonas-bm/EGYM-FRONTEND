@@ -31,7 +31,7 @@ export class NutricionistaCreaeditaComponent implements OnInit {
   constructor(private nS:NutricionistaService, private router:Router){ }
 
   aceptar():void{
-    this.nutri.idNutricionista=this.form.value['idNutricionista'];
+    this.nutri.id=this.form.value['id'];
     this.nutri.nombreNutricionista=this.form.value['nombreNutricionista'];
     this.nutri.apellidosNutricionista=this.form.value['apellidosNutricionista'];
     this.nutri.dni=this.form.value['dni'];

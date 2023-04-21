@@ -97,7 +97,7 @@ module.exports = function () {
         ],
         Nutricionista:[
           {
-            idNutricionista:1,
+            id:1,
             nombreNutricionista:"Luis Miguel",
             apellidosNutricionista:"Matinez Guzman",
             dni:"74525296",
@@ -107,7 +107,7 @@ module.exports = function () {
             Estado:"Disponible",
           },
           {
-            idNutricionista:2,
+            id:2,
             nombreNutricionista:"Miguelito Andres",
             apellidosNutricionista:"Sandoval Rosse",
             dni:"75869585",
@@ -117,7 +117,7 @@ module.exports = function () {
             Estado:"Disponible",
           },
           {
-            idNutricionista:3,
+            id:3,
             nombreNutricionista:"Josefina Rosales",
             apellidosNutricionista:"Ayala Rosse",
             dni:"71586932",
@@ -127,7 +127,7 @@ module.exports = function () {
             Estado:"Ocupada",
           },
           {
-            idNutricionista:4,
+            id:4,
             nombreNutricionista:"Sandra Andrea",
             apellidosNutricionista:"Mosquera Rosse",
             dni:"75147485",
