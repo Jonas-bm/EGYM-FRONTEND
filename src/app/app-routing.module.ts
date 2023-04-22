@@ -7,6 +7,9 @@ const routes: Routes = [
     path:'nutricionista', component:NutricionistaComponent,children:[
       {
         path:'new',component:NutricionistaCreaeditaComponent
+      },
+      {
+        path:'edicion/:id',component:NutricionistaCreaeditaComponent
       }
     ]
   }

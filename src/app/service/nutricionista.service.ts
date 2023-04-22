@@ -25,4 +25,13 @@ export class NutricionistaService {
   getList(){
     return this.listaCambio.asObservable();
   }
+  //tre la id
+  listID(id:number){
+    return this.http.get<ClassNutricionista>(`${this.url}/${id}`);
+  }
+  //modificar
+  update(n:ClassNutricionista){
+    return this.http.put(this.url+"/"+n.id,n);
+  }
+
 }
