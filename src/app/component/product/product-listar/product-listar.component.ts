@@ -14,7 +14,7 @@ export class ProductListarComponent implements OnInit {
   events = ['close', 'open'];
 
   dataSource: MatTableDataSource<Product> = new MatTableDataSource();
-  displayedColumns: string[] = ['codigo', 'precio', 'nombre', 'descripcion'];
+  displayedColumns: string[] = ['codigo', 'precio', 'nombre', 'descripcion', 'acciones'];
 
   constructor (private pS: ProductService ) {
 
@@ -31,4 +31,9 @@ export class ProductListarComponent implements OnInit {
     })
 
   }
+
+  filtrar(z: any){
+    this.dataSource.filter = z.target.value.trim();
+  }
+
 }

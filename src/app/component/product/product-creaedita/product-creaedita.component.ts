@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-creaedita',
@@ -12,11 +12,21 @@ import { Router } from '@angular/router';
 export class ProductCreaeditaComponent implements OnInit {
   opened = false;
 
+  id: number = 0
+  edicion: boolean = false
+
   form: FormGroup = new FormGroup({})
   product: Product = new Product()
   mensaje: string = ""
 
   ngOnInit(): void {
+
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    })
+
     this.form = new FormGroup({
       id: new FormControl(),
       precio: new FormControl(),
@@ -25,7 +35,7 @@ export class ProductCreaeditaComponent implements OnInit {
     })
     }
 
-    constructor (private aS: ProductService, private router:Router) {}
+    constructor (private aS: ProductService, private router:Router, private route: ActivatedRoute) {}
 
     aceptar(): void {
       this.product.id = this.form.value['id'];
@@ -34,11 +44,26 @@ export class ProductCreaeditaComponent implements OnInit {
       this.product.descripcion = this.form.value['descripcion'];
       if (this.form.value['nombre'].length > 0 && this.form.value['descripcion'].length > 0 &&
           this.form.value['precio'].length > 0) {
-        this.aS.insert(this.product).subscribe(data => {
-          this.aS.list().subscribe(data => {
-            this.aS.setList(data)
-          })
-        })
+
+            if (this.edicion) {
+              this.aS.update(this.product).subscribe(() => {
+
+                this.aS.list().subscribe(data => {
+                  this.aS.setList(data)
+                  })
+
+              })
+            }
+            else {
+
+              this.aS.insert(this.product).subscribe(data => {
+                this.aS.list().subscribe(data => {
+                  this.aS.setList(data)
+                })
+              })
+
+            }
+
         this.router.navigate(['products'])
       }
       else {
@@ -46,6 +71,26 @@ export class ProductCreaeditaComponent implements OnInit {
         this.mensaje = "Ingrese los datos del producto!!";
 
       }
+   }
+
+   init() {
+
+    if (this.edicion) {
+
+      this.aS.listId(this.id).subscribe(data => {
+
+        this.form = new FormGroup ({
+          id: new FormControl(data.id),
+          nombre: new FormControl(data.nombre),
+          precio: new FormControl(data.precio),
+          descripcion: new FormControl(data.descripcion)
+        })
+
+      })
+
+    }
+
+
    }
 
   }

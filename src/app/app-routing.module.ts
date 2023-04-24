@@ -9,6 +9,9 @@ const routes: Routes = [
     path:'products', component: ProductComponent, children: [
       {
         path: 'new', component: ProductCreaeditaComponent
+      },
+      {
+        path: 'edicion/:id', component: ProductCreaeditaComponent
       }
     ]
   }
