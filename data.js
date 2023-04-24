@@ -94,7 +94,49 @@ module.exports = function () {
 
             },
 
-        ]
+        ],
+        Nutricionista:[
+          {
+            id:1,
+            nombreNutricionista:"Luis Miguel",
+            apellidosNutricionista:"Matinez Guzman",
+            dni:"74525296",
+            telefono:"996845125",
+            sexo:"Masculino",
+            Descripcion:"Veterano",
+            Estado:"Disponible",
+          },
+          {
+            id:2,
+            nombreNutricionista:"Miguelito Andres",
+            apellidosNutricionista:"Sandoval Rosse",
+            dni:"75869585",
+            telefono:"996354142",
+            sexo:"Masculino",
+            Descripcion:"Veterano",
+            Estado:"Disponible",
+          },
+          {
+            id:3,
+            nombreNutricionista:"Josefina Rosales",
+            apellidosNutricionista:"Ayala Rosse",
+            dni:"71586932",
+            telefono:"987654122",
+            sexo:"Femenino",
+            Descripcion:"Novata",
+            Estado:"Ocupado",
+          },
+          {
+            id:4,
+            nombreNutricionista:"Sandra Andrea",
+            apellidosNutricionista:"Mosquera Rosse",
+            dni:"75147485",
+            telefono:"985632147",
+            sexo:"Femenino",
+            Descripcion:"Novata",
+            Estado:"Disponible",
+          }
+        ],
     }
     return data
 }

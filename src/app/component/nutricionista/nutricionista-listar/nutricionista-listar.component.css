@@ -1,0 +1,18 @@
+tr{
+  background-color: rgb(216, 255, 216);
+  align-items: center;
+}
+
+th{
+  text-align: center;
+  font-weight: bold;
+}
+td{
+  text-align: center;
+}
+h1{
+  font-weight: bold;
+}
+button{
+  margin-top: auto;
+}

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demoCrud';
 
+
   datosMenu=[{
     'titulo':'Alumno',
     'icon':'',
