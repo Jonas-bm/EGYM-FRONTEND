@@ -28,13 +28,7 @@
 
         <mat-form-field class="example-full-width">
           <mat-label>Apellido Paterno</mat-label>
-          <input matInput placeholder="Apellido Paterno" formControlName="apellidoPaterno" autocomplete="off">
-        </mat-form-field>
-        <br>
-
-        <mat-form-field class="example-full-width">
-          <mat-label>Apellido Materno</mat-label>
-          <input matInput placeholder="Apellido Materno" formControlName="apellidoMaterno" autocomplete="off">
+          <input matInput placeholder="Apellido Paterno" formControlName="apellidos" autocomplete="off">
         </mat-form-field>
         <br>
 
@@ -81,8 +75,8 @@
         <div class="contenedor-botones">
           <button mat-raised-button  color="primary">Aceptar</button>
           <button mat-raised-button  color="warn" routerLink="/alumnos">Cancelar</button>
+          <p>{{mensaje}}</p>
         </div>
-        <p>{{mensaje}}</p>
       </form>
     </div>
   </body>

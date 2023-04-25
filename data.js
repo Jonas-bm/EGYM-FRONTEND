@@ -4,8 +4,7 @@ module.exports = function () {
             {
                 id:1,
                 nombre: "Juan Andrés",
-                apellidoPaterno: "Borjas",
-                apellidoMaterno:"Machuca",
+                apellidos: "Borjas Machuca",
                 dni:"72381574",
                 direccion: "Av. Los Cascabeles Mz. a Lt. 5 - Las Brisas - Barranco",
                 celular:987456123,
@@ -15,9 +14,8 @@ module.exports = function () {
             },
             {
                 id:2,
-                nombre: "David",
-                apellidoPaterno: "Villa",
-                apellidoMaterno:"Carranza",
+                nombre: "David Marcelo",
+                apellidos: "Villa Carranza",
                 dni:"72381579",
                 direccion: "Av. Los Cocharcas Mz. s Lt. 7 - Los Condoritos - Miraflores",
                 celular:987456123,
@@ -28,8 +26,7 @@ module.exports = function () {
             {
                 id:3,
                 nombre: "Piero Gonzalo",
-                apellidoPaterno: "Corrento",
-                apellidoMaterno:"Vernaola",
+                apellidos: "Corrento Vernaola",
                 dni:"65381556",
                 direccion: "Av. Las Totoras Mz. d Lt. 10 - Los Cascabeles - Lurín",
                 celular:958445712,
@@ -40,8 +37,7 @@ module.exports = function () {
             {
                 id:4,
                 nombre: "Maria Angélica",
-                apellidoPaterno: "Elitsu",
-                apellidoMaterno:"Gomez",
+                apellidos: "Elitsu Gomez",
                 dni:"95457815",
                 direccion: "Av. Las Camelias Mz. d Lt. 6 - Eucaliptos - Santa Anita",
                 celular:956847456,

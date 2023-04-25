@@ -29,4 +29,8 @@ export class AlumnoService {
   {
     return this.listaCambio.asObservable();
   }
+  listId(id:number)
+  {
+    return this.http.get<Alumno>(`${this.url}/${id}`);
+  }
 }

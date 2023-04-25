@@ -1,5 +1,5 @@
 export class ClassNutricionista{
-  id:number=0
+  id?:number=0
   nombreNutricionista:string=""
   apellidosNutricionista:string=""
   dni:string=""

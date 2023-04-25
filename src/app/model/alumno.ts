@@ -2,8 +2,7 @@ export class Alumno
 {
         id?:number=0
         nombre:string=""
-        apellidoPaterno:string=""
-        apellidoMaterno:string=""
+        apellidos:string=""
         dni:string=""
         direccion:string=""
         celular:number=0

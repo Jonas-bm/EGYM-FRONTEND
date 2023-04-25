@@ -19,8 +19,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
     this.form=new FormGroup({
       id: new FormControl(),
       nombre:new FormControl(),
-      apellidoPaterno:new FormControl(),
-      apellidoMaterno:new FormControl(),
+      apellidos:new FormControl(),
       dni:new FormControl(),
       direccion:new FormControl(),
       celular:new FormControl(),
@@ -33,8 +32,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
     aceptar():void{
       this.alumno.id=this.form.value['id'];
       this.alumno.nombre=this.form.value['nombre'];
-      this.alumno.apellidoPaterno=this.form.value['apellidoPaterno'];
-      this.alumno.apellidoMaterno=this.form.value['apellidoMaterno'];
+      this.alumno.apellidos=this.form.value['apellidos'];
       this.alumno.dni=this.form.value['dni'];
       this.alumno.direccion=this.form.value['direccion'];
       this.alumno.celular=this.form.value['celular'];
@@ -42,7 +40,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       this.alumno.peso=this.form.value['peso'];
       this.alumno.talla=this.form.value['talla'];
 
-      if(this.form.value['nombre'].length>0 && this.form.value['apellidoPaterno'].length>0 && this.form.value['apellidoMaterno'].length>0&& this.form.value['dni'].length>0 && this.form.value['direccion'].length>0&& this.form.value['celular'].length>0&& this.form.value['fechaNacimiento']!= null && this.form.value['peso'].length>0&& this.form.value['talla'].length>0)
+      if(this.form.value['nombre'].length>0  && this.form.value['apellidos'].length>0&& this.form.value['dni'].length>0 && this.form.value['direccion'].length>0&& this.form.value['celular'].length>0&& this.form.value['fechaNacimiento']!= null && this.form.value['peso'].length>0&& this.form.value['talla'].length>0)
       {
         this.as.insert(this.alumno).subscribe(data=>{
           this.as.list().subscribe(data=>{
