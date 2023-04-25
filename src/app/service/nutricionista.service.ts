@@ -25,7 +25,7 @@ export class NutricionistaService {
   getList(){
     return this.listaCambio.asObservable();
   }
-  //tre la id
+  //trae la id
   listID(id:number){
     return this.http.get<ClassNutricionista>(`${this.url}/${id}`);
   }

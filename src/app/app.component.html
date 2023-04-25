@@ -15,13 +15,15 @@
   <button routerLink="/alumnos" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>logout</mat-icon>
   </button>
-  
+
 
 </mat-toolbar>
 
 <br>
 
-<app-alumno></app-alumno>
+<!--aquí lo que hace es poner la página en vacío para cuando recién le damos link en
+cada una de las opciones nos aparesca el listar, antes estaba el <app-alumnos> -->
+<router-outlet></router-outlet>
 <div></div>
 
 

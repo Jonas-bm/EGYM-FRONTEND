@@ -2,7 +2,8 @@ export class Alumno
 {
         id?:number=0
         nombre:string=""
-        apellidos:string=""
+        apellidoPaterno: string=""
+        apellidoMaterno: string=""
         dni:string=""
         direccion:string=""
         celular:number=0

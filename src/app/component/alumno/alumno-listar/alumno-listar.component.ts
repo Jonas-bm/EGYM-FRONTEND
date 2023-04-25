@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AlumnoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Alumno> = new MatTableDataSource();
-  displayedColumns:String[]=['codigo','nombre','apellidos','dni','direccion','celular','fechaNacimiento','peso','talla'] //agregamos el componente (mediante consola)
+  displayedColumns:String[]=['codigo','nombre','apellidoPaterno','apellidoMaterno','dni','direccion','celular','fechaNacimiento','peso','talla','accion01'] //agregamos el componente (mediante consola)
   constructor(private as: AlumnoService) {}
   ngOnInit(): void {
     this.as.list().subscribe((data) => {
@@ -20,5 +20,8 @@ export class AlumnoListarComponent implements OnInit {
     this.as.getList().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
+  }
+  filtrar(z:any){
+    this.dataSource.filter=z.target.value.trim();
   }
 }

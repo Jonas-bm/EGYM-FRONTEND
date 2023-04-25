@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Alumno } from '../model/alumno';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -32,5 +31,9 @@ export class AlumnoService {
   listId(id:number)
   {
     return this.http.get<Alumno>(`${this.url}/${id}`);
+  }
+  update(a:Alumno)
+  {
+    return this.http.put(this.url+"/"+a.id,a);
   }
 }

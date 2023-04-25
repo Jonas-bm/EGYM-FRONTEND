@@ -10,6 +10,9 @@ const routes: Routes = [
     path:'alumnos',component:AlumnoComponent,children:[
       {
         path:'new',component:AlumnoCreaeditaComponent
+      },
+      {
+        path:'edicion/:id',component:AlumnoCreaeditaComponent
       }
     ]},
   {
@@ -21,7 +24,7 @@ const routes: Routes = [
         path:'edicion/:id',component:NutricionistaCreaeditaComponent
       }
     ]
-  }
+  },
 ];
 
 @NgModule({
