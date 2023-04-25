@@ -9,7 +9,10 @@ import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
+import { MatInputModule } from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,7 @@ import { BrowserModule } from '@angular/platform-browser';
     AlumnoListarComponent,
     EntrenadorListarComponent,
     EntrenadorComponent,
+    EntrenadorCreaeditaComponent,
 
   ],
   imports: [
@@ -24,7 +28,11 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

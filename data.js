@@ -50,7 +50,7 @@ module.exports = function () {
                 talla:185
             }
         ],
-        entrenador: [
+        entrenadores: [
             {
                 id:1,
                 nombre: "Luís",
@@ -65,35 +65,6 @@ module.exports = function () {
                 estado: "Activo",
 
             },
-            {
-                id:2,
-                nombre: "Juan Carlos",
-                apellidoPaterno: "Garcia",
-                apellidoMaterno: "Chavez",
-                dni: "89652417",
-                telefono: "958421367",
-                correo: "JuanGarcia@gmail.com",
-                habilidades: "Zumba, Bailes, Ciclismo",
-                experiencia: "5 años",
-                educacion: "Edutin Academy",
-                estado: "Activo",
-
-            },
-            {
-                id:3,
-                nombre: "Jon",
-                apellidoPaterno: "Cueva",
-                apellidoMaterno: "Rios",
-                dni: "74265135",
-                telefono: "911748563",
-                correo: "Cueva12@gmail.com",
-                habilidades: "Correr, levantamiento de pesas",
-                experiencia: "6 años",
-                educacion: "D' Fitness",
-                estado: "Activo",
-
-            },
-
         ]
     }
     return data

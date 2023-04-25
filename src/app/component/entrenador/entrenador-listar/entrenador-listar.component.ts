@@ -19,6 +19,10 @@ constructor (private aS:EntrenadorService){
 ngOnInit(): void {
 this.aS.list().subscribe(data=>{
   this.dataSource = new MatTableDataSource(data);
+});
+//despues
+this.aS.getList().subscribe(data=>{
+  this.dataSource=new MatTableDataSource(data);
 })
 }
 }

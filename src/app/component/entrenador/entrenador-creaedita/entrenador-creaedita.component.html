@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+    <form [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Codigo" formControlName="id">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombre">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>ApellidoPaterno</mat-label>
+        <input matInput placeholder="ApellidoPaterno" formControlName="apellidoPaterno">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>ApellidoMaterno</mat-label>
+        <input matInput placeholder="ApellidoMaterno" formControlName="apellidoMaterno">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>DNI</mat-label>
+        <input matInput placeholder="DNI" formControlName="dni">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="Telefono" formControlName="telefono">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Correo" formControlName="correo">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Habilidades</mat-label>
+        <input matInput placeholder="Habilidades" formControlName="habilidades">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Experiencia</mat-label>
+        <input matInput placeholder="Experiencia" formControlName="experiencia">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Educación</mat-label>
+        <input matInput placeholder="Educación" formControlName="educacion">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Estado" formControlName="estado">
+      </mat-form-field>
+
+
+      <button mat-raised-button color="primary" >Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/entrenadores">Cancelar</button>
+
+    </form>
+  </div>
+  <p>{{mensaje}}</p>
+</body>
+</html>
