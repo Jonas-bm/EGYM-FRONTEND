@@ -7,16 +7,22 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-      <div style="width: 80%;">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <div class="container">
+          <h1 style="text-align: center;">
+            Lista de Alumnos
+          </h1>
+    </div>
+        <div class="container" style="text-align:left;">
+
+          <mat-form-field>
+            <input matInput (keyup)="filtrar($event)" placeholder="Buscar" style="color:cadetblue;">
+          </mat-form-field>
+        <table align="center" mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
           <!--- Note that these columns can be defined in any order.
                The actual rendered columns are set as a property on the row definition" -->
-
           <!-- Position Column -->
-
           <ng-container matColumnDef="codigo">
-            <th mat-header-cell *matHeaderCellDef class="header-border">CODIGO</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Codigo</th>
 
             <td mat-cell *matCellDef="let element">{{ element.id }}</td>
           </ng-container>
@@ -24,26 +30,24 @@
           <!-- Name Column -->
 
           <ng-container matColumnDef="nombre">
-            <th mat-header-cell *matHeaderCellDef class="header-border">NOMBRE</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Nombre</th>
 
             <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
           </ng-container>
 
           <!-- Weight Column -->
-
           <ng-container matColumnDef="apellidoPaterno">
-            <th mat-header-cell *matHeaderCellDef class="header-border">APELLIDO PATERNO</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Apellido Paterno</th>
 
-            <td mat-cell *matCellDef="let element">{{ element.apellidoPaterno }}</td>
+            <td mat-cell *matCellDef="let element">{{element.apellidoPaterno}}</td>
           </ng-container>
-
-          <!-- Symbol Column -->
 
           <ng-container matColumnDef="apellidoMaterno">
-            <th mat-header-cell *matHeaderCellDef class="header-border">APELLIDO MATERNO</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Apellido Materno</th>
 
-            <td mat-cell *matCellDef="let element">{{ element.apellidoMaterno}}</td>
+            <td mat-cell *matCellDef="let element">{{ element.apellidoMaterno }}</td>
           </ng-container>
+          <!-- Symbol Column -->
 
           <ng-container matColumnDef="dni">
             <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
@@ -52,40 +56,51 @@
           </ng-container>
 
           <ng-container matColumnDef="direccion">
-            <th mat-header-cell *matHeaderCellDef class="header-border">DIRECCION</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Direccion</th>
 
             <td mat-cell *matCellDef="let element">{{ element.direccion }}</td>
           </ng-container>
 
           <ng-container matColumnDef="celular">
-            <th mat-header-cell *matHeaderCellDef class="header-border">CELULAR</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Celular</th>
 
             <td mat-cell *matCellDef="let element">{{ element.celular }}</td>
           </ng-container>
 
           <ng-container matColumnDef="fechaNacimiento">
-            <th mat-header-cell *matHeaderCellDef class="header-border">FECHA DE NACIMIENTO</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Fecha de Nacimiento</th>
 
-            <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento}}</td>
+            <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento | date:'dd/MM/yyyy'}}</td>
           </ng-container>
 
           <ng-container matColumnDef="peso">
-            <th mat-header-cell *matHeaderCellDef class="header-border">PESO</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Peso</th>
 
             <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
           </ng-container>
 
           <ng-container matColumnDef="talla">
-            <th mat-header-cell *matHeaderCellDef class="header-border">TALLA</th>
+            <th mat-header-cell *matHeaderCellDef class="header-border">Talla</th>
 
             <td mat-cell *matCellDef="let element">{{ element.talla }}</td>
           </ng-container>
+
+          <ng-container matColumnDef="accion01">
+            <th mat-header-cell *matHeaderCellDef class="header-border">Acciones</th>
+            <td mat-cell *matCellDef="let element">
+              <button  mat-raised-button color="warn" [routerLink]="['edicion',element.id]">Actualizar</button>
+            </td>
+          </ng-container>
+
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 
           <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </table>
-      </div>
-    </div>
+        <br>
+        <div style="text-align: center;">
+          <button mat-raised-button color="warn" routerLink="/alumnos/new">Agregar</button>
+        </div>
+        </div>
   </body>
 </html>

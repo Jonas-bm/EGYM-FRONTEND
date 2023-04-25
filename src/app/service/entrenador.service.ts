@@ -9,7 +9,7 @@ const base_url=environment.base
   providedIn: 'root'
 })
 export class EntrenadorService {
-private url=`${base_url}/entrenador`
+private url=`${base_url}/entrenadores`
   constructor(private http: HttpClient) {}
   list(){
     return this.http.get<Entrenador[]>(this.url)  }

@@ -13,3 +13,18 @@ td {
   text-align: center;
   vertical-align: middle;
 }
+tr{
+  background-color: rgb(216, 255, 216);
+  align-items: center;
+}
+th{
+  text-align: center;
+  font-weight: bold;
+}
+h1{
+  font-weight: bold;
+}
+button{
+  margin-top: auto;
+}
+
