@@ -27,9 +27,18 @@ import{MatButtonModule} from '@angular/material/button';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AlumnoDialogoComponent } from './component/alumno/alumno-listar/alumno-dialogo/alumno-dialogo.component';
+//login
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+//cargando
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+
 
 //para delete
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginComponent } from './component/login/login.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 
 @NgModule({
@@ -44,6 +53,8 @@ import { MatDialogModule } from '@angular/material/dialog'
     NutricionistaListarComponent,
     NutricionistaCreaeditaComponent,
     AlumnoDialogoComponent,
+    LoginComponent,
+    NavbarComponent,
 
   ],
   imports: [
@@ -60,11 +71,14 @@ import { MatDialogModule } from '@angular/material/dialog'
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule,
     MatSelectModule,
+    //login
+    MatSnackBarModule,
 
     //para delete
-    MatDialogModule
+    MatDialogModule,
+
+    MatProgressSpinnerModule
 
   ],
   providers: [],

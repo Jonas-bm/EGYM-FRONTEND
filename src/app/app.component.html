@@ -1,30 +1,11 @@
-
-<mat-toolbar color="primary">
-  <span>E-GYM</span>
-
-  <span class="example-spacer"></span>
-
-  <button mat-button routerLink="/alumnos">Alumno</button>
-  <button mat-button routerLink="entrenador">Entrenador</button>
-  <button mat-button routerLink="/nutricionista">Nutricionista</button>
-  <button mat-button >Producto</button>
-  <button mat-button >Calificacion</button>
-
-  <span class="example-spacer"></span>
-
-  <button routerLink="/alumnos" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>logout</mat-icon>
-  </button>
-
-
-</mat-toolbar>
-
-<br>
-
-<!--aquí lo que hace es poner la página en vacío para cuando recién le damos link en
-cada una de las opciones nos aparesca el listar, antes estaba el <app-alumnos> -->
+<div [hidden]="!(route.children.length!==0)">
+  <app-navbar></app-navbar>
+  </div>
 <router-outlet></router-outlet>
-<div></div>
+<div [hidden]="route.children.length!==0">
+<app-login></app-login>
+</div>
+
 
 
 

@@ -4,6 +4,7 @@ import { AlumnoComponent } from './component/alumno/alumno.component';
 import { AlumnoCreaeditaComponent } from './component/alumno/alumno-creaedita/alumno-creaedita.component';
 import { NutricionistaComponent } from './component/nutricionista/nutricionista.component';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
+import { LoginComponent } from './component/login/login.component';
 
 const routes: Routes = [
   {
