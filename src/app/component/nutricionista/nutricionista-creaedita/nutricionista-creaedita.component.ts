@@ -27,8 +27,6 @@ export class NutricionistaCreaeditaComponent implements OnInit {
       this.edicion=data['id']!=null;
       this.init();
     })
-
-
     //crear
     this.form=new FormGroup({
       idNutricionista: new FormControl(),
