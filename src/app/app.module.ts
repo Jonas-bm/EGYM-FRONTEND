@@ -18,6 +18,8 @@ import{MatNativeDateModule}from '@angular/material/core';
 import{MatButtonModule} from '@angular/material/button';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 import { MatSelectModule } from '@angular/material/select';
+import { NutricionistaDialogoComponent } from './component/nutricionista/nutricionista-listar/nutricionista-dialogo/nutricionista-dialogo.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { MatSelectModule } from '@angular/material/select';
     NutricionistaComponent,
     NutricionistaListarComponent,
     NutricionistaCreaeditaComponent,
+    NutricionistaDialogoComponent,
 
   ],
   imports: [
@@ -43,7 +46,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
