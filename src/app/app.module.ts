@@ -12,7 +12,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 import { MatInputModule } from '@angular/material/input'
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
+import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-listar/entrenador-dialogo/entrenador-dialogo.component'
+import { MatDialogModule } from '@angular/material/dialog'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button'
     EntrenadorListarComponent,
     EntrenadorComponent,
     EntrenadorCreaeditaComponent,
+    EntrenadorDialogoComponent,
 
   ],
   imports: [
@@ -32,7 +35,8 @@ import { MatButtonModule } from '@angular/material/button'
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

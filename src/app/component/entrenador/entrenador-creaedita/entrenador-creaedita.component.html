@@ -8,7 +8,10 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" style="text-align: center;">
+    <div style="text-align: center;">
+    <h1>Registro de Entrenadores</h1>
+    </div>
     <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
@@ -66,12 +69,13 @@
         <input matInput placeholder="Estado" formControlName="estado">
       </mat-form-field>
 
-
+      <div style="text-align: center;"></div>
+      <div class="contenedor-botones">
       <button mat-raised-button color="primary" >Aceptar</button>
       <button mat-raised-button color="warn" routerLink="/entrenadores">Cancelar</button>
-
+      <p>{{mensaje}}</p>
+      </div>
     </form>
   </div>
-  <p>{{mensaje}}</p>
 </body>
 </html>

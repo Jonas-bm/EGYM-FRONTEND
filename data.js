@@ -65,6 +65,20 @@ module.exports = function () {
                 estado: "Activo",
 
             },
+            {
+              id:2,
+              nombre: "Carlos",
+              apellidoPaterno: "Cueva",
+              apellidoMaterno: "Flores",
+              dni: "78532648",
+              telefono: "932864197",
+              correo: "CuevaFlores@gmail.com",
+              habilidades: "Entrenamiento con pesas",
+              experiencia: "5 años",
+              educacion: "Certificado en EUROINNOVA",
+              estado: "Activo",
+
+          },
         ]
     }
     return data

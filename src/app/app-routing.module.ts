@@ -5,9 +5,12 @@ import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-
 
 const routes: Routes = [
 {
-  path: 'entrenadores',component:EntrenadorComponent, children:[
+  path: 'entrenadores',component: EntrenadorComponent, children:[
     {
-      path:'new', component:EntrenadorCreaeditaComponent
+      path:'new', component: EntrenadorCreaeditaComponent
+    },
+    {
+    path:'edicion/:id', component: EntrenadorCreaeditaComponent
     }
   ]
 }
