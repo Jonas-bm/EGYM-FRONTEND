@@ -19,7 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { ProductDialogoComponent } from './component/product/product-listar/product-dialogo/product-dialogo.component'
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import {MatIconModule} from '@angular/material/icon'
     ProductComponent,
     ProductListarComponent,
     ProductCreaeditaComponent,
+    ProductDialogoComponent,
 
   ],
   imports: [
@@ -47,7 +50,8 @@ import {MatIconModule} from '@angular/material/icon'
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
