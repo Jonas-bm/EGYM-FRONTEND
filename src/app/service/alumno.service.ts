@@ -10,6 +10,7 @@ const base_url=environment.base
 })
 export class AlumnoService {
   private url=`${base_url}/alumnos`
+  private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio=new Subject<Alumno[]>();
   constructor(private http:HttpClient) { }
   list()
@@ -35,5 +36,19 @@ export class AlumnoService {
   update(a:Alumno)
   {
     return this.http.put(this.url+"/"+a.id,a);
+  }
+
+  //delete
+  delete(id:number)
+  {
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete()
+  {
+    return this.confirmarEliminacion.asObservable();
+  }
+  setConfirmDelete(estado:Boolean)
+  {
+    this.confirmarEliminacion.next(estado);
   }
 }

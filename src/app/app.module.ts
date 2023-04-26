@@ -26,6 +26,10 @@ import{MatNativeDateModule}from '@angular/material/core';
 import{MatButtonModule} from '@angular/material/button';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 import { MatSelectModule } from '@angular/material/select';
+import { AlumnoDialogoComponent } from './component/alumno/alumno-listar/alumno-dialogo/alumno-dialogo.component';
+
+//para delete
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 @NgModule({
@@ -39,6 +43,7 @@ import { MatSelectModule } from '@angular/material/select';
     NutricionistaComponent,
     NutricionistaListarComponent,
     NutricionistaCreaeditaComponent,
+    AlumnoDialogoComponent,
 
   ],
   imports: [
@@ -56,7 +61,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+
+    //para delete
+    MatDialogModule
 
   ],
   providers: [],
