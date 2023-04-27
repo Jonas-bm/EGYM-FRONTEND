@@ -40,6 +40,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import{ProductCreaeditaComponent} from './component/product/product-creaedita/product-creaedita.component'
 import { NutricionistaDialogoComponent } from './component/nutricionista/nutricionista-listar/nutricionista-dialogo/nutricionista-dialogo.component';
+import { ProductDialogoComponent } from './component/product/product-listar/product-dialogo/product-dialogo.component'
+
+
 
 @NgModule({
   declarations: [
@@ -62,6 +65,7 @@ import { NutricionistaDialogoComponent } from './component/nutricionista/nutrici
     ProductCreaeditaComponent,
     ProductListarComponent,
     NutricionistaDialogoComponent,
+    ProductDialogoComponent,
 
   ],
   imports: [
@@ -89,6 +93,8 @@ import { NutricionistaDialogoComponent } from './component/nutricionista/nutrici
     MatListModule,
     MatButtonModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatIconModule,
     MatDialogModule
   ],
   providers: [],

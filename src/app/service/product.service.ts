@@ -10,6 +10,7 @@ const base_url = environment.base
 })
 export class ProductService {
   private url = `${base_url}/producto`
+  private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio = new Subject<Product[]>();
   constructor(private http:HttpClient) { }
   list(){
@@ -35,4 +36,17 @@ export class ProductService {
   update(a: Product){
     return this.http.put(this.url + "/" + a.id, a)
   }
+
+  delete(id: number) {
+    return this.http.delete(`${this.url}/${id}`)
+  }
+
+  getConfirmDelete(){
+    return this.confirmarEliminacion.asObservable();
+  }
+
+  setConfirmDelete(estado:Boolean){
+    this.confirmarEliminacion.next(estado);
+  }
+
 }

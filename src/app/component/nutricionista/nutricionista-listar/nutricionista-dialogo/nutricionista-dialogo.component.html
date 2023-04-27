@@ -1,5 +1,7 @@
 <mat-dialog-content>
-  <p>¿Seguro que quieres eliminar este registro?</p>
-  <button mat-raised-button color="primary" (click)="confirmar(true)">Si</button>
-  <button mat-raised-button color="accent" (click)="confirmar(false)">No</button>
+  <p>¿Está seguro de eliminar?</p>
+  <div class="d-flex justify-content-center gap-3">
+    <button mat-raised-button color="primary" (click)="confirmar(true)">Si</button>
+    <button mat-raised-button color="warn" (click)="confirmar(false)">No</button>
+  </div>
 </mat-dialog-content>
