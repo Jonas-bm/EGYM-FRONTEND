@@ -5,6 +5,8 @@ import { AlumnoCreaeditaComponent } from './component/alumno/alumno-creaedita/al
 import { NutricionistaComponent } from './component/nutricionista/nutricionista.component';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
 import { LoginComponent } from './component/login/login.component';
+import { EntrenadorComponent } from './component/entrenador/entrenador.component';
+import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 
 const routes: Routes = [
   {
@@ -26,8 +28,17 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'entrenadores',component: EntrenadorComponent, children:[
+      {
+        path:'new', component: EntrenadorCreaeditaComponent
+      },
+      {
+      path:'edicion/:id', component: EntrenadorCreaeditaComponent
+      }
+    ]
+  }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

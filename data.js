@@ -66,33 +66,18 @@ module.exports = function () {
 
             },
             {
-                id:2,
-                nombre: "Juan Carlos",
-                apellidoPaterno: "Garcia",
-                apellidoMaterno: "Chavez",
-                dni: "89652417",
-                telefono: "958421367",
-                correo: "JuanGarcia@gmail.com",
-                habilidades: "Zumba, Bailes, Ciclismo",
-                experiencia: "5 años",
-                educacion: "Edutin Academy",
-                estado: "Activo",
-
-            },
-            {
-                id:3,
-                nombre: "Jon",
-                apellidoPaterno: "Cueva",
-                apellidoMaterno: "Rios",
-                dni: "74265135",
-                telefono: "911748563",
-                correo: "Cueva12@gmail.com",
-                habilidades: "Correr, levantamiento de pesas",
-                experiencia: "6 años",
-                educacion: "D' Fitness",
-                estado: "Activo",
-
-            },
+              id:2,
+              nombre: "Carlos",
+              apellidoPaterno: "Cueva",
+              apellidoMaterno: "Flores",
+              dni: "78532648",
+              telefono: "932864197",
+              correo: "CuevaFlores@gmail.com",
+              habilidades: "Entrenamiento con pesas",
+              experiencia: "5 años",
+              educacion: "Certificado en EUROINNOVA",
+              estado: "Activo",
+            }
 
         ],
         Nutricionista:[
@@ -135,8 +120,8 @@ module.exports = function () {
             sexo:"Femenino",
             Descripcion:"Novata",
             Estado:"Disponible",
-          }
-        ],
-    }
+          },
+        ]
+      }
     return data
 }

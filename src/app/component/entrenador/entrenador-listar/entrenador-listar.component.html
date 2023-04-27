@@ -1,84 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<body>
-  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <div style="width: 80%;">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef class="header-border">ID. </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container>
-      <!-- Name Column -->
-      <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="apellidoPaterno">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> ApellidoPaterno </th>
-        <td mat-cell *matCellDef="let element"> {{element.apellidoPaterno}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="apellidoMaterno">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> ApellidoMaterno </th>
-        <td mat-cell *matCellDef="let element"> {{element.apellidoMaterno}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="dni">
-        <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
-        <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="telefono">
-        <th mat-header-cell *matHeaderCellDef class="header-border">Telefono</th>
-        <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="correo">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Correo </th>
-        <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="habilidades">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> habilidades </th>
-        <td mat-cell *matCellDef="let element"> {{element.habilidades}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-container matColumnDef="experiencia">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Experiencia</th>
-        <td mat-cell *matCellDef="let element"> {{element.experiencia}} </td>
-      </ng-container>
-      <!-- Weight Column -->
-      <ng-containerng-container matColumnDef="educacion">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Educacion</th>
-        <td mat-cell *matCellDef="let element"> {{element.educacion}} </td>
-      </ng-containerng-container>
-
-      <!-- Weight Column -->
-      <ng-container matColumnDef="estado">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Estado </th>
-        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
-      </ng-container>
-<!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-         <th mat-header-cell *matHeaderCellDef class="header-border"> Symbol </th>
-         <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-      </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+  <body>
+    <br>
+    <div style="text-align: center">
+      <h1>Lista de Entrenadores</h1>
     </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+      "
+    >
+      <!--para subir o bajar el cuadro-->
+      <div style="width: 93%">
+        <!--para centar el cuadro-->
+        <mat-form-field>
+          <input matInput (keyup)="filtrar($event)" placeholder="Buscar" style="color:cadetblue;" autocomplete="off">
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef class="header-border">ID.</th>
+            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Nombre
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="apellidos">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Apellidos
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.apellidoPaterno }} {{element.apellidoMaterno}}
+            </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <!-- Weight Column -->
+          <ng-container matColumnDef="dni">
+            <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
+            <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="telefono">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Telefono
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.telefono }}</td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="correo">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Correo
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.correo }}</td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="habilidades">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Habilidades
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.habilidades }}
+            </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="experiencia">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Experiencia
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.experiencia }}
+            </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-containerng-container matColumnDef="educacion">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Educacion
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.educacion }}</td>
+          </ng-containerng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Estado
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.estado }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="accion01">
+            <th mat-header-cell *matHeaderCellDef class="header-border">
+              Acciones
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <button
+                mat-raised-button
+                color="warn"
+                [routerLink]="['edicion', element.id]">Editar</button>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="accion02">
+            <th mat-header-cell *matHeaderCellDef class="header-border"> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
+            </td>
+          </ng-container>
+          <!-- Symbol Column -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <br>
+        <div style="text-align: center">
+          <button mat-raised-button color="warn" routerLink="/entrenadores/new"> Agregar</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
