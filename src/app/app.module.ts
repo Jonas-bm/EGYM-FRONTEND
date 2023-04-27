@@ -34,9 +34,16 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-listar/entrenador-dialogo/entrenador-dialogo.component'
+import { ProductComponent } from './component/product/product.component';
+import { ProductListarComponent } from './component/product/product-listar/product-listar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import{ProductCreaeditaComponent} from './component/product/product-creaedita/product-creaedita.component'
 
 @NgModule({
   declarations: [
+    ProductCreaeditaComponent,
+    EntrenadorCreaeditaComponent,
     AppComponent,
     AlumnoComponent,
     AlumnoListarComponent,
@@ -49,8 +56,10 @@ import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-li
     AlumnoDialogoComponent,
     LoginComponent,
     NavbarComponent,
-    EntrenadorCreaeditaComponent,
     EntrenadorDialogoComponent,
+    ProductComponent,
+    ProductCreaeditaComponent,
+    ProductListarComponent
 
   ],
   imports: [
@@ -73,11 +82,9 @@ import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-li
     //para delete
     MatDialogModule,
     MatProgressSpinnerModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

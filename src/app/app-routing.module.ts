@@ -7,6 +7,8 @@ import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutri
 import { LoginComponent } from './component/login/login.component';
 import { EntrenadorComponent } from './component/entrenador/entrenador.component';
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
+import { ProductComponent } from './component/product/product.component';
+import { ProductCreaeditaComponent } from './component/product/product-creaedita/product-creaedita.component';
 
 const routes: Routes = [
   {
@@ -37,8 +39,19 @@ const routes: Routes = [
       path:'edicion/:id', component: EntrenadorCreaeditaComponent
       }
     ]
+  },
+  {
+    path:'products', component: ProductComponent, children: [
+      {
+        path: 'new', component: ProductCreaeditaComponent
+      },
+      {
+        path: 'edicion/:id', component: ProductCreaeditaComponent
+      }
+    ]
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
