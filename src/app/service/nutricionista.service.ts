@@ -11,6 +11,9 @@ const base_url=environment.base
 export class NutricionistaService {
   private url=`${base_url}/Nutricionista`
   private listaCambio=new Subject<ClassNutricionista[]>();
+  //para el eliminar
+  private confirmaEliminar=new Subject<Boolean>();
+  //metodos
   constructor(private http:HttpClient) { }
   list(){
     return this.http.get<ClassNutricionista[]>(this.url);
@@ -32,6 +35,16 @@ export class NutricionistaService {
   //modificar
   update(n:ClassNutricionista){
     return this.http.put(this.url+"/"+n.id,n);
+  }
+  //delete
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
   }
 
 }

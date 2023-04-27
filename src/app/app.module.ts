@@ -39,6 +39,7 @@ import { ProductListarComponent } from './component/product/product-listar/produ
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import{ProductCreaeditaComponent} from './component/product/product-creaedita/product-creaedita.component'
+import { NutricionistaDialogoComponent } from './component/nutricionista/nutricionista-listar/nutricionista-dialogo/nutricionista-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import{ProductCreaeditaComponent} from './component/product/product-creaedita/pr
     EntrenadorDialogoComponent,
     ProductComponent,
     ProductCreaeditaComponent,
-    ProductListarComponent
+    ProductListarComponent,
+    NutricionistaDialogoComponent,
 
   ],
   imports: [
@@ -85,6 +87,9 @@ import{ProductCreaeditaComponent} from './component/product/product-creaedita/pr
     MatDialogModule,
     MatSidenavModule,
     MatListModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
