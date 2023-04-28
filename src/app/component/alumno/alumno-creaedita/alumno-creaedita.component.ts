@@ -53,7 +53,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       this.alumno.peso=this.form.value['peso'];
       this.alumno.talla=this.form.value['talla'];
 
-      if(this.form.value['nombre'].length>0  && this.form.value['apellidoPaterno'].length>0 && this.form.value['apellidoMaterno'].length>0 && this.form.value['dni'].length>0 && this.form.value['fechaNacimiento']!= null && this.form.value['talla'].length>0)
+      if(this.form.value['nombre'].length>0  || this.form.value['apellidoPaterno'].length>0 || this.form.value['apellidoMaterno'].length>0 || this.form.value['dni'].length>0 || this.form.value['fechaNacimiento']!= null || this.form.value['talla'].length>0)
       {
         if(this.edicion==true)
         {

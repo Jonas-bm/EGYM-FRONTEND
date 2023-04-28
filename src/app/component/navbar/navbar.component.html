@@ -1,15 +1,15 @@
-<mat-toolbar color="primary">
-  <span>E-GYM</span>
+<mat-toolbar class="my-toolbar">
+  <span class="my-text">E-GYM</span>
   <span class="example-spacer"></span>
-  <button mat-button routerLink="/alumnos" >Alumno</button>
-  <button mat-button routerLink="entrenadores">Entrenador</button>
-  <button mat-button routerLink="/nutricionista">Nutricionista</button>
-  <button mat-button routerLink="/products">Producto</button>
-  <button mat-button >Calificacion</button>
+  <button mat-button routerLink="/alumnos" ><span class="my-text">Alumno</span></button>
+  <button mat-button routerLink="/entrenadores"><span class="my-text">Entrenador</span></button>
+  <button mat-button routerLink="/nutricionista"><span class="my-text">Nutricionista</span></button>
+  <button mat-button routerLink="/products"><span class="my-text">Producto</span></button>
+  <button mat-button ><span class="my-text">Calificación</span></button>
 
   <span class="example-spacer"></span>
 
-  <button routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon aling="left">logout</mat-icon>
+  <button    [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" routerLink="/" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon mat-raised-button aling="left" class="my-text">logout</mat-icon>
   </button>
 </mat-toolbar>

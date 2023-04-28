@@ -42,7 +42,7 @@ export class ProductCreaeditaComponent implements OnInit {
       this.product.nombre = this.form.value['nombre'];
       this.product.precio = this.form.value['precio'];
       this.product.descripcion = this.form.value['descripcion'];
-      if (this.form.value['nombre'].length > 0 && this.form.value['descripcion'].length > 0 &&
+      if (this.form.value['nombre'].length || 0 && this.form.value['descripcion'].length > 0 ||
           this.form.value['precio'].length > 0) {
 
             if (this.edicion) {

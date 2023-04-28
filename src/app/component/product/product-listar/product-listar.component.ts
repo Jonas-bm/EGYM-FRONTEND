@@ -18,7 +18,7 @@ export class ProductListarComponent implements OnInit {
   lista: Product[] = []
   dataSource: MatTableDataSource<Product> = new MatTableDataSource();
   idMayor: number = 0
-  displayedColumns: string[] = ['codigo', 'precio', 'nombre', 'descripcion', 'acciones', 'acciones2'];
+  displayedColumns: string[] = ['codigo', 'nombre', 'descripcion', 'precio', 'acciones', 'acciones2'];
 
   constructor (private pS: ProductService, private dialog: MatDialog ) {
 

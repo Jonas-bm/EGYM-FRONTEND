@@ -1,3 +1,10 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.my-toolbar {
+  background-color: #242424; /* Cambia #007ACC por el color que desees */
+}
+
+.my-text {
+  color: white; /* Cambia #007ACC por el color que desees */
+}

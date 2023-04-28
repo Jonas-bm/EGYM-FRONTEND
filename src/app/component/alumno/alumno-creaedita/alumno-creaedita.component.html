@@ -81,8 +81,8 @@
 
         <div style="text-align:center;"></div>
         <div class="contenedor-botones" class="d-flex justify-content-center gap-4">
-          <button mat-raised-button  color="primary">Aceptar</button>
-          <button mat-raised-button  color="warn" routerLink="/alumnos">Cancelar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/alumnos">Cancelar</button>
           <p>{{mensaje}}</p>
         </div>
       </form>
