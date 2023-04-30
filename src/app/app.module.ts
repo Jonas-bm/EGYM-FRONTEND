@@ -43,6 +43,13 @@ import { ProductDialogoComponent } from './component/product/product-listar/prod
 import { HomeComponent } from './component/home/home.component'
 import { MatSelectModule } from '@angular/material/select';
 
+import { CalificacionComponent } from './component/calificacion/calificacion.component';
+import { CalificacionListarComponent } from './component/calificacion/calificacion-listar/calificacion-listar.component';
+import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
+import { CalificacionDialogoComponent } from './component/calificacion/calificacion-dialogo/calificacion-dialogo.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -67,6 +74,10 @@ import { MatSelectModule } from '@angular/material/select';
     NutricionistaDialogoComponent,
     ProductDialogoComponent,
     HomeComponent,
+    CalificacionComponent,
+    CalificacionListarComponent,
+    CalificacionCreaeditaComponent,
+    CalificacionDialogoComponent,
 
   ],
   imports: [
@@ -91,6 +102,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatListModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDialogModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatSelectModule
 
   ],
   providers: [],

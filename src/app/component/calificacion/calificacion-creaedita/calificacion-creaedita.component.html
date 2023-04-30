@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="container" style= "text-align:center;">
+  <div style="text-align: center;">
+    <h1>Registro de Calificaciones</h1>
+  </div>
+  <form [formGroup] ="form"(submit)="aceptar()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Codigo</mat-label>
+      <input matInput placeholder="id"formControlName="id">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="nombre"formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Puntuacion</mat-label>
+      <input matInput placeholder="puntuacion"formControlName="puntuacion">
+    </mat-form-field>
+     <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Comentario</mat-label>
+      <input matInput placeholder="comentario"formControlName="comentario">
+    </mat-form-field>
+    <br>
+    <div class="d-flex justify-content-center gap-4">
+
+    <button mat-button color="primary">Aceptar</button>
+    <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" routerLink="/calificaciones">Cancelar</button>
+
+
+    <br>
+  </div>
+  <p>{{mensaje}}</p>
+  </form>
+
+</div>
+</body>
+</html>
