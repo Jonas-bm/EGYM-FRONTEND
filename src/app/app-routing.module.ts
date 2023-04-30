@@ -10,6 +10,10 @@ import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-
 import { ProductComponent } from './component/product/product.component';
 import { ProductCreaeditaComponent } from './component/product/product-creaedita/product-creaedita.component';
 import { HomeComponent } from './component/home/home.component';
+import { Calificacion } from './model/calificacion';
+import { CalificacionComponent } from './component/calificacion/calificacion.component';
+import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
+
 
 const routes: Routes = [
   {
@@ -53,11 +57,22 @@ const routes: Routes = [
   },
   {
     path:'home',component:HomeComponent,
+ },
+ {
+  path: 'calificaciones',component: CalificacionComponent,children: [
+     {
+      path: 'new',
+      component: CalificacionCreaeditaComponent,
+     },
+     {
+      path: 'edicion/:id',
+       component: CalificacionCreaeditaComponent,
     },
-];
-
+      ],
+    },
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

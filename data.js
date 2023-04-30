@@ -147,7 +147,28 @@ module.exports = function () {
             nombre: "Barra Elite 15Kg - 8 Rodajes",
             descripcion:"LA ELITE BARBELL representa el más alto nivel de ingeniería de precisión con una amplia gama de nuevas características.",
       }
-    ]
+    ],
+    calificaciones:[
+      {
+        id:1,
+        name: "Rodrigo Narique",
+        puntuacion: 9,
+        comentario:"estuvo muy bien",
+      },
+      {
+        id:2,
+        name: "Pedro Gonzales Sanchez",
+        puntuacion: 8,
+        comentario:"estuvo bien",
+      },
+
+      {
+        id:3,
+        name: "Juan Miranda Javor",
+        puntuacion: 6,
+        comentario:"Estuvo algo bien",
+	}
+    ],
     }
     return data
 }
