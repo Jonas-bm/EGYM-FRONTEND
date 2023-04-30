@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #e7d162, #424037);
+}
+.header-border {
+  border-top: 3px solid #242424;
+  border-bottom: 3px solid #242424;
+}
+/* centrar los encabezados*/
+.header-border {
+  text-align: center;
+  vertical-align: middle;
+}
+/* centrar el contenido de las celdas de las tablas*/
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+tr{
+ /* background-color: rgb(216, 255, 216);*/
+ background-color: #fff;
+  align-items: center;
+}
+th{
+  text-align: center;
+  font-weight: bold;
+}
+h1{
+  font-weight: bold;
+}
+button{
+  margin-top: auto;
+}
