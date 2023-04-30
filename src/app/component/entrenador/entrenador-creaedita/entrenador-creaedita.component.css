@@ -17,4 +17,9 @@
 mat-form-field{
   width: 55%;
 }
+body{
+  height:100vh;
+  background: linear-gradient(to bottom, #e7d162, #424037);
+  }
+
 

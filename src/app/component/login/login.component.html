@@ -1,7 +1,6 @@
 <div class="body">
   <div class="login">
     <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
-
     <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
       <img src="./assets/img/inicio.png" width="30%">
   <h1 style="color: white">E-Gym</h1>
@@ -18,7 +17,6 @@
     Ingresar
   </button>
       </form>
-
   </div>
 </div>
 

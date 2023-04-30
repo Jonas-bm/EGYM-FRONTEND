@@ -9,10 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AlumnoComponent implements OnInit {
   constructor(public route:ActivatedRoute)
   {
+    ////aquí modifiqueeeeeeeeeeeeeeeeee por silas moscas
 
   }
   ngOnInit():void
   {
-    
+
   }
 }

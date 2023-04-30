@@ -20,7 +20,6 @@ import{MatDatepickerModule} from '@angular/material/datepicker';
 import{MatNativeDateModule}from '@angular/material/core';
 import{MatButtonModule} from '@angular/material/button';
 import { NutricionistaCreaeditaComponent } from './component/nutricionista/nutricionista-creaedita/nutricionista-creaedita.component';
-import { MatSelectModule } from '@angular/material/select';
 import { AlumnoDialogoComponent } from './component/alumno/alumno-listar/alumno-dialogo/alumno-dialogo.component';
 //login
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -40,8 +39,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import{ProductCreaeditaComponent} from './component/product/product-creaedita/product-creaedita.component'
 import { NutricionistaDialogoComponent } from './component/nutricionista/nutricionista-listar/nutricionista-dialogo/nutricionista-dialogo.component';
-import { ProductDialogoComponent } from './component/product/product-listar/product-dialogo/product-dialogo.component'
-
+import { ProductDialogoComponent } from './component/product/product-listar/product-dialogo/product-dialogo.component';
+import { HomeComponent } from './component/home/home.component'
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -66,6 +66,7 @@ import { ProductDialogoComponent } from './component/product/product-listar/prod
     ProductListarComponent,
     NutricionistaDialogoComponent,
     ProductDialogoComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -88,14 +89,9 @@ import { ProductDialogoComponent } from './component/product/product-listar/prod
     //para delete
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatDialogModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

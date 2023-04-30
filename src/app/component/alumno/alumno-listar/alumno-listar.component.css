@@ -1,7 +1,6 @@
-
-body{
-height:100vh;
-  background-color:#62584b;
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #e7d162, #424037);
 }
 .header-border {
   border-top: 3px solid #242424;

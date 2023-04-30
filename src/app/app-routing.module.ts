@@ -9,6 +9,7 @@ import { EntrenadorComponent } from './component/entrenador/entrenador.component
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 import { ProductComponent } from './component/product/product.component';
 import { ProductCreaeditaComponent } from './component/product/product-creaedita/product-creaedita.component';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   {
@@ -49,7 +50,7 @@ const routes: Routes = [
         path: 'edicion/:id', component: ProductCreaeditaComponent
       }
     ]
-  }
+  },
 ];
 
 @NgModule({

@@ -16,23 +16,16 @@
 
 </head>
 
-
-
 <body>
-
-
-  <div class="container mt-4">
-
+  <div class="container" style="text-align:center;">
+    <div style="text-align: center;">
+      <h1>Registro de Productos</h1>
+    </div>
     <form [formGroup]="form" (submit)="aceptar()">
 
-      <h1 class="text-center">Registro de productos</h1>
-
       <mat-form-field class="example-full-width w-100">
-
         <mat-label>Código</mat-label>
-
         <input matInput placeholder="Código" formControlName="id" required>
-
       </mat-form-field>
 
       <br>
@@ -68,13 +61,9 @@
       <br>
 
       <div class="d-flex justify-content-center gap-4">
-
         <button  mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" >Aceptar</button>
-
         <button  mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/products">Cancelar</button>
-
       </div>
-
 
       <p>{{mensaje}}</p>
 
