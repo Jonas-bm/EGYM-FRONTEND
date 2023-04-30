@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
     if(usuario=="grupo4" && password=="grupo4")
     {
-      this.router.navigate(['alumnos'])
+      this.router.navigate(['home'])
       this.loginFalso();
     }
     else
