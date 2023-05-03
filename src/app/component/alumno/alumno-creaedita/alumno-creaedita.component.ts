@@ -103,7 +103,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
     }
   }
   imgresarTodosDatos():void{
-    this._snackvar.open("El usuario o contraseña ingresado son inválidos",'',{
+    this._snackvar.open("Ingrese todos los campos para agregar un nuevo alumno",'',{
       duration:5000,
       horizontalPosition:'center',
       verticalPosition:'bottom'
