@@ -4,6 +4,7 @@ import { Alumno } from 'src/app/model/alumno';
 import * as moment from 'moment'
 import { AlumnoService } from 'src/app/service/alumno.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-alumno-creaedita',
@@ -40,7 +41,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       talla:new FormControl()
     })
   }
-    constructor(private as:AlumnoService, private router:Router,private route:ActivatedRoute ){}
+    constructor(private as:AlumnoService, private router:Router,private route:ActivatedRoute, private _snackvar:MatSnackBar ){}
     aceptar():void{
       this.alumno.id=this.form.value['id'];
       this.alumno.nombre=this.form.value['nombre'];
@@ -53,7 +54,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       this.alumno.peso=this.form.value['peso'];
       this.alumno.talla=this.form.value['talla'];
 
-      if(this.form.value['nombre'].length>0  || this.form.value['apellidoPaterno'].length>0 || this.form.value['apellidoMaterno'].length>0 || this.form.value['dni'].length>0 || this.form.value['fechaNacimiento']!= null || this.form.value['talla'].length>0)
+      if(this.form.value['nombre']!=null  && this.form.value['apellidoPaterno']!=null && this.form.value['apellidoMaterno']!=null && this.form.value['dni']!=null && this.form.value['fechaNacimiento']!= null && this.form.value['talla']!=null)
       {
         if(this.edicion==true)
         {
@@ -76,7 +77,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       }
       else
       {
-        this.mensaje="Ingrese los datos del alumno!!";
+        this.imgresarTodosDatos();
       }
     }
 
@@ -100,5 +101,12 @@ export class AlumnoCreaeditaComponent implements OnInit {
         })
       })
     }
+  }
+  imgresarTodosDatos():void{
+    this._snackvar.open("El usuario o contraseña ingresado son inválidos",'',{
+      duration:5000,
+      horizontalPosition:'center',
+      verticalPosition:'bottom'
+    })
   }
 }
