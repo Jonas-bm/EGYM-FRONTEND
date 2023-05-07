@@ -48,9 +48,6 @@ import { CalificacionListarComponent } from './component/calificacion/calificaci
 import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
 import { CalificacionDialogoComponent } from './component/calificacion/calificacion-dialogo/calificacion-dialogo.component';
 
-
-
-
 @NgModule({
   declarations: [
     ProductCreaeditaComponent,
@@ -78,7 +75,6 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     CalificacionListarComponent,
     CalificacionCreaeditaComponent,
     CalificacionDialogoComponent,
-
   ],
   imports: [
     BrowserModule,

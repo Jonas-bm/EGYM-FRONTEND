@@ -1,6 +1,7 @@
 <mat-dialog-content>
   <p>¿Está seguro de eliminar?</p>
-  <button mat-raised-button color="primary" (click)="confirmar(true)">Si</button>
-  <button mat-raised-button color="accent" (click)="confirmar(false)">No</button>
+  <div class="d-flex justify-content-center gap-3">
+    <button mat-raised-button color="primary" (click)="confirmar(true)" mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}">Si</button>
+    <button mat-raised-button color="warn" (click)="confirmar(false)" mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}">No</button>
+  </div>
 </mat-dialog-content>
-

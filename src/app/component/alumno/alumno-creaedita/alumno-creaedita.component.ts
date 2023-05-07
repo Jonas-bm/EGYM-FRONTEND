@@ -53,7 +53,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
       this.alumno.peso=this.form.value['peso'];
       this.alumno.talla=this.form.value['talla'];
 
-      if(this.form.value['nombre'].length>0  || this.form.value['apellidoPaterno'].length>0 || this.form.value['apellidoMaterno'].length>0 || this.form.value['dni'].length>0 || this.form.value['fechaNacimiento']!= null || this.form.value['talla'].length>0)
+      if(this.form.value['nombre']!=null  && this.form.value['apellidoPaterno']!=null && this.form.value['apellidoMaterno']!=null && this.form.value['dni']!=null && this.form.value['fechaNacimiento']!= null && this.form.value['talla']!=null)
       {
         if(this.edicion==true)
         {
@@ -79,7 +79,6 @@ export class AlumnoCreaeditaComponent implements OnInit {
         this.mensaje="Ingrese los datos del alumno!!";
       }
     }
-
     init()
     {
       if(this.edicion)
@@ -96,7 +95,6 @@ export class AlumnoCreaeditaComponent implements OnInit {
           fechaNacimiento:new FormControl(data.fechaNacimiento),
           peso:new FormControl(data.peso),
           talla:new FormControl(data.talla)
-
         })
       })
     }

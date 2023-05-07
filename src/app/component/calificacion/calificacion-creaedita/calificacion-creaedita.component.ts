@@ -26,7 +26,6 @@ export class CalificacionCreaeditaComponent implements OnInit {
     });
   }
   constructor(private as:CalificacionService, private router:Router){ }
-
   aceptar(): void {
     this.calificacion.id = this.form.value['id'];
     this.calificacion.name = this.form.value['name'];

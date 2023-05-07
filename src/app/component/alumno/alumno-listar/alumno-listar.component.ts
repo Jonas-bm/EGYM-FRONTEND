@@ -17,7 +17,7 @@ export class AlumnoListarComponent implements OnInit {
   constructor(private as: AlumnoService, private dialog:MatDialog) {}
   ngOnInit(): void {
     this.as.list().subscribe((data) => {
-      this.dataSource = new MatTableDataSource(data);
+    this.dataSource = new MatTableDataSource(data);
     });
 
     this.as.getList().subscribe(data=>{
