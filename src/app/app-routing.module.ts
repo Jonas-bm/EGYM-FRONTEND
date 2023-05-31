@@ -61,14 +61,12 @@ const routes: Routes = [
  {
   path: 'calificaciones',component: CalificacionComponent,children: [
      {
-      path: 'new',
-      component: CalificacionCreaeditaComponent,
+      path: 'new', component: CalificacionCreaeditaComponent,
      },
      {
-      path: 'edicion/:id',
-       component: CalificacionCreaeditaComponent,
+      path: 'edicion/:id', component: CalificacionCreaeditaComponent,
     },
-      ],
+      ]
     },
 ]
 @NgModule({

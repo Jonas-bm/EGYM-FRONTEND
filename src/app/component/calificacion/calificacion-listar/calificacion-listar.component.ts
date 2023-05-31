@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Calificacion } from 'src/app/model/calificacion';
 import { CalificacionService } from 'src/app/service/calificacion.service';
-import { CalificacionDialogoComponent } from '../calificacion-dialogo/calificacion-dialogo.component';
+import { CalificacionDialogoComponent } from './calificacion-dialogo/calificacion-dialogo.component';
 
 
 @Component({

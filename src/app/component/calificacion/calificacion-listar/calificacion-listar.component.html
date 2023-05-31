@@ -9,7 +9,7 @@
 <body>
   <br>
     <div class="container">
-      <h1 style="text-align: center; color: black;" class="color" >
+      <h1 style="text-align: center; color:white;" class="color" >
         Listar Calificacion
       </h1>
       <div>
@@ -51,7 +51,6 @@
         <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  [routerLink]="['edicion', element.id]"><i class="bi bi-pencil fs-4" ></i></button>
       </td>
     </ng-container>
-
     //button eliminar
     <ng-container matColumnDef="acciones2">
       <th mat-header-cell *matHeaderCellDef class="header-border">Eliminar</th>
@@ -68,7 +67,7 @@
   </table>
   <br>
   <div style="text-align: center;">
-    <button mat-button color="warn"routerLink="/calificaciones/edicion/id">Agregar</button>
+    <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}"  routerLink="/calificaciones/new">Agregar</button>
   </div>
 </div>
 <br>
