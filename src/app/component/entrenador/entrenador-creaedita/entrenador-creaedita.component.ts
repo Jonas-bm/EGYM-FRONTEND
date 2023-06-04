@@ -4,6 +4,7 @@ import { Entrenador } from 'src/app/model/entrenador';
 import * as moment from 'moment';
 import { EntrenadorService } from 'src/app/service/entrenador.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-entrenador-creaedita',
@@ -43,7 +44,7 @@ export class EntrenadorCreaeditaComponent implements OnInit {
   constructor(
     private aS: EntrenadorService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute, private _snackvar:MatSnackBar
   ) {}
   aceptar(): void {
     this.entrenador.id = this.form.value['id'];
@@ -59,8 +60,11 @@ export class EntrenadorCreaeditaComponent implements OnInit {
     this.entrenador.estado = this.form.value['estado'];
 
     if (
-      this.form.value['nombre'].length > 0 &&
-      this.form.value['correo'].length > 0
+      this.form.value['nombre']!=null &&
+      this.form.value['correo']!=null && this.form.value['apellidoPaterno']!=null &&
+      this.form.value['apellidoMaterno']!=null && this.form.value['dni']!=null && this.form.value['telefono']!=null &&
+      this.form.value['habilidades']!=null && this.form.value['experiencia']!=null &&
+      this.form.value['educacion']!=null && this.form.value['estado']!=null
     ) {
       if (this.edicion) {
         //actualize
@@ -79,7 +83,7 @@ export class EntrenadorCreaeditaComponent implements OnInit {
 
       this.router.navigate(['entrenadores']);
     } else {
-      this.mensaje = 'Ingrese los datos del Entrenador';
+      this.ingresarTodosDatos();
     }
   }
 
@@ -101,5 +105,12 @@ export class EntrenadorCreaeditaComponent implements OnInit {
         });
       });
     }
+  }
+  ingresarTodosDatos():void{
+    this._snackvar.open("Debe ingresar todos los campos para agregar un nuevo entrenador",'',{
+      duration:5000,
+      horizontalPosition:'center',
+      verticalPosition:'bottom'
+    })
   }
 }

@@ -11,11 +11,10 @@
 <body>
   <br>
   <div class="container">
-    <div class="container">
-      <h1 style="text-align: center; color: white;" class="color" >
-        Lista de Nutricionistas
-      </h1>
-    </div>
+    <h1 style="text-align: center; color: white;" class="color" >
+      Lista de Nutricionistas
+    </h1>
+  <div class="container" style="text-align:left;">
 
     <mat-form-field>
       <input matInput (keyup)="filtrar($event)" placeholder="Buscar" autocomplete="off">
@@ -90,13 +89,14 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <br>
+    <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
+        <br>
     <div style="text-align: center;">
       <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}"  routerLink="/nutricionista/new">Agregar</button>
     </div>
   </div>
 
-
+</div>
 </body>
 
 </html>

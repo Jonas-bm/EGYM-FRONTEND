@@ -14,22 +14,22 @@
   <form [formGroup] ="form"(submit)="aceptar()">
     <mat-form-field class="example-full-width">
       <mat-label>Codigo</mat-label>
-      <input matInput placeholder="id"formControlName="id">
+      <input matInput placeholder="id"formControlName="id" required>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
       <mat-label>Nombre</mat-label>
-      <input matInput placeholder="nombre"formControlName="name">
+      <input matInput placeholder="nombre"formControlName="name" required>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
       <mat-label>Puntuacion</mat-label>
-      <input matInput placeholder="puntuacion"formControlName="puntuacion">
+      <input matInput placeholder="puntuacion"formControlName="puntuacion" required>
     </mat-form-field>
      <br>
     <mat-form-field class="example-full-width">
       <mat-label>Comentario</mat-label>
-      <input matInput placeholder="comentario"formControlName="comentario">
+      <input matInput placeholder="comentario"formControlName="comentario" required>
     </mat-form-field>
     <br>
     <div class="d-flex justify-content-center gap-4">

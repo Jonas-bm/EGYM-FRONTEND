@@ -64,6 +64,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
               this.as.setList(data)
             })
           })
+
         }
         else
         {
@@ -103,7 +104,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
     }
   }
   imgresarTodosDatos():void{
-    this._snackvar.open("Ingrese todos los campos para agregar un nuevo alumno",'',{
+    this._snackvar.open("Debe ingresar todos los campos para agregar un nuevo Alumno",'',{
       duration:5000,
       horizontalPosition:'center',
       verticalPosition:'bottom'

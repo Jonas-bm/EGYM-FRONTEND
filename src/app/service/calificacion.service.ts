@@ -23,7 +23,7 @@ private confirmarEliminacion = new Subject<Boolean>()
    return this.http.post(this.url,calificacion)
   }
   set_list(ListaNueva: Calificacion[]){
-    this.listaCambio.asObservable();
+    this.listaCambio.next(ListaNueva);
   }
 
   get_list(){

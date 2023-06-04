@@ -8,11 +8,11 @@
 </head>
 <body>
   <br>
-
   <div class="container" style="text-align: center;">
     <div style="text-align: center;">
     <h1>Registro de Entrenadores</h1>
     </div>
+    <br>
     <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
@@ -65,9 +65,12 @@
         <input matInput placeholder="Educación" formControlName="educacion" required>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field appearance="fill">
         <mat-label>Estado</mat-label>
-        <input matInput placeholder="Estado" formControlName="estado" required>
+        <mat-select formControlName="estado" required="">
+          <mat-option value="Disponible">Disponible</mat-option>
+          <mat-option value="Ocupado">Ocupado</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <div style="text-align: center"></div>

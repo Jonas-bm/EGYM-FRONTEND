@@ -4,6 +4,7 @@ import { ClassNutricionista } from 'src/app/model/nutricionista';
 import *as moment from 'moment';
 import { NutricionistaService } from 'src/app/service/nutricionista.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-nutricionista-creaedita',
@@ -39,7 +40,7 @@ export class NutricionistaCreaeditaComponent implements OnInit {
       Estado: new FormControl(),
     })
   }
-  constructor(private nS:NutricionistaService, private router:Router,private route:ActivatedRoute){ }
+  constructor(private nS:NutricionistaService, private router:Router,private route:ActivatedRoute, private _snackvar:MatSnackBar){ }
 
   aceptar():void{
     this.nutri.id=this.form.value['id'];
@@ -50,13 +51,13 @@ export class NutricionistaCreaeditaComponent implements OnInit {
     this.nutri.sexo=this.form.value['sexo'];
     this.nutri.Descripcion=this.form.value['Descripcion'];
     this.nutri.Estado=this.form.value['Estado'];
-    if(this.form.value['nombreNutricionista'].length>0 &&
-    this.form.value['apellidosNutricionista'].length>0 &&
-    this.form.value['dni'].length>0 &&
-    this.form.value['telefono'].length>0 &&
-    this.form.value['sexo'].length>0 &&
-    this.form.value['Descripcion'].length>0 &&
-    this.form.value['Estado'].length>0){
+    if(this.form.value['nombreNutricionista']!=null &&
+    this.form.value['apellidosNutricionista']!=null &&
+    this.form.value['dni']!=null &&
+    this.form.value['telefono']!=null &&
+    this.form.value['sexo']!=null &&
+    this.form.value['Descripcion']!=null &&
+    this.form.value['Estado']!=null){
       if(this.edicion){
         //editar
         this.nS.update(this.nutri).subscribe(()=>{
@@ -74,7 +75,7 @@ export class NutricionistaCreaeditaComponent implements OnInit {
       }
       this.router.navigate(['nutricionista'])
     }else{
-      this.mensaje="Ingrese los datos del nutricionista!!";
+      this.ingresarTodosDatos();
 
     }
   }
@@ -94,5 +95,12 @@ export class NutricionistaCreaeditaComponent implements OnInit {
         })
       })
     }
+  }
+  ingresarTodosDatos():void{
+    this._snackvar.open("Debe ingresar todos los campos para agregar un nuevo Nutricionista",'',{
+      duration:5000,
+      horizontalPosition:'center',
+      verticalPosition:'bottom'
+    })
   }
 }

@@ -47,8 +47,10 @@ import { CalificacionComponent } from './component/calificacion/calificacion.com
 import { CalificacionListarComponent } from './component/calificacion/calificacion-listar/calificacion-listar.component';
 import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
 import { CalificacionDialogoComponent } from './component/calificacion/calificacion-listar/calificacion-dialogo/calificacion-dialogo.component';
+import { SidenavComponent } from './component/sidenav/sidenav.component';
 
-
+import { MatDividerModule } from '@angular/material/divider';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -78,6 +80,7 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     CalificacionListarComponent,
     CalificacionCreaeditaComponent,
     CalificacionDialogoComponent,
+    SidenavComponent,
 
   ],
   imports: [
@@ -109,8 +112,9 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     MatIconModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatSelectModule
-
+    MatSelectModule,
+    MatDividerModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

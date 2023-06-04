@@ -1,24 +1,29 @@
 <div class="body">
-  <div class="login">
-    <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
-    <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
-      <img src="./assets/img/inicio.png" width="30%">
-  <h1 style="color: white">E-Gym</h1>
-  <mat-form-field class="ancho" appearance="fill">
-    <mat-label>Usuario</mat-label>
-    <input matInput type="text" autocomplete="off" formControlName="usuario">
-  </mat-form-field>
-  <mat-form-field class="ancho" appearance="fill">
-    <mat-label>Contraseña</mat-label>
-    <input type="password" matInput autocomplete="off" formControlName="password">
-  </mat-form-field>
-  <br>
-  <button type="submit" class="ancho button" mat-raised-button [disabled]="form.invalid" [ngStyle]="{ 'background-color': form.valid ? '#ffd700' : '', 'color': form.valid ? '#242424' : '' }">
-    Ingresar
-  </button>
-      </form>
-  </div>
+  <div>
+  <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()" style="text-align: center;">
+    <img src="./assets/img/inicio.png" width="30%">
+    <h1 style="color: white">E-Gym</h1>
+    <mat-form-field class="ancho" appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <input matInput type="text" autocomplete="off" formControlName="usuario">
+    </mat-form-field>
+    <mat-form-field class="ancho" appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput autocomplete="off" formControlName="password">
+    </mat-form-field>
+    <br>
+    <button type="submit" class="ancho button" mat-raised-button [disabled]="form.invalid" [ngStyle]="{ 'background-color': form.valid ? '#efef39' : '', 'color': form.valid ? '#242424' : '' }">
+      Ingresar
+    </button>
+    <br>
+    <br>
+      <h4 style="color: white; font-family: Arial, Helvetica, sans-serif;">¿No tienes cuenta?</h4>
+    <a class="btn bg-amarillo text-light fs-9 text-uppercase p-2 fw-bold mt-4 width-link" href="#">Regístrate</a>
+  </form>
 </div>
+</div>
+
+
 
 
 

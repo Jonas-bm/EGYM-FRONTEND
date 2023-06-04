@@ -39,7 +39,7 @@ export class CalificacionCreaeditaComponent implements OnInit {
     this.calificacion.name = this.form.value['name'];
     this.calificacion.puntuacion = this.form.value['puntuacion'];
     this.calificacion.comentario = this.form.value['comentario'];
-    if(this.form.value['name'].length!=null && this.form.value['puntuacion'].length!=null && this.form.value['comentario'].length!=null)
+    if(this.form.value['name']!=null && this.form.value['puntuacion']!=null && this.form.value['comentario']!=null)
     {
       if(this.edicion==true)
       {
@@ -75,7 +75,7 @@ export class CalificacionCreaeditaComponent implements OnInit {
   }
   }
   ingresarTodosDatos():void{
-    this._snackvar.open("Ingrese todos los campos para agregar una nueva calificacion",'',{
+    this._snackvar.open("Debe ingresar todos los campos para agregar una nueva Calificacion",'',{
       duration:5000,
       horizontalPosition:'center',
       verticalPosition:'bottom'

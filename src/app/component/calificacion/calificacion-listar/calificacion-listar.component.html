@@ -65,7 +65,8 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <br>
+  <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
+        <br>
   <div style="text-align: center;">
     <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}"  routerLink="/calificaciones/new">Agregar</button>
   </div>

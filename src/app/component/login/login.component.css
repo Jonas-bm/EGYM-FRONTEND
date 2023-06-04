@@ -1,3 +1,18 @@
+
+.bg-amarillo {
+  background-color: #93874c;
+}
+
+.bg-amarillo:hover {
+  background-color: #bfbf00; /* Puedes mantener el mismo color o cambiarlo si deseas */
+}
+
+.container{
+   height: 100vh;
+    background: linear-gradient(to bottom, #e7d162, #424037);
+
+}
+
 .body
 {
   display:flex;
@@ -19,7 +34,11 @@
 .button{
   height: 50px;
 }
-
-.spinner{
-  margin: 0 auto;
+.btnregistrate
+{
+  align-items:normal;
+}
+.btn {
+  width: 40%;
+  height: 10%;
 }

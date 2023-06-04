@@ -48,7 +48,31 @@ module.exports = function () {
                 fechaNacimiento:"2002-12-12",
                 peso:75,
                 talla:185
-            }
+            },
+            {
+              id:5,
+              nombre: "Jazmin María",
+              apellidoPaterno: "Pinedo",
+              apellidoMaterno: "Gonzales",
+              dni:"78945623",
+              direccion: "Av. Las Camelias Mz. d Lt. 6 - Eucaliptos - Surco",
+              celular:963258741,
+              fechaNacimiento:"2002-12-11",
+              peso:75,
+              talla:170
+          },
+          {
+            id:6,
+            nombre: "José Andrés",
+            apellidoPaterno: "Solorzano",
+            apellidoMaterno: "Benavides",
+            dni:"78945655",
+            direccion: "Av. Las Camelias Mz. d Lt. 6 - Eucaliptos - Salamanca",
+            celular:963369963,
+            fechaNacimiento:"2010-12-12",
+            peso:60,
+            talla:160
+        }
         ],
         entrenadores: [
             {
@@ -77,7 +101,61 @@ module.exports = function () {
               experiencia: "5 años",
               educacion: "Certificado en EUROINNOVA",
               estado: "Activo",
-            }
+            },
+            {
+              id:3,
+              nombre: "Andrés",
+              apellidoPaterno: "Morilla",
+              apellidoMaterno: "Pernis",
+              dni: "78945612",
+              telefono: "96857412",
+              correo: "morilla08@gmail.com",
+              habilidades: "entrenamiento con pesas",
+              experiencia: "9 años",
+              educacion: "Certificado en EUROINNOVA",
+              estado: "Activo",
+
+          },
+          {
+            id:4,
+            nombre: "Nando",
+            apellidoPaterno: "Del Río",
+            apellidoMaterno: "Amens",
+            dni: "77787974",
+            telefono: "999654458",
+            correo: "rios@gmail.com",
+            habilidades: "Aerobic",
+            experiencia: "3 años",
+            educacion: "Certificado en EUROINNOVA",
+            estado: "Activo",
+          },
+          {
+            id:5,
+            nombre: "Enernes",
+            apellidoPaterno: "Cerrón",
+            apellidoMaterno: "Peves",
+            dni: "77777756",
+            telefono: "981549696",
+            correo: "cerron@gmail.com",
+            habilidades: "entrenamiento con pesas",
+            experiencia: "10 años",
+            educacion: "Certificado en EUROINNOVA",
+            estado: "Activo",
+
+        },
+        {
+          id:6,
+          nombre: "Miguel",
+          apellidoPaterno: "Coronos",
+          apellidoMaterno: "Villavicencio",
+          dni: "78969658",
+          telefono: "999955586",
+          correo: "coronos@gmail.com",
+          habilidades: "Entrenamiento con pesas",
+          experiencia: "9 años",
+          educacion: "Certificado en EUROINNOVA",
+          estado: "Activo",
+        }
 
         ],
         Nutricionista:[
@@ -121,6 +199,26 @@ module.exports = function () {
             Descripcion:"Novata",
             Estado:"Disponible",
           },
+          {
+            id:5,
+            nombreNutricionista:"Andrea Ines",
+            apellidosNutricionista:"San Martín Flores",
+            dni:"78945865",
+            telefono:"996655448",
+            sexo:"Femenino",
+            Descripcion:"Novata",
+            Estado:"Ocupado",
+          },
+          {
+            id:6,
+            nombreNutricionista:"Maribel",
+            apellidosNutricionista:"Gonzales Prada",
+            dni:"78988855",
+            telefono:"963258741",
+            sexo:"Femenino",
+            Descripcion:"Experta",
+            Estado:"Disponible",
+          },
         ],
         producto: [
           {
@@ -146,28 +244,59 @@ module.exports = function () {
             precio: 1069,
             nombre: "Barra Elite 15Kg - 8 Rodajes",
             descripcion:"LA ELITE BARBELL representa el más alto nivel de ingeniería de precisión con una amplia gama de nuevas características.",
-      }
+          },
+          {
+            id:5,
+            precio: 108,
+            nombre: "Rueda Abdominal Bracked Whell",
+            descripcion:"Incluye dos Discos compactos. con 1.5 cm entre cada disco.",
+          },
+          {
+            id:6,
+            precio: 1068,
+            nombre: "Barra Elite 25Kg - 8 Rodajes",
+            descripcion:"LA ELITE BARBELL representa el más alto nivel ",
+          }
     ],
     calificaciones:[
       {
         id:1,
-        name: "Rodrigo Narique",
+        name: "Luis Cordova Lazo",
         puntuacion: 9,
         comentario:"estuvo muy bien",
       },
       {
         id:2,
-        name: "Pedro Gonzales Sanchez",
+        name: "Carlos Cueva Flores",
         puntuacion: 8,
         comentario:"estuvo bien",
       },
 
       {
         id:3,
-        name: "Juan Miranda Javor",
+        name: "Carlos Cueva Flores",
         puntuacion: 6,
         comentario:"Estuvo algo bien",
-	}
+	    },
+      {
+        id:4,
+        name: "Miguel Coronos Villavicencio",
+        puntuacion: 9,
+        comentario:"estuvo muy bien",
+      },
+      {
+        id:5,
+        name: "Miguel Coronos Villavicencio",
+        puntuacion: 8,
+        comentario:"estuvo bien",
+      },
+
+      {
+        id:6,
+        name: "Luis Cordova Lazo",
+        puntuacion: 6,
+        comentario:"Estuvo algo bien",
+	    }
     ],
     }
     return data
