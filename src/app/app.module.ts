@@ -29,7 +29,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 //para delete
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './component/login/login.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
 
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-listar/entrenador-dialogo/entrenador-dialogo.component'
@@ -46,7 +45,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { CalificacionComponent } from './component/calificacion/calificacion.component';
 import { CalificacionListarComponent } from './component/calificacion/calificacion-listar/calificacion-listar.component';
 import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
-import { CalificacionDialogoComponent } from './component/calificacion/calificacion-dialogo/calificacion-dialogo.component';
+import { CalificacionDialogoComponent } from './component/calificacion/calificacion-listar/calificacion-dialogo/calificacion-dialogo.component';
+import { SidenavComponent } from './component/sidenav/sidenav.component';
+
+import { MatDividerModule } from '@angular/material/divider';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -73,6 +77,8 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     CalificacionComponent,
     CalificacionListarComponent,
     CalificacionCreaeditaComponent,
+    CalificacionDialogoComponent,
+    SidenavComponent,
 
   ],
   imports: [
@@ -104,8 +110,9 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     MatIconModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatSelectModule
-
+    MatSelectModule,
+    MatDividerModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

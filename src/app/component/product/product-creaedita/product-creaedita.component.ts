@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-creaedita',
@@ -35,19 +36,18 @@ export class ProductCreaeditaComponent implements OnInit {
     })
     }
 
-    constructor (private aS: ProductService, private router:Router, private route: ActivatedRoute) {}
+    constructor (private aS: ProductService, private router:Router, private route: ActivatedRoute, private _snackvar:MatSnackBar) {}
 
     aceptar(): void {
       this.product.id = this.form.value['id'];
       this.product.nombre = this.form.value['nombre'];
       this.product.precio = this.form.value['precio'];
       this.product.descripcion = this.form.value['descripcion'];
-      if (this.form.value['nombre'].length || 0 && this.form.value['descripcion'].length > 0 ||
-          this.form.value['precio'].length > 0) {
+      if (this.form.value['nombre']!=null  && this.form.value['descripcion']!=null &&
+          this.form.value['precio']!=null) {
 
             if (this.edicion) {
               this.aS.update(this.product).subscribe(() => {
-
                 this.aS.list().subscribe(data => {
                   this.aS.setList(data)
                   })
@@ -68,7 +68,7 @@ export class ProductCreaeditaComponent implements OnInit {
       }
       else {
 
-        this.mensaje = "Ingrese los datos del producto!!";
+        this.ingresarTodosDatos();
 
       }
    }
@@ -89,9 +89,13 @@ export class ProductCreaeditaComponent implements OnInit {
       })
 
     }
-
-
    }
-
+   ingresarTodosDatos():void{
+    this._snackvar.open("Debe ingresar todos los campos para agregar un nuevo Producto",'',{
+      duration:5000,
+      horizontalPosition:'center',
+      verticalPosition:'bottom'
+    })
+  }
   }
 

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog'
 import { ProductDialogoComponent } from './product-dialogo/product-dialogo.component';
+import {MatPaginator} from '@angular/material/paginator'
 
 @Component({
   selector: 'app-product-listar',
@@ -14,7 +15,7 @@ export class ProductListarComponent implements OnInit {
   shouldRun = false; /////////NAV/////////
   opened = false;
   events = ['close', 'open'];
-
+  totalItems: number = 0;
   lista: Product[] = []
   dataSource: MatTableDataSource<Product> = new MatTableDataSource();
   idMayor: number = 0
@@ -22,16 +23,19 @@ export class ProductListarComponent implements OnInit {
 
   constructor (private pS: ProductService, private dialog: MatDialog ) {
 
-  }
+  }  @ViewChild(MatPaginator) paginator!:MatPaginator;
+
 
   ngOnInit(): void {
 
     this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     })
 
     this.pS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     })
 
     this.pS.getConfirmDelete().subscribe(data => {

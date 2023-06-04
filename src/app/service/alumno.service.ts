@@ -35,7 +35,7 @@ export class AlumnoService {
   }
   update(a:Alumno)
   {
-    return this.http.put(this.url+"/"+a.id,a);
+    return this.http.put(this.url,a);
   }
 
   //delete

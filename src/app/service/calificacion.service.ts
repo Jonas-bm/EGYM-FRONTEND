@@ -23,7 +23,7 @@ private confirmarEliminacion = new Subject<Boolean>()
    return this.http.post(this.url,calificacion)
   }
   set_list(ListaNueva: Calificacion[]){
-    this.listaCambio.asObservable();
+    this.listaCambio.next(ListaNueva);
   }
 
   get_list(){
@@ -33,7 +33,7 @@ private confirmarEliminacion = new Subject<Boolean>()
     return this.http.get<Calificacion>(`${this.url}/${id}`);
   }
   update(cali: Calificacion) {
-    return this.http.put(this.url + "/" + cali.id, cali);
+    return this.http.put(this.url, cali);
 }
 //http- HttpClientModule: get-post-put-delete, hacer un cuadro comparativo
 

@@ -9,7 +9,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class ProductService {
-  private url = `${base_url}/producto`
+  private url = `${base_url}/productos`
   private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio = new Subject<Product[]>();
   constructor(private http:HttpClient) { }
@@ -34,7 +34,7 @@ export class ProductService {
   }
 
   update(a: Product){
-    return this.http.put(this.url + "/" + a.id, a)
+    return this.http.put(this.url,a)
   }
 
   delete(id: number) {

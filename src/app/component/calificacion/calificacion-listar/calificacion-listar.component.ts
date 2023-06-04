@@ -1,10 +1,10 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Calificacion } from 'src/app/model/calificacion';
 import { CalificacionService } from 'src/app/service/calificacion.service';
-import { CalificacionDialogoComponent } from '../calificacion-dialogo/calificacion-dialogo.component';
-
+import { CalificacionDialogoComponent } from './calificacion-dialogo/calificacion-dialogo.component';
+import {MatPaginator} from '@angular/material/paginator'
 
 @Component({
   selector: 'app-calificacion-listar',
@@ -14,17 +14,20 @@ import { CalificacionDialogoComponent } from '../calificacion-dialogo/calificaci
 export class CalificacionListarComponent implements OnInit{
   dataSource: MatTableDataSource<Calificacion> = new MatTableDataSource();
   idMayor: number= 0
+  totalItems: number = 0;
   displayedColumns:String[]=['id','name','puntuacion','comentario','acciones1','acciones2']
   constructor(private as:CalificacionService, private dialog: MatDialog){ }
-
+  @ViewChild(MatPaginator) paginator!:MatPaginator;
 
   ngOnInit():  void {
     this.as.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     });
 
     this.as.get_list().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     });
     this.as.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;

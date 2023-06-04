@@ -5,6 +5,6 @@ export class ClassNutricionista{
   dni:string=""
   telefono:string=""
   sexo:string=""
-  Descripcion:string=""
-  Estado:string=""
+  descripcion:string=""
+  estado:string=""
 }
