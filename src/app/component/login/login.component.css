@@ -1,44 +1,7 @@
 
 .bg-amarillo {
-  background-color: #93874c;
+  background-color: #aaaa29;
 }
-
 .bg-amarillo:hover {
-  background-color: #bfbf00; /* Puedes mantener el mismo color o cambiarlo si deseas */
-}
-
-.container{
-   height: 100vh;
-    background: linear-gradient(to bottom, #e7d162, #424037);
-
-}
-
-.body
-{
-  display:flex;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
-  background: linear-gradient(to bottom, #e7d162, #424037);
-}
-.login
-{
-  width: 100%;
-  max-width: 330px;
-  text-align: center;
-}
-.ancho
-{
-  width: 80%;
-}
-.button{
-  height: 50px;
-}
-.btnregistrate
-{
-  align-items:normal;
-}
-.btn {
-  width: 40%;
-  height: 10%;
+  background-color: #cccc00; /* Puedes mantener el mismo color o cambiarlo si deseas */
 }

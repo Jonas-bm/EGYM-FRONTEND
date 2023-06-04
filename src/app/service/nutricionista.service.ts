@@ -9,7 +9,7 @@ const base_url=environment.base
   providedIn: 'root'
 })
 export class NutricionistaService {
-  private url=`${base_url}/Nutricionista`
+  private url=`${base_url}/nutricionistas`;
   private listaCambio=new Subject<ClassNutricionista[]>();
   //para el eliminar
   private confirmaEliminar=new Subject<Boolean>();
@@ -34,7 +34,7 @@ export class NutricionistaService {
   }
   //modificar
   update(n:ClassNutricionista){
-    return this.http.put(this.url+"/"+n.id,n);
+    return this.http.put(this.url,n);
   }
   //delete
   delete(id:number){

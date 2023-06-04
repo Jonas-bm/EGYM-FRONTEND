@@ -18,7 +18,7 @@ export class NutricionistaListarComponent implements OnInit {
   totalItems: number = 0;
   //listar
   dataSource: MatTableDataSource<ClassNutricionista> = new MatTableDataSource();
-  displayedColumns: string[] = ["id", "Nombre", "Apellidos", "DNI", "Telefono", "Sexo", "Descripcion", "Disponibilidad", "Accion01","Accion02"];
+  displayedColumns: string[] = ["codigo", "nombre", "apellidos", "dni", "telefono", "sexo", "descripcion", "disponibilidad", "accion01","accion02"];
 
   constructor(private aS: NutricionistaService, private dialoN:MatDialog) {
   }

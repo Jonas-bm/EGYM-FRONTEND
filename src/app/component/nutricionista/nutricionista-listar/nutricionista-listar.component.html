@@ -26,57 +26,57 @@
             The actual rendered columns are set as a property on the row definition" -->
 
       <!-- Position Column -->
-      <ng-container matColumnDef="id">
+      <ng-container matColumnDef="codigo">
 
         <th mat-header-cell *matHeaderCellDef class="header-border"> No. </th>
         <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="Nombre">
+      <ng-container matColumnDef="nombre">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Nombre </th>
         <td mat-cell *matCellDef="let element"> {{element.nombreNutricionista}} </td>
       </ng-container>
 
       <!-- Weight Column -->
-      <ng-container matColumnDef="Apellidos">
+      <ng-container matColumnDef="apellidos">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Apellidos </th>
         <td mat-cell *matCellDef="let element"> {{element.apellidosNutricionista}} </td>
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="DNI">
+      <ng-container matColumnDef="dni">
         <th mat-header-cell *matHeaderCellDef class="header-border"> DNI </th>
         <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Telefono">
+      <ng-container matColumnDef="telefono">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Telefono </th>
         <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
       </ng-container>
-      <ng-container matColumnDef="Sexo">
+      <ng-container matColumnDef="sexo">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Sexo </th>
         <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Descripcion">
+      <ng-container matColumnDef="descripcion">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Descripcion </th>
-        <td mat-cell *matCellDef="let element"> {{element.Descripcion}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Disponibilidad">
+      <ng-container matColumnDef="disponibilidad">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Disponibilidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.Estado}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Accion01">
+      <ng-container matColumnDef="accion01">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Editar </th>
         <td mat-cell *matCellDef="let element">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  [routerLink]="['edicion', element.id]"><i class="bi bi-pencil fs-4" ></i></button>
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="Accion02">
+      <ng-container matColumnDef="accion02">
         <th mat-header-cell *matHeaderCellDef class="header-border"> Eliminar </th>
         <td mat-cell *matCellDef="let element">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" (click)="confirm(element.id)">

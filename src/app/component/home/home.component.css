@@ -171,13 +171,13 @@ img {
   display: flex;
   justify-content:left;
   align-items: center;
-  transform: translate(23%, -20%);
+
 }
-.titulo {/* Título sobre nosotros y testimonios */
+.titulo {/* Título sobre nosotros y testimonios, además el espacio entre secciones */
   text-align: center; /* Centra el texto horizontalmente */
-  margin-top: 200px; /* Ajusta el margen superior */
+  margin-top: 100px; /* Ajusta el margen superior */
   /* Ajusta otras propiedades de posición según sea necesario */
-  transform: translate(23%, -300%);
+
 }
 .flex-container {
   justify-content: center; /* Centra el contenido horizontalmente */
@@ -188,14 +188,6 @@ img {
 form{/*contenido de contacto*/
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
-  transform: translate(52%, 20%);
-}
-.tituloContacto{/*contacto*/
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  transform: translate(95%, 20%);
-  font-size: 40px; /* Tamaño de fuente deseado */
-  font-weight: bold; /* Negrita */
 
 }
 
@@ -219,8 +211,8 @@ form{/*contenido de contacto*/
 .translate-button {
   transform: translate(295%, -5%);
 }
-.navbar-brand{
-  transform: translate(40%, 200%);
+.navbar-brand{ /* AJUSTA EL NOMBRE E-GYM*/
+  transform: translate(-90%, 100%);
   font-size: 9000px;
 }
 .navbar-brand h1 {

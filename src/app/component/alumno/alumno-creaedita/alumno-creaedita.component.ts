@@ -81,7 +81,6 @@ export class AlumnoCreaeditaComponent implements OnInit {
         this.imgresarTodosDatos();
       }
     }
-
     init()
     {
       if(this.edicion)
@@ -98,7 +97,6 @@ export class AlumnoCreaeditaComponent implements OnInit {
           fechaNacimiento:new FormControl(data.fechaNacimiento),
           peso:new FormControl(data.peso),
           talla:new FormControl(data.talla)
-
         })
       })
     }

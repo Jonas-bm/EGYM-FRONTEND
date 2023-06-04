@@ -36,8 +36,8 @@ export class NutricionistaCreaeditaComponent implements OnInit {
       dni: new FormControl(),
       telefono: new FormControl(),
       sexo: new FormControl(),
-      Descripcion: new FormControl(),
-      Estado: new FormControl(),
+      descripcion: new FormControl(),
+      estado: new FormControl(),
     })
   }
   constructor(private nS:NutricionistaService, private router:Router,private route:ActivatedRoute, private _snackvar:MatSnackBar){ }
@@ -49,15 +49,16 @@ export class NutricionistaCreaeditaComponent implements OnInit {
     this.nutri.dni=this.form.value['dni'];
     this.nutri.telefono=this.form.value['telefono'];
     this.nutri.sexo=this.form.value['sexo'];
-    this.nutri.Descripcion=this.form.value['Descripcion'];
-    this.nutri.Estado=this.form.value['Estado'];
+    this.nutri.descripcion=this.form.value['descripcion'];
+    this.nutri.estado=this.form.value['estado'];
     if(this.form.value['nombreNutricionista']!=null &&
     this.form.value['apellidosNutricionista']!=null &&
     this.form.value['dni']!=null &&
     this.form.value['telefono']!=null &&
     this.form.value['sexo']!=null &&
-    this.form.value['Descripcion']!=null &&
-    this.form.value['Estado']!=null){
+    this.form.value['descripcion']!=null &&
+    this.form.value['estado']!=null){
+
       if(this.edicion){
         //editar
         this.nS.update(this.nutri).subscribe(()=>{
@@ -90,11 +91,12 @@ export class NutricionistaCreaeditaComponent implements OnInit {
           dni:new FormControl(data.dni),
           telefono:new FormControl(data.telefono),
           sexo:new FormControl(data.sexo),
-          Descripcion:new FormControl(data.Descripcion),
-          Estado:new FormControl(data.Estado),
+          descripcion:new FormControl(data.descripcion),
+          estado:new FormControl(data.estado),
         })
       })
     }
+
   }
   ingresarTodosDatos():void{
     this._snackvar.open("Debe ingresar todos los campos para agregar un nuevo Nutricionista",'',{

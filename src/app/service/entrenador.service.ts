@@ -36,7 +36,7 @@ export class EntrenadorService {
     return this.http.get<Entrenador>(`${this.url}/${id}`);
   }
   update(a: Entrenador) {
-    return this.http.put(this.url + "/" + a.id, a);
+    return this.http.put(this.url,a);
   }
   delete(id: number){
     return this.http.delete(`${this.url}/${id}`)

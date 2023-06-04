@@ -152,7 +152,7 @@ module.exports = function () {
           telefono: "999955586",
           correo: "coronos@gmail.com",
           habilidades: "Entrenamiento con pesas",
-          experiencia: "9 años",
+          experiencia: "",
           educacion: "Certificado en EUROINNOVA",
           estado: "Activo",
         }
@@ -223,7 +223,7 @@ module.exports = function () {
         producto: [
           {
             id:1,
-            precio: 164,
+            precio:   ,
             nombre: "Pelota con Rebote 3 Kg",
             descripcion:"El balón medicinal con rebote Rudem tiene la capacidad de dar bote contra las superficies, lo que lo hace útil para que el cuerpo amortiguar esta fuerza.",
           },

@@ -43,12 +43,11 @@ export class ProductCreaeditaComponent implements OnInit {
       this.product.nombre = this.form.value['nombre'];
       this.product.precio = this.form.value['precio'];
       this.product.descripcion = this.form.value['descripcion'];
-      if (this.form.value['nombre']!=null && 0 && this.form.value['descripcion']!=null &&
+      if (this.form.value['nombre']!=null  && this.form.value['descripcion']!=null &&
           this.form.value['precio']!=null) {
 
             if (this.edicion) {
               this.aS.update(this.product).subscribe(() => {
-
                 this.aS.list().subscribe(data => {
                   this.aS.setList(data)
                   })
