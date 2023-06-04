@@ -63,7 +63,6 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     NutricionistaCreaeditaComponent,
     AlumnoDialogoComponent,
     LoginComponent,
-    NavbarComponent,
     EntrenadorDialogoComponent,
     ProductComponent,
     ProductCreaeditaComponent,
@@ -74,7 +73,7 @@ import { CalificacionDialogoComponent } from './component/calificacion/calificac
     CalificacionComponent,
     CalificacionListarComponent,
     CalificacionCreaeditaComponent,
-    CalificacionDialogoComponent,
+
   ],
   imports: [
     BrowserModule,
