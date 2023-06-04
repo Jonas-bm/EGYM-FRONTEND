@@ -29,7 +29,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 //para delete
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './component/login/login.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
 
 import { EntrenadorCreaeditaComponent } from './component/entrenador/entrenador-creaedita/entrenador-creaedita.component';
 import { EntrenadorDialogoComponent } from './component/entrenador/entrenador-listar/entrenador-dialogo/entrenador-dialogo.component'
@@ -68,7 +67,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     NutricionistaCreaeditaComponent,
     AlumnoDialogoComponent,
     LoginComponent,
-    NavbarComponent,
     EntrenadorDialogoComponent,
     ProductComponent,
     ProductCreaeditaComponent,
