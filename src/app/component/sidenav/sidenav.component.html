@@ -12,12 +12,12 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav [(opened)]="opened" mode="over" #sidenav>
+  <mat-sidenav [(opened)]="opened" mode="side">
     <div>
-      <img src="./assets/img/inicio.png" width="50%">
+      <img src="./assets/img/logo1.png" style="height: 12rem; width: 12rem;">
     </div>
     <mat-divider></mat-divider>
-    <button mat-button routerLink="/alumnos" (click)="cerrarSidenav()" class="menu-button" style="color: white;">
+    <button mat-button routerLink="/alumnos" (click)="cerrarSidenav()" class="menu-button" style="color: #fff;">
       <mat-icon>
         person
       </mat-icon>
@@ -25,7 +25,7 @@
         Alumnos
       </span>
     </button>
-    <button mat-button routerLink="/entrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+    <button mat-button routerLink="/entrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         person
       </mat-icon>
@@ -33,7 +33,7 @@
         Entrenadores
       </span>
     </button>
-    <button mat-button routerLink="/nutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+    <button mat-button routerLink="/nutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         person
       </mat-icon>
@@ -41,7 +41,7 @@
         Nutricionistas
       </span>
     </button>
-    <button mat-button routerLink="/products" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+    <button mat-button routerLink="/products" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         shopping_basket
       </mat-icon>
@@ -49,7 +49,7 @@
         Productos
       </span>
     </button>
-    <button mat-button routerLink="/calificaciones" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+    <button mat-button routerLink="/calificaciones" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
@@ -58,8 +58,8 @@
       </span>
     </button>
     <mat-divider></mat-divider>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <button mat-button routerLink="/" class="menu-button"style="color: white;">
+    <br>
+    <button mat-button routerLink="/" class="menu-button"style="color: #fff;">
       <mat-icon>
         logout
       </mat-icon>

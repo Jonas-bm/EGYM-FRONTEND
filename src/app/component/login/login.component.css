@@ -5,3 +5,17 @@
 .bg-amarillo:hover {
   background-color: #cccc00; /* Puedes mantener el mismo color o cambiarlo si deseas */
 }
+.logo-login {
+  display: none !important;
+}
+@media (min-width:900px) {
+
+  .logo-login {
+    display: flex !important;
+  }
+
+  .entrar-login {
+    width: 50% !important;
+  }
+
+}

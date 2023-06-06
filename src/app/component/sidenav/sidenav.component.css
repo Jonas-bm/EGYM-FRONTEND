@@ -1,5 +1,5 @@
 mat-toolbar{
-  background:#242424;
+  background:#676719;
   color:white;
 }
 .centered-content {
@@ -21,9 +21,9 @@ mat-toolbar{
 }
 
 mat-sidenav{
-  width: 300px;
+  width: 250px;
   border-right: none;
-  background: #242424;
+  background: #909025;
   color: white;
   padding: 16px;
   text-align: center;
@@ -68,7 +68,7 @@ mat-icon{
 mat-divider{
   margin-top: 16px;
   margin-bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ffffff;
 }
 .hero-container {
   background-image: url('src/assets/img/hero.jpg');

@@ -9,16 +9,18 @@
 </head>
 <body>
   <br>
-  <div class="container">
-    <div class="container">
-      <h1 style="text-align: center; color: white;" class="color" >
-        Lista de Productos
-      </h1>
-    </div>
-        <mat-form-field>
-          <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
-        </mat-form-field>
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <div class="container px-5">
+    <h1 style="text-align: center; color: #7b7b1e;" class="color" >
+      Lista de Productos
+    </h1>
+
+    <mat-form-field>
+      <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+    </mat-form-field>
+
+    <div class="container mat-elevation-z8">
+
+        <table mat-table [dataSource]="dataSource">
 
 
           <!--- Note that these columns can be defined in any order.
@@ -86,9 +88,10 @@
 
          </table>
          <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
-        <br>
-         <div style="text-align:center">
-          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}"  routerLink="/products/new">Agregar</button>
+        </div>
+         <br>
+         <div style="text-align:center" class="mt-4">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="/products/new">Agregar</button>
         </div>
       </div>
 
