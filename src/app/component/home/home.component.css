@@ -1,0 +1,222 @@
+
+:root {
+  --amarilloClaro: #e8e85b;
+  --amarillo: #adad42;
+  --amarilloOscuro: #7b7b1e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px; /*1rem = 10px*/
+}
+img {
+  width: 100%;
+}
+.header {
+  height: 70rem;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('src/assets/img/hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.header h2 {
+  font-size: 7rem !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  background-color: rgba(152, 195, 23, 0.2);
+}
+.navbar-toggler-icon {
+  height: 3rem;
+  width: 3rem;
+}
+.nav-link:hover {
+  color: var(--amarilloClaro) !important;
+}
+.nosotros p {
+  line-height: 2;
+}
+.titulo {
+  font-size: 2.5rem;
+  color: var(--amarilloOscuro);
+  font-weight: bold;
+}
+.testimonios, .nosotros {
+  margin-top: 5rem;
+}
+.testimonios, .contacto {
+  margin-bottom: 5rem;
+}
+.container-foto1 {
+  background-image: url('src/assets/img/entrenador.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.container-foto2 {
+  background-image: url('src/assets/img/nutricionista.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.container-foto3 {
+  background-image: url('src/assets/img/productos.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.container-foto4 {
+  background-image: url('src/assets/img/foto1.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.container-foto5 {
+  background-image: url('src/assets/img/foto2.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.container-foto6 {
+  background-image: url('src/assets/img/foto3.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.bg-amarillo {
+  background-color: var(--amarillo);
+}
+.bg-amarillo:hover {
+  background-color: var(--amarilloOscuro);
+}
+.footer {
+  background: #e9d362;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 4rem;
+  font-size: 1.5rem;
+}
+.width {
+  max-width: 60rem;
+}
+.height {
+  height: 40rem;
+}
+.width-link {
+  width: min(40rem,100%);
+}
+@media (min-width: 768px) {
+  .margin {
+      margin-top: 10rem!important;
+  }
+}
+.margin-top {
+  margin-top: 4rem;
+}
+.button {
+  width: 15rem;
+  background-color: var(--amarillo);
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.button:hover {
+  background-color: var(--amarilloOscuro);
+}
+
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.custom-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -35%);
+  color: white;
+  /* Otros estilos personalizados según sea necesario */
+}
+.mx-4.margin-top {/* Campos de sobre nosotros y tertimonios */
+  display: flex;
+  justify-content:left;
+  align-items: center;
+
+}
+.titulo {/* Título sobre nosotros y testimonios, además el espacio entre secciones */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 100px; /* Ajusta el margen superior */
+  /* Ajusta otras propiedades de posición según sea necesario */
+
+}
+.flex-container {
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  /* Ajusta otras propiedades de posición según sea necesario */
+
+}
+form{/*contenido de contacto*/
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+
+}
+
+.bg-amarillo {
+  background-color: #aaaa29;
+}
+.bg-amarillo:hover {
+  background-color: #cccc00; /* Puedes mantener el mismo color o cambiarlo si deseas */
+}
+.horizontal-space {
+  margin-right: 10px; /* Ajusta el valor según el espacio horizontal deseado */
+}
+
+.container-foto1,
+.container-foto2,
+.container-foto3 {
+  width: 250px; /* Ajusta el tamaño deseado */
+  height: 250px; /* Ajusta el tamaño deseado */
+  border-radius: 500%; /* Hace que las imágenes sean circulares */
+}
+.translate-button {
+  transform: translate(295%, -5%);
+}
+.navbar-brand{ /* AJUSTA EL NOMBRE E-GYM*/
+  transform: translate(-90%, 100%);
+  font-size: 9000px;
+}
+.navbar-brand h1 {
+  font-size: 80px; /* Ajusta el tamaño de fuente deseado */
+  /* Otros estilos adicionales si los deseas */
+}
+

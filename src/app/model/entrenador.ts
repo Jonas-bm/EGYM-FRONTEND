@@ -1,5 +1,5 @@
 export class Entrenador{
-  id: number = 0
+  id?: number = 0
   nombre: string = ""
   apellidoPaterno: string = ""
   apellidoMaterno: string = ""

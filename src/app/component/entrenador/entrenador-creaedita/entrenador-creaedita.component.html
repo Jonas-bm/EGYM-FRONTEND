@@ -7,16 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-
+  <br>
   <div class="container" style="text-align: center;">
     <div style="text-align: center;">
     <h1>Registro de Entrenadores</h1>
     </div>
+    <br>
     <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
         <mat-label>Código</mat-label>
-        <input matInput placeholder="Codigo" formControlName="id">
+        <input matInput placeholder="Codigo" formControlName="id" required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
@@ -36,7 +37,7 @@
 
       <mat-form-field class="example-full-width">
         <mat-label>DNI</mat-label>
-        <input matInput placeholder="DNI" formControlName="dni">
+        <input matInput placeholder="DNI" formControlName="dni" required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
@@ -51,12 +52,12 @@
 
       <mat-form-field class="example-full-width">
         <mat-label>Habilidades</mat-label>
-        <input matInput placeholder="Habilidades" formControlName="habilidades">
+        <input matInput placeholder="Habilidades" formControlName="habilidades" required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Experiencia</mat-label>
-        <input matInput placeholder="Experiencia" formControlName="experiencia">
+        <input matInput placeholder="Experiencia" formControlName="experiencia" required>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
@@ -64,15 +65,18 @@
         <input matInput placeholder="Educación" formControlName="educacion" required>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field appearance="fill">
         <mat-label>Estado</mat-label>
-        <input matInput placeholder="Estado" formControlName="estado">
+        <mat-select formControlName="estado" required="">
+          <mat-option value="Disponible">Disponible</mat-option>
+          <mat-option value="Ocupado">Ocupado</mat-option>
+        </mat-select>
       </mat-form-field>
 
-      <div style="text-align: center;"></div>
-      <div class="contenedor-botones">
-      <button mat-raised-button color="primary" >Aceptar</button>
-      <button mat-raised-button color="warn" routerLink="/entrenadores">Cancelar</button>
+      <div style="text-align: center"></div>
+      <div class="contenedor-botones" class="d-flex justify-content-center gap-4">
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  >Aceptar</button>
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/entrenadores">Cancelar</button>
       <p>{{mensaje}}</p>
       </div>
     </form>

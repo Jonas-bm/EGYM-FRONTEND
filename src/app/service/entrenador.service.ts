@@ -10,6 +10,7 @@ const base_url = environment.base;
   providedIn: 'root',
 })
 export class EntrenadorService {
+
   private url = `${base_url}/entrenadores`;
   private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio = new Subject<Entrenador[]>();
@@ -35,7 +36,7 @@ export class EntrenadorService {
     return this.http.get<Entrenador>(`${this.url}/${id}`);
   }
   update(a: Entrenador) {
-    return this.http.put(this.url + "/" + a.id, a);
+    return this.http.put(this.url,a);
   }
   delete(id: number){
     return this.http.delete(`${this.url}/${id}`)

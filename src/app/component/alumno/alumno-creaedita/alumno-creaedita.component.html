@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <div class="container" style="text-align:center;">
+      <div style="text-align: center;">
+        <h1>Registrar Alumno</h1>
+      </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
+    
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="nombre" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellido Paterno</mat-label>
+          <input matInput placeholder="Apellido Paterno" formControlName="apellidoPaterno" autocomplete="off" required>
+        </mat-form-field>
+       <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellido Materno</mat-label>
+          <input matInput placeholder="Apellido Materno" formControlName="apellidoMaterno" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Dni</mat-label>
+          <input matInput placeholder="Dni" formControlName="dni" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Direccion</mat-label>
+          <input matInput placeholder="Direccion" formControlName="direccion" autocomplete="off" required>
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Celular</mat-label>
+          <input matInput placeholder="Celular" formControlName="celular" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Peso</mat-label>
+          <input matInput placeholder="Peso" formControlName="peso" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Talla</mat-label>
+          <input matInput placeholder="Talla" formControlName="talla" autocomplete="off" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" [max]="maxFecha" autocomplete="off">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+
+        <div class="d-flex justify-content-center gap-4">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/alumnos">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </body>
+</html>

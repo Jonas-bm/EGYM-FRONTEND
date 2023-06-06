@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <br>
+  <br>
+
+
+  <div class="container" style="text-align:center;">
+    <div style="text-align: center;">
+      <h1>Registro de Productos</h1>
+    </div>
+    <br>
+    <form [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Código" formControlName="id">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Precio</mat-label>
+
+        <input matInput placeholder="Precio" formControlName="precio" required>
+
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Nombre</mat-label>
+
+        <input matInput placeholder="Nombre" formControlName="nombre" required>
+
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+
+        <mat-label>Descripcion</mat-label>
+
+        <input matInput placeholder="Descripcion" formControlName="descripcion" required >
+
+      </mat-form-field>
+
+      <br>
+
+      <div class="d-flex justify-content-center gap-4">
+        <button  mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" >Aceptar</button>
+        <button  mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/products">Cancelar</button>
+      </div>
+
+      <p>{{mensaje}}</p>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

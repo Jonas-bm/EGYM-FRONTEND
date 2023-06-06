@@ -1,0 +1,7 @@
+
+.bg-amarillo {
+  background-color: #aaaa29;
+}
+.bg-amarillo:hover {
+  background-color: #cccc00; /* Puedes mantener el mismo color o cambiarlo si deseas */
+}

@@ -1,0 +1,74 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button (click)="opened=!opened" class="menu">
+      <mat-icon>
+        menu
+      </mat-icon>
+    </button>
+  E-GYM
+    <div class="spacer"></div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="over" #sidenav>
+    <div>
+      <img src="./assets/img/inicio.png" width="50%">
+    </div>
+    <mat-divider></mat-divider>
+    <button mat-button routerLink="/alumnos" (click)="cerrarSidenav()" class="menu-button" style="color: white;">
+      <mat-icon>
+        person
+      </mat-icon>
+      <span>
+        Alumnos
+      </span>
+    </button>
+    <button mat-button routerLink="/entrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+      <mat-icon>
+        person
+      </mat-icon>
+      <span>
+        Entrenadores
+      </span>
+    </button>
+    <button mat-button routerLink="/nutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+      <mat-icon>
+        person
+      </mat-icon>
+      <span>
+        Nutricionistas
+      </span>
+    </button>
+    <button mat-button routerLink="/products" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+      <mat-icon>
+        shopping_basket
+      </mat-icon>
+      <span>
+        Productos
+      </span>
+    </button>
+    <button mat-button routerLink="/calificaciones" (click)="cerrarSidenav()" class="menu-button"style="color: white;">
+      <mat-icon>
+        check
+      </mat-icon>
+      <span>
+        Calificaciones
+      </span>
+    </button>
+    <mat-divider></mat-divider>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button mat-button routerLink="/" class="menu-button"style="color: white;">
+      <mat-icon>
+        logout
+      </mat-icon>
+      <span>
+        Salir
+      </span>
+    </button>
+  </mat-sidenav>
+<mat-sidenav-content>
+  <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>

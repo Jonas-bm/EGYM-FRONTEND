@@ -1,0 +1,28 @@
+.boton-grande {
+  font-size: 24px; /* ajusta el tamaño de fuente según sea necesario */
+  height: 50px; /* ajusta la altura del botón según sea necesario */
+  width: 150px; /* ajusta el ancho del botón según sea necesario */
+}
+
+.contenedor-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+mat-form-field{
+  width: 50%;
+}
+
+body{
+  display:flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(to bottom, #e7d162, #424037);
+
+  }
