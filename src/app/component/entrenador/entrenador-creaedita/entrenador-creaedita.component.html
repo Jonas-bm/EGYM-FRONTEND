@@ -10,73 +10,92 @@
   <br>
   <div class="container" style="text-align: center;">
     <div style="text-align: center;">
-    <h1>Registro de Entrenadores</h1>
+    <h1 style="color: #7b7b1e;">Registro de Entrenadores</h1>
     </div>
     <br>
     <form [formGroup]="form" (submit)="aceptar()">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Código</mat-label>
-        <input matInput placeholder="Codigo" formControlName="id" required>
-      </mat-form-field>
+      <div class="container d-flex gap-5">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Nombre" formControlName="nombre" required>
-      </mat-form-field>
+        <div class="w-50">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>ApellidoPaterno</mat-label>
-        <input matInput placeholder="ApellidoPaterno" formControlName="apellidoPaterno" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Código</mat-label>
+            <input matInput placeholder="Codigo" formControlName="id" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>ApellidoMaterno</mat-label>
-        <input matInput placeholder="ApellidoMaterno" formControlName="apellidoMaterno" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="nombre" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>DNI</mat-label>
-        <input matInput placeholder="DNI" formControlName="dni" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>ApellidoPaterno</mat-label>
+            <input matInput placeholder="ApellidoPaterno" formControlName="apellidoPaterno" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Telefono</mat-label>
-        <input matInput placeholder="Telefono" formControlName="telefono" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>ApellidoMaterno</mat-label>
+            <input matInput placeholder="ApellidoMaterno" formControlName="apellidoMaterno" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Correo</mat-label>
-        <input matInput placeholder="Correo" formControlName="correo" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>DNI</mat-label>
+            <input matInput placeholder="DNI" formControlName="dni" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Habilidades</mat-label>
-        <input matInput placeholder="Habilidades" formControlName="habilidades" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="Telefono" formControlName="telefono" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Experiencia</mat-label>
-        <input matInput placeholder="Experiencia" formControlName="experiencia" required>
-      </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Correo</mat-label>
+            <input matInput placeholder="Correo" formControlName="correo" required>
+          </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Educación</mat-label>
-        <input matInput placeholder="Educación" formControlName="educacion" required>
-      </mat-form-field>
+        </div>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Estado</mat-label>
-        <mat-select formControlName="estado" required="">
-          <mat-option value="Disponible">Disponible</mat-option>
-          <mat-option value="Ocupado">Ocupado</mat-option>
-        </mat-select>
-      </mat-form-field>
+        <div class="w-50 d-flex flex-column align-items-center justify-content-between gap-4">
+
+          <img src="../../../../assets/img/alumno.jpeg" alt="" style="height: 12rem; width: auto;">
+
+          <div class="w-100">
+
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Habilidades</mat-label>
+              <input matInput placeholder="Habilidades" formControlName="habilidades" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Experiencia</mat-label>
+              <input matInput placeholder="Experiencia" formControlName="experiencia" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Educación</mat-label>
+              <input matInput placeholder="Educación" formControlName="educacion" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Estado</mat-label>
+              <mat-select formControlName="estado" required="">
+                <mat-option value="Disponible">Disponible</mat-option>
+                <mat-option value="Ocupado">Ocupado</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
       <div style="text-align: center"></div>
-      <div class="contenedor-botones" class="d-flex justify-content-center gap-4">
-      <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  >Aceptar</button>
-      <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  routerLink="/entrenadores">Cancelar</button>
+      <div class="contenedor-botones" class="d-flex justify-content-center gap-4 pt-4">
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }"  >Aceptar</button>
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/entrenadores">Cancelar</button>
       <p>{{mensaje}}</p>
       </div>
     </form>

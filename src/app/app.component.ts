@@ -8,12 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'demoCrud';
-
+  ruta="";
   constructor(public route:ActivatedRoute){}
 
-  datosMenu=[{
-    'titulo':'Alumno',
-    'icon':'',
-    'url':''
-  }]
+  ngOnInit() {
+    const segments = this.route.snapshot.url;
+     this.ruta = segments[segments.length - 1].path;
+  }
 }

@@ -1,12 +1,12 @@
 
 body{
   height:100vh;
-  background: linear-gradient(to bottom, #e7d162, #424037);
+  /* background: linear-gradient(to bottom, #e7d162, #424037); */
   }
-  .header-border {
+  /* .header-border {
     border-top: 3px solid #242424;
     border-bottom: 3px solid #242424;
-  }
+  } */
   /* centrar los encabezados*/
   .header-border {
     text-align: center;
@@ -26,14 +26,14 @@ body{
     font-weight: bold;
   }
   h1{
-    font-weight: bold;
+    font-weight: normal;
   }
   button{
     margin-top: auto;
   }
   body{
     height:100vh;
-      background-color:#62584b;
+      /* background-color:#62584b; */
     }
 
 

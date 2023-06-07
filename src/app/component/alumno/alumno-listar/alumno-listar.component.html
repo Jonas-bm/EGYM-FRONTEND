@@ -8,104 +8,105 @@
   </head>
   <body>
     <br>
-    <div class="container">
-      <h1 style="text-align: center; color: white;" class="color" >
+    <div class="container px-5 py-2">
+      <h1 style="text-align: center; color: #7b7b1e;" class="color">
         Lista de Alumnos
       </h1>
+
+      <mat-form-field>
+        <input matInput (keyup)="filtrar($event)" placeholder="Buscar" autocomplete="off">
+      </mat-form-field>
+
+      <div class="mat-elevation-z8 container" style="text-align:left;">
+
+      <table mat-table [dataSource]="dataSource">
+        <!--- Note that these columns can be defined in any order.
+             The actual rendered columns are set as a property on the row definition" -->
+        <!-- Position Column -->
+        <ng-container matColumnDef="codigo">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Codigo</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Nombre</th>
+
+          <td mat-cell *matCellDef="let element" >{{element.nombre}}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="apellidos">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Apellidos</th>
+
+          <td mat-cell *matCellDef="let element">{{element.apellidoPaterno}} {{element.apellidoMaterno}}</td>
+        </ng-container>
+        <!-- Symbol Column -->
+
+        <ng-container matColumnDef="dni">
+          <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="direccion">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Direccion</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.direccion }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="celular">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Celular</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.celular }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="fechaNacimiento">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Fecha de Nacimiento</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento | date:'dd/MM/yyyy'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="peso">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Peso</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="talla">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Talla</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.talla }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="acciones1">
+          <th mat-header-cell *matHeaderCellDef class="header-border"> Editar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }"  [routerLink]="['edicion', element.id]"><i class="bi bi-pencil fs-4" ></i></button>
+          </td>
+        </ng-container>
+
+        //button eliminar
+        <ng-container matColumnDef="acciones2">
+          <th  class="header-border" mat-header-cell *matHeaderCellDef >Eliminar</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }" (click)="confirm(element.id)">
+              <span class="material-icons">delete</span>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
     </div>
-        <div class="container" style="text-align:left;">
-
-          <mat-form-field>
-            <input matInput (keyup)="filtrar($event)" placeholder="Buscar" autocomplete="off">
-          </mat-form-field>
-        <table align="center" mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
-          <!--- Note that these columns can be defined in any order.
-               The actual rendered columns are set as a property on the row definition" -->
-          <!-- Position Column -->
-          <ng-container matColumnDef="codigo">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Codigo</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-          </ng-container>
-
-          <!-- Name Column -->
-
-          <ng-container matColumnDef="nombre">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Nombre</th>
-
-            <td mat-cell *matCellDef="let element" >{{element.nombre}}</td>
-          </ng-container>
-
-          <!-- Weight Column -->
-          <ng-container matColumnDef="apellidos">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Apellidos</th>
-
-            <td mat-cell *matCellDef="let element">{{element.apellidoPaterno}} {{element.apellidoMaterno}}</td>
-          </ng-container>
-          <!-- Symbol Column -->
-
-          <ng-container matColumnDef="dni">
-            <th mat-header-cell *matHeaderCellDef class="header-border">DNI</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="direccion">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Direccion</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.direccion }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="celular">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Celular</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.celular }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="fechaNacimiento">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Fecha de Nacimiento</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento | date:'dd/MM/yyyy'}}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="peso">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Peso</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="talla">
-            <th mat-header-cell *matHeaderCellDef class="header-border">Talla</th>
-
-            <td mat-cell *matCellDef="let element">{{ element.talla }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="acciones1">
-            <th mat-header-cell *matHeaderCellDef class="header-border"> Editar </th>
-            <td mat-cell *matCellDef="let element">
-              <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }"  [routerLink]="['edicion', element.id]"><i class="bi bi-pencil fs-4" ></i></button>
-            </td>
-          </ng-container>
-
-          //button eliminar
-          <ng-container matColumnDef="acciones2">
-            <th  class="header-border" mat-header-cell *matHeaderCellDef >Eliminar</th>
-            <td mat-cell *matCellDef="let element">
-              <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" (click)="confirm(element.id)">
-                <span class="material-icons">delete</span>
-              </button>
-            </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-
-          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-        </table>
-        <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
-        <br>
-        <div style="text-align: center;">
-          <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424'}"  routerLink="/alumnos/new">Agregar</button>
-        </div>
-        </div>
+    <div style="text-align: center;" class="my-5">
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="/alumnos/new">Agregar</button>
+    </div>
+    </div>
   </body>
 </html>

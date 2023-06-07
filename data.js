@@ -223,7 +223,7 @@ module.exports = function () {
         producto: [
           {
             id:1,
-            precio:   ,
+            precio:  45,
             nombre: "Pelota con Rebote 3 Kg",
             descripcion:"El balón medicinal con rebote Rudem tiene la capacidad de dar bote contra las superficies, lo que lo hace útil para que el cuerpo amortiguar esta fuerza.",
           },

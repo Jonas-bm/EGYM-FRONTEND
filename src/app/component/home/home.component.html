@@ -1,183 +1,182 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.component.css">
+  <title>Document</title>
 </head>
 <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-md navbar-dark pt-5">
-          <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-              <h1 class="text-light fw-light">E-<span class="fw-bold">GYM</span></h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarCollapse">
-              <div class="navbar-nav d-flex flex-column align-items-center justify-content-center flex-md-row gap-2 gap-md-4 mt-3 mt-md-0">
-                <a class="nav-link text-light fs-4 fw-bold" href="#">Home</a>
-                <a class="nav-link text-light fs-4 fw-bold" href="#1">Sobre Nosotros</a>
-                <a class="nav-link text-light fs-4 fw-bold" href="#">Servicios</a>
-                <a class="nav-link text-light fs-4 fw-bold" href="#">Testimonios</a>
-                <a class="nav-link text-light fs-4 fw-bold" href="#">Contacto</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      <div class="mx-4">
 
-
-        <div class="container">
-          <div class="custom-container">
-            <h2 class="mb-4 text">Entrena en casa</h2>
-            <p class="my-4 text" style="font-size: 22px;">
-              <br>
-              En Digitally Healthy estamos comprometidos en brindar soluciones innovadoras
-              y personalizadas para ayudarte a alcanzar tus objetivos de salud y ejercicio
-              desde la comodidad de tu hogar a través de nuestra aplicación E-Gym.
-            </p>
-            <a class="btn bg-amarillo text-light fs-4 text-uppercase p-3 fw-bold mt-4 width-link" href="#">Unete ahora</a>
-          </div>
+  <nav class="navbar navbar-expand-md navbar-light bg-light p-1 position-fixed top-4 w-100 z-1 shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-lightning-fill text-dark fs-2"></i>
+        <h1 class="text-dark fw-light m-0">E-<span class="fw-bold">GYM</span></h1>
+        <!-- <img src="logo.png" alt=""> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarCollapse">
+        <div class="navbar-nav d-flex flex-column align-items-center justify-content-center flex-md-row gap-2 gap-md-4 my-3 my-md-0">
+          <a class="nav-link text-dark fs-6 fw-bold" href="" style="display: block;">Inicio</a>
+          <a class="nav-link text-dark fs-6 fw-bold" href="#nosotros">Nosotros</a>
+          <a class="nav-link text-dark fs-6 fw-bold" href="#servicios">Servicios</a>
+          <a class="nav-link text-dark fs-6 fw-bold" href="#testimonios">Testimonios</a>
+          <a class="nav-link text-dark fs-6 fw-bold" href="#contacto">Contacto</a>
+          <a class="nav-link text-light fs-6 fw-bold active" style="border-radius: 1rem; padding: .5rem 1.2rem;" routerLink="/login">Iniciar sesion</a>
         </div>
+      </div>
+    </div>
+  </nav>
+
+    <header class="header d-flex flex-column justify-content-center">
+      <div class="mx-4">
+          <div class="container text-light height d-flex flex-column justify-content-center mt-0">
+              <div class="width d-flex flex-column align-items-center align-items-sm-start opacity-75">
+                  <h2 class="mb-4 text-center text-sm-start">Entrena en casa</h2>
+                  <p class="my-4 text-center text-sm-start">
+                    En Digitally Healthy estamos comprometidos en brindar soluciones innovadoras
+                    y personalizadas para ayudarte a alcanzar tus objetivos de salud y ejercicio
+                    desde la comodidad de tu hogar a través de nuestra aplicación E-Gym.
+                  </p>
+                  <a class="bg-amarillo btn text-light fs-5 text-uppercase p-2 fw-bold mt-4 width-link" href="">unete ahora</a>
+              </div>
+          </div>
       </div>
     </header>
-    <section id=1 class="container nosotros">
-      <h2 class="text-center titulo">Sobre Nosotros</h2>
-      <div class="mx-4 margin-top d-flex flex-column align-items-center">
-        <div class="d-flex flex-column justify-content-center align-items-center flex-md-row gap-5">
-          <div class="d-flex flex-column justify-content-center">
-            <p class="fw-bold">
-              Digitally Healthy es una startup dedicada a brindar soluciones innovadoras para
-              problemas relacionados a la salud física y el ejercicio, siendo su principal
-              propuesta la aplicación "E-Gym".
-            </p>
-            <p>
-              Nuestra misión es brindar un servicio de calidad a los usuarios que
-              busquen vivir de manera saludable, ya sea con rutinas de ejercicios o con
-              dietas específicas para cada usuario.
-            </p>
-            <p>
-              Nuestra misión es brindar un servicio de calidad a los usuarios que busquen
-              vivir de manera saludable, ya sea con rutinas de ejercicios o con dietas
-              específicas para cada usuario.
-            </p>
-            <!-- <a href="#" class="button">Contáctanos</a> -->
-          </div>
-          <div>
-            <img src="./assets/img/nosotros.jpeg" alt="" class="img-nosotros">
-          </div>
-        </div>
-      </div>
 
+    <section class="container nosotros" id="nosotros">
+        <h2 class="text-center titulo">Sobre Nosotros</h2>
+        <div class="mx-4 margin-top">
+          <div class="d-flex flex-column justify-content-center align-items-center flex-md-row gap-5">
+            <div class="d-flex flex-column justify-content-center">
+              <p class="fw-bold">
+                Digitally Healthy es una startup dedicada a brindar soluciones innovadoras para
+                problemas relacionados a la salud física y el ejercicio, siendo su principal
+                propuesta la aplicación “E-Gym”.
+              </p>
+                <p>
+                  Nuestra misión es brindar un servicio de calidad a los usuarios que
+                  busquen vivir de manera saludable, ya sea con rutinas de ejercicios o con
+                  dietas específicas para cada usuario.
+                </p>
+                <p>
+                  Nuestra misión es brindar un servicio de calidad a los usuarios que busquen
+                  vivir de manera saludable, ya sea con rutinas de ejercicios o con dietas
+                  específicas para cada usuario.
+                </p>
+                <!-- <a href="#" class="button">Contáctanos</a> -->
+            </div>
+            <div>
+              <img src="../../../assets/img/nosotros.jpeg" alt="" class="img-nosotros">
+            </div>
+        </div>
+        </div>
     </section>
 
-
-    <section class="container servicios" >
-        <h2 class="text-center mb-5 titulo">Servicios</h2>
-        <div class="mx-4 margin-top d-flex justify-content-center">
-            <div class="card-body d-flex flex-column justify-content-center">
-                  <div class="d-flex justify-content-center align-items-center gap-4">
-                    <div class="container-foto1 my-4">
-                    </div>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                    <p class="text-center fw-bold m-0">Entrenador Personalizado</p>
-                    <br>
-                  </div>
-                  <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            <div >
-                <div class="d-flex justify-content-center align-items-center gap-4">
-                  <div class="container-foto2 my-4">
-                  </div>
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                  <p class="text-center fw-bold m-0">Asesoría Nutricionista</p>
-                  <br>
-                </div>
-                <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <div>
+    <section class="container servicios" style="margin: 5rem auto;">
+      <h2 class="text-center mb-5 titulo">Servicios</h2>
+      <div class="mx-4 margin-top d-flex justify-content-center">
+          <div class="card-body d-flex flex-column justify-content-center" id="servicios">
               <div class="d-flex justify-content-center align-items-center gap-4">
-                <div class="container-foto3 my-4">
+                <div class="container-foto1 my-4">
                 </div>
               </div>
               <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                <p class="text-center fw-bold m-0">Productos de Calidad</p>
+                <p class="text-center fw-bold m-0">Entrenador Personalizado</p>
                 <br>
               </div>
               <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container testimonios">
-      <h2 class="text-center mb-5 titulo">Testimonios</h2>
-      <div class="mx-4 margin-top d-flex justify-content-center">
-        <div class="card shadow" style="width: 25rem;">
-          <div class="card-body d-flex flex-column justify-content-center">
-                <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="d-flex justify-content-center align-items-center gap-4">
-                  <div class="container-foto4 my-4">
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                    <p class="text-center fw-bold m-0">Jhoselyn Egusquiza</p>
-                    <p class="text-center fw-bold m-0">Diseñadora</p>
-                  </div>
-                </div>
-                <a href="#" class="btn bg-amarillo text-center p-3 text-light fw-bold fs-4">Ver Testimonio</a>
-              </div>
           </div>
-          <span class="horizontal-space"></span>
-          <div class="card shadow" style="width: 25rem;">
-            <div class="card-body d-flex flex-column justify-content-center">
-              <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div >
               <div class="d-flex justify-content-center align-items-center gap-4">
-                <div class="container-foto5 my-4">
+                <div class="container-foto2 my-4">
                 </div>
-                <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                  <p class="text-center fw-bold m-0">Alessandra Andrades</p>
-                  <p class="text-center fw-bold m-0">Modelo</p>
-                </div>
-              </div>
-              <a href="#" class="btn bg-amarillo text-center p-3 text-light fw-bold fs-4">Ver Testimonio</a>
-            </div>
-        </div>
-        <span class="horizontal-space"></span>
-        <div class="card shadow" style="width: 25rem;">
-          <div class="card-body d-flex flex-column justify-content-center">
-            <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="d-flex justify-content-center align-items-center gap-4">
-              <div class="container-foto6 my-4">
               </div>
               <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                <p class="text-center fw-bold m-0">José Cotrina</p>
-                <p class="text-center fw-bold m-0">Ingeniero</p>
+                  <p class="text-center fw-bold m-0">Asesoría de Nutricion</p>
+                  <br>
               </div>
-            </div>
-            <a href="#" class="btn bg-amarillo text-center p-3 text-light fw-bold fs-4">Ver Testimonio</a>
+              <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
-        </div>
+          <div>
+              <div class="d-flex justify-content-center align-items-center gap-4">
+                  <div class="container-foto3 my-4">
+                  </div>
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                  <p class="text-center fw-bold m-0">Productos de Calidad</p>
+                  <br>
+              </div>
+                <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
       </div>
   </section>
 
-    <section class="container contacto width">
+    <section class="container testimonios" id="testimonios">
+        <h2 class="text-center mb-5 titulo">Testimonios</h2>
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5">
+            <div class="card shadow" style="width: 250px;">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div class="container-foto my-4 shadow">
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                      <p class="text-center m-0">Carla M.</p>
+                      <p class="text-center m-0">Ing. Ambiental</p>
+                    </div>
+                  </div>
+                  <a href="" class="btn bg-amarillo text-center p-2 text-light fw-bold fs-6">Ver Testimonio</a>
+                </div>
+            </div>
+            <div class="card shadow" style="width: 250px;">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                  <div class="container-foto fn-1 my-4 shadow">
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                    <p class="text-center m-0">Jenz R.</p>
+                    <p class="text-center m-0">Diseñadora</p>
+                  </div>
+                </div>
+                <a href="" class="btn bg-amarillo text-center p-2 text-light fw-bold fs-6">Ver Testimonio</a>
+              </div>
+          </div>
+          <div class="card shadow" style="width: 250px;">
+            <div class="card-body d-flex flex-column justify-content-center">
+              <p class="card-text text-center m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="d-flex justify-content-center align-items-center gap-4">
+                <div class="container-foto fn-2 my-4 shadow">
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                  <p class="text-center m-0">Zein M.</p>
+                  <p class="text-center m-0">Arquitecto</p>
+                </div>
+              </div>
+              <a href="" class="btn bg-amarillo text-center p-2 text-light fw-bold f-6">Ver Testimonio</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="container contacto width" id="contacto">
       <div class="mx-4">
-        <h2 class="text-center mb-5 titulo">Contacto</h2>
+        <h2 class="text-center titulo">Contacto</h2>
         <form>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control fs-4" id="nombre" placeholder="Tu nombre" autocomplete="off">
+            <input type="text" class="form-control fs-6" id="nombre" placeholder="Tu nombre">
           </div>
           <div class="mb-3">
             <label for="nombre" class="form-label">Apellido</label>
-            <input type="text" class="form-control fs-4" id="nombre" placeholder="Tu apellido" autocomplete="off">
+            <input type="text" class="form-control fs-6" id="nombre" placeholder="Tu apellido">
           </div>
-          <!-- <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div> -->
-          <button type="submit" class="btn bg-amarillo text-light px-4 py-2 fs-4 translate-button">ENVIAR</button>
+          <button type="submit" class="btn bg-amarillo text-light px-4 py-2 fs-6">ENVIAR</button>
         </form>
       </div>
     </section>
@@ -186,9 +185,5 @@
         <p class="text-center text-light m-0">&copy; 2023 Todos los derechos reservados | E-GYM</p>
     </footer>
 
-
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
-
 </body>
-
+</html>

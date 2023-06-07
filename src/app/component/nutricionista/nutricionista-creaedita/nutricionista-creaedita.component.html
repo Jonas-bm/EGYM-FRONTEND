@@ -11,67 +11,88 @@
 <body>
   <br>
   <div class="container" style="text-align:center;">
-    <h1 class="text-center">Registro de Nutricionistas</h1>
+    <h1 class="text-center" style="color: #7b7b1e;">Registro de Nutricionistas</h1>
     <form [formGroup]="form" (submit)="aceptar()">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>id</mat-label>
-        <input matInput placeholder="Codigo" formControlName="id" >
-      </mat-form-field>
       <br>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Nombre" formControlName="nombreNutricionista" required>
-      </mat-form-field>
-      <br>
+      <div class="container d-flex gap-5">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Apellidos</mat-label>
-        <input matInput placeholder="Apellidos" formControlName="apellidosNutricionista" required>
-      </mat-form-field>
-      <br>
+        <div class="w-50">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>DNI</mat-label>
-        <input matInput placeholder="DNI" formControlName="dni" required>
-      </mat-form-field>
-      <br>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>id</mat-label>
+            <input matInput placeholder="Codigo" formControlName="id" >
+          </mat-form-field>
+          <br>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Telefono</mat-label>
-        <input matInput placeholder="Telefono" formControlName="telefono" required>
-      </mat-form-field>
-      <br>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="nombreNutricionista" required>
+          </mat-form-field>
+          <br>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Sexo</mat-label>
-        <mat-select formControlName="sexo" required>
-          <mat-option value="Masculino">Masculino</mat-option>
-          <mat-option value="Femenino">Femenino</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Apellidos</mat-label>
+            <input matInput placeholder="Apellidos" formControlName="apellidosNutricionista" required>
+          </mat-form-field>
+          <br>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Descripcion</mat-label>
-        <input matInput placeholder="descripcion" formControlName="descripcion" required>
-      </mat-form-field>
-      <br>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>DNI</mat-label>
+            <input matInput placeholder="DNI" formControlName="dni" required>
+          </mat-form-field>
+          <br>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Disponibilidad</mat-label>
-        <mat-select formControlName="estado" required>
-          <mat-option value="Disponible">Disponible</mat-option>
-          <mat-option value="Ocupado">Ocupado</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="Telefono" formControlName="telefono" required>
+          </mat-form-field>
+          <br>
 
-      <div class="d-flex justify-content-center gap-4">
-        <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" >Aceptar</button>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Sexo</mat-label>
+            <mat-select formControlName="sexo" required>
+              <mat-option value="Masculino">Masculino</mat-option>
+              <mat-option value="Femenino">Femenino</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+
+        </div>
+
+        <div class="w-50 d-flex flex-column align-items-center justify-content-between">
+
+          <img src="../../../../assets/img/alumno.jpeg" alt="" style="height: 16rem; width: auto;">
+
+          <div class="w-100">
+
+            <mat-form-field class="example-full-width w-100">
+              <mat-label>Descripcion</mat-label>
+              <input matInput placeholder="descripcion" formControlName="descripcion" required>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Disponibilidad</mat-label>
+              <mat-select formControlName="estado" required>
+                <mat-option value="Disponible">Disponible</mat-option>
+                <mat-option value="Ocupado">Ocupado</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="d-flex justify-content-center gap-4 mt-4">
+        <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
         <br>
-        <button mat-raised-button [ngStyle]="{ 'background-color': '#ffd700', 'color': '#242424' }" routerLink="/nutricionista">Cancelar</button>
+        <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }" routerLink="/nutricionista">Cancelar</button>
         <br>
       </div>
       <p>{{mensaje}}</p>
