@@ -10,6 +10,6 @@ export class HomeComponent implements OnInit{
   constructor(public router:Router){
   }
   ngOnInit(): void {
-    this.router.navigate(['login'])
+    //this.router.navigate([''])
   }
 }
