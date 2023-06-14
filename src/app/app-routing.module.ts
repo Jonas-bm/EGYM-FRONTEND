@@ -23,6 +23,8 @@ import { DocumentoventaComponent } from './component/documentoventa/documentoven
 import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
+import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
 
 
 const routes: Routes = [
@@ -99,6 +101,10 @@ const routes: Routes = [
     },
     {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
       { path: 'nuevo', component: RutinaasignadaCreaeditaComponent},
+    ]
+    },
+    {path: 'videosRutinarios', component: VideorutinarioComponent, children: [
+      { path: 'nuevo', component: VideorutinarioCreaeditaComponent},
     ]
     },
 ]
