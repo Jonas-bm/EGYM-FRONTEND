@@ -19,7 +19,7 @@ export class SuscripcionCreaeditaComponent implements OnInit {
   form:FormGroup=new FormGroup({});
   suscripcion:Suscripcion=new Suscripcion();
   mensaje:string=""
-  maxFecha: Date = moment().add(+1, 'days').toDate();
+  maxFecha: Date = moment().add({months:1}).toDate();
   listaA:Alumno[]=[]
   idAlumnoSeleccionado:number=0;
 
