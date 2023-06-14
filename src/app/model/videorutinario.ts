@@ -6,5 +6,5 @@ export class VideoRutinario
   entrenador:Entrenador=new Entrenador();
   nombreTipoVideo:string="";
   descripcion:string="";
-  duracion:number=0;
+  duracion:string="";
 }

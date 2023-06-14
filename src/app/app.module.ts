@@ -68,8 +68,9 @@ import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rut
 import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
 import { VideorutinarioListarComponent } from './component/videorutinario/videorutinario-listar/videorutinario-listar.component';
 import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
-
-
+import { DetalleventaComponent } from './component/detalleventa/detalleventa.component';
+import { DetalleventaListarComponent } from './component/detalleventa/detalleventa-listar/detalleventa-listar.component';
+import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,11 @@ import { VideorutinarioCreaeditaComponent } from './component/videorutinario/vid
     RutinaasignadaCreaeditaComponent,
     VideorutinarioComponent,
     VideorutinarioListarComponent,
-    VideorutinarioCreaeditaComponent
+    VideorutinarioCreaeditaComponent,
+    DetalleventaComponent,
+    DetalleventaListarComponent,
+    DetalleventaCreaeditaComponent
+
   ],
   imports: [
     BrowserModule,

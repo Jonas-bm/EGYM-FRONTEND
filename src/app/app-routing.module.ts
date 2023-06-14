@@ -23,8 +23,13 @@ import { DocumentoventaComponent } from './component/documentoventa/documentoven
 import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+
 import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
 import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
+
+import { DetalleventaComponent } from './component/detalleventa/detalleventa.component';
+import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+
 
 
 const routes: Routes = [
@@ -105,6 +110,11 @@ const routes: Routes = [
     },
     {path: 'videosRutinarios', component: VideorutinarioComponent, children: [
       { path: 'nuevo', component: VideorutinarioCreaeditaComponent},
+    ]
+  },
+
+    {path: 'detalleVentas', component: DetalleventaComponent, children: [
+      { path: 'nuevo', component: DetalleventaCreaeditaComponent},
     ]
     },
 ]

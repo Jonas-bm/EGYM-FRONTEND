@@ -23,11 +23,21 @@
           </mat-form-field>
           <br>
 
-          <mat-form-field class="example-full">
+          <mat-form-field appearance="fill" class="example-full">
             <mat-label>Entrenador</mat-label>
-            <input matInput placeholder="Tipo de Video" formControlName="nombreTipoVideo" autocomplete="off" required>
+            <mat-select formControlName="entrenador" [(value)]="idEntrenadorSeleccionado" required>
+              <mat-option *ngFor="let e of listaE" [value]="e.id">
+                {{e.nombre}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
-          <br>
+            <br>
+
+            <mat-form-field class="example-full">
+              <mat-label>Tipo de Video</mat-label>
+              <input matInput placeholder="Tipo Video" formControlName="nombreTipoVideo" autocomplete="off" required>
+            </mat-form-field>
+            <br>
 
           <mat-form-field class="example-full">
             <mat-label>Descripcion</mat-label>
@@ -37,14 +47,9 @@
 
           <mat-form-field class="example-full">
             <mat-label>Duracion</mat-label>
-            <input matInput placeholder="Repeticiones" formControlName="duracion" autocomplete="off" required>
+            <input matInput placeholder="Duracion" formControlName="duracion" autocomplete="off" required>
           </mat-form-field>
           <br>
-            <mat-form-field class="example-full">
-              <mat-label>Descripcion</mat-label>
-              <input matInput placeholder="Descripcion" formControlName="descripcion" autocomplete="off" required>
-            </mat-form-field>
-            <br>
 
         <div class="d-flex justify-content-center gap-4 pt-5">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
