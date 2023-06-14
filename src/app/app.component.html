@@ -1,8 +1,8 @@
-<div [hidden]="route.children.length==0 && ruta!='login'">
+<div [hidden]="route.children.length==0">
   <app-sidenav></app-sidenav>
 </div>
 <router-outlet></router-outlet>
 <div [hidden]="route.children.length!==0">
-<app-home></app-home>
+<app-login></app-login>
 </div>
 

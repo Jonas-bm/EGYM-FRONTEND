@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <div class="container" style="text-align:center;">
+      <div style="text-align: center;">
+        <h1 style="color: #7b7b1e;">Citas</h1>
+      </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
+        <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="idCitaNutricionista">
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Alumno</mat-label>
+            <mat-select formControlName="alumno" [(value)]="idAlumnoSeleccionado" required>
+              <mat-option *ngFor="let a of listaA" [value]="a.id">
+                {{a.nombre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            <br>
+
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Nutricionista</mat-label>
+            <mat-select formControlName="nutricionista" [(value)]="idNutricionistaSeleccionado" required>
+              <mat-option *ngFor="let n of listaN" [value]="n.id">
+                {{n.nombreNutricionista}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Fecha</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="fecha" [max]="maxFecha" autocomplete="off">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="example-full">
+              <mat-label>Descripcion</mat-label>
+              <input matInput placeholder="Descripcion" formControlName="descripcion" autocomplete="off" required>
+            </mat-form-field>
+            <br>
+
+        <div class="d-flex justify-content-center gap-4 pt-5">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/citaNutricionistas">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </body>
+</html>
