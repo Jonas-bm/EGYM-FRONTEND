@@ -23,6 +23,8 @@ import { DocumentoventaComponent } from './component/documentoventa/documentoven
 import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
+import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
 
 import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
 import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
@@ -108,6 +110,7 @@ const routes: Routes = [
       { path: 'nuevo', component: RutinaasignadaCreaeditaComponent},
     ]
     },
+
     {path: 'videosRutinarios', component: VideorutinarioComponent, children: [
       { path: 'nuevo', component: VideorutinarioCreaeditaComponent},
     ]
@@ -117,6 +120,13 @@ const routes: Routes = [
       { path: 'nuevo', component: DetalleventaCreaeditaComponent},
     ]
     },
+
+    {
+      path:'suscripcion', component:SuscripcionComponent,children:[
+        {path:'nuevo',component:SuscripcionCreaeditaComponent},
+      ]
+    }
+
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

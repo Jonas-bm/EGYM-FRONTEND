@@ -65,12 +65,20 @@ import { DocumentoventaCreaeditaComponent } from './component/documentoventa/doc
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaListarComponent } from './component/rutinaasignada/rutinaasignada-listar/rutinaasignada-listar.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+
 import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
 import { VideorutinarioListarComponent } from './component/videorutinario/videorutinario-listar/videorutinario-listar.component';
 import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
 import { DetalleventaComponent } from './component/detalleventa/detalleventa.component';
 import { DetalleventaListarComponent } from './component/detalleventa/detalleventa-listar/detalleventa-listar.component';
 import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+
+import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
+import { SuscripcionListarComponent } from './component/suscripcion/suscripcion-listar/suscripcion-listar.component';
+import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -119,7 +127,12 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
     VideorutinarioCreaeditaComponent,
     DetalleventaComponent,
     DetalleventaListarComponent,
-    DetalleventaCreaeditaComponent
+    DetalleventaCreaeditaComponent,
+
+
+    SuscripcionComponent,
+    SuscripcionListarComponent,
+    SuscripcionCreaeditaComponent
 
   ],
   imports: [
