@@ -50,6 +50,22 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 
 import { MatDividerModule } from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CentrenadorComponent } from './component/centrenador/centrenador.component';
+import { CentrenadorCreaeditaComponent } from './component/centrenador/centrenador-creaedita/centrenador-creaedita.component';
+import { CentrenadorListarComponent } from './component/centrenador/centrenador-listar/centrenador-listar.component';
+import { CnutricionistaComponent } from './component/cnutricionista/cnutricionista.component';
+import { CnutricionistaListarComponent } from './component/cnutricionista/cnutricionista-listar/cnutricionista-listar.component';
+import { CnutricionistaCreaeditaComponent } from './component/cnutricionista/cnutricionista-creaedita/cnutricionista-creaedita.component';
+import { ResetaasignadaComponent } from './component/resetaasignada/resetaasignada.component';
+import { ResetaasignadaListarComponent } from './component/resetaasignada/resetaasignada-listar/resetaasignada-listar.component';
+import { ResetaasignadaCreaeditaComponent } from './component/resetaasignada/resetaasignada-creaedita/resetaasignada-creaedita.component';
+import { DocumentoventaComponent } from './component/documentoventa/documentoventa.component';
+import { DocumentoventaListarComponent } from './component/documentoventa/documentoventa-listar/documentoventa-listar.component';
+import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
+import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
+import { RutinaasignadaListarComponent } from './component/rutinaasignada/rutinaasignada-listar/rutinaasignada-listar.component';
+import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+
 
 
 @NgModule({
@@ -79,7 +95,21 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     CalificacionCreaeditaComponent,
     CalificacionDialogoComponent,
     SidenavComponent,
-
+    CentrenadorComponent,
+    CentrenadorCreaeditaComponent,
+    CentrenadorListarComponent,
+    CnutricionistaComponent,
+    CnutricionistaListarComponent,
+    CnutricionistaCreaeditaComponent,
+    ResetaasignadaComponent,
+    ResetaasignadaCreaeditaComponent,
+    ResetaasignadaListarComponent,
+    DocumentoventaComponent,
+    DocumentoventaListarComponent,
+    DocumentoventaCreaeditaComponent,
+    RutinaasignadaComponent,
+    RutinaasignadaListarComponent,
+    RutinaasignadaCreaeditaComponent
   ],
   imports: [
     BrowserModule,

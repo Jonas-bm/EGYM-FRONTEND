@@ -13,6 +13,16 @@ import { HomeComponent } from './component/home/home.component';
 import { Calificacion } from './model/calificacion';
 import { CalificacionComponent } from './component/calificacion/calificacion.component';
 import { CalificacionCreaeditaComponent } from './component/calificacion/calificacion-creaedita/calificacion-creaedita.component';
+import { CentrenadorComponent } from './component/centrenador/centrenador.component';
+import { CentrenadorCreaeditaComponent } from './component/centrenador/centrenador-creaedita/centrenador-creaedita.component';
+import { CnutricionistaComponent } from './component/cnutricionista/cnutricionista.component';
+import { CnutricionistaCreaeditaComponent } from './component/cnutricionista/cnutricionista-creaedita/cnutricionista-creaedita.component';
+import { ResetaasignadaComponent } from './component/resetaasignada/resetaasignada.component';
+import { ResetaasignadaCreaeditaComponent } from './component/resetaasignada/resetaasignada-creaedita/resetaasignada-creaedita.component';
+import { DocumentoventaComponent } from './component/documentoventa/documentoventa.component';
+import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
+import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
+import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
 
 
 const routes: Routes = [
@@ -55,6 +65,9 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path:'home',component:HomeComponent,
+  },
 {
   path:'login',component:LoginComponent,
 },
@@ -67,6 +80,26 @@ const routes: Routes = [
       path: 'edicion/:id', component: CalificacionCreaeditaComponent,
     },
       ]
+    },
+    {path: 'citaEntrenadores', component: CentrenadorComponent, children: [
+      { path: 'nuevo', component: CentrenadorCreaeditaComponent},
+    ]
+    },
+    {path: 'citaNutricionistas', component: CnutricionistaComponent, children: [
+      { path: 'nuevo', component: CnutricionistaCreaeditaComponent},
+    ]
+    },
+    {path: 'recetasAsignadas', component: ResetaasignadaComponent, children: [
+      { path: 'nuevo', component: ResetaasignadaCreaeditaComponent},
+    ]
+    },
+    {path: 'documentoVentas', component: DocumentoventaComponent, children: [
+      { path: 'nuevo', component: DocumentoventaCreaeditaComponent},
+    ]
+    },
+    {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
+      { path: 'nuevo', component: RutinaasignadaCreaeditaComponent},
+    ]
     },
 ]
 @NgModule({

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <div class="container" style="text-align:center;">
+      <div style="text-align: center;">
+        <h1 style="color: #7b7b1e;">Agregar Rutinas</h1>
+      </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
+        <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="idRutinaAsignada">
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="example-full">
+            <mat-label>Nombre de la Rutina</mat-label>
+            <input matInput placeholder="Nombre de la Rutina" formControlName="nombreRutina" autocomplete="off" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="example-full">
+            <mat-label>Descripcion</mat-label>
+            <input matInput placeholder="Descripcion" formControlName="descripcion" autocomplete="off" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="example-full">
+            <mat-label>Repeticiones</mat-label>
+            <input matInput placeholder="Repeticiones" formControlName="repeticiones" autocomplete="off" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="example-full">
+            <mat-label>Tiempo de la Rutina</mat-label>
+            <input matInput placeholder="Tiempo de la rutina" formControlName="tiempoRutina" autocomplete="off" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Entrenador</mat-label>
+            <mat-select formControlName="CitaEntrenador" [(value)]="idCitaEntrenadorSeleccionado" required>
+              <mat-option *ngFor="let ce of listaCE" [value]="ce.idCita">
+                {{ce.entrenador.nombre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            <br>
+
+
+
+            <mat-form-field class="example-full">
+              <mat-label>Descripcion</mat-label>
+              <input matInput placeholder="Descripcion" formControlName="descripcion" autocomplete="off" required>
+            </mat-form-field>
+            <br>
+
+        <div class="d-flex justify-content-center gap-4 pt-5">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/rutinasAsignadas">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </body>
+</html>
+
