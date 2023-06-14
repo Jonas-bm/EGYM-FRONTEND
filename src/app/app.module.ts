@@ -65,6 +65,10 @@ import { DocumentoventaCreaeditaComponent } from './component/documentoventa/doc
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaListarComponent } from './component/rutinaasignada/rutinaasignada-listar/rutinaasignada-listar.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { VisualizacionesComponent } from './component/visualizaciones/visualizaciones.component';
+import { VisualizacionesCreaeditaComponent } from './component/visualizaciones/visualizaciones-creaedita/visualizaciones-creaedita.component';
+import { VisualizacionesListarComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-listar.component';
+import { VisualizacionesDialogoComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-dialogo/visualizaciones-dialogo.component';
 
 
 
@@ -109,7 +113,11 @@ import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rut
     DocumentoventaCreaeditaComponent,
     RutinaasignadaComponent,
     RutinaasignadaListarComponent,
-    RutinaasignadaCreaeditaComponent
+    RutinaasignadaCreaeditaComponent,
+    VisualizacionesComponent,
+    VisualizacionesCreaeditaComponent,
+    VisualizacionesListarComponent,
+    VisualizacionesDialogoComponent
   ],
   imports: [
     BrowserModule,

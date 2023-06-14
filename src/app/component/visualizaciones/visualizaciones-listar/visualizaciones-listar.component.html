@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br>
+    <div class="container px-5 py-2">
+      <h1 style="text-align: center; color: #7b7b1e;" class="color">
+        Visualizaciones
+      </h1>
+
+      <div class="mat-elevation-z8 container" style="text-align:left;">
+
+      <table mat-table [dataSource]="dataSource">
+        <!--- Note that these columns can be defined in any order.
+             The actual rendered columns are set as a property on the row definition" -->
+        <!-- Position Column -->
+        <ng-container matColumnDef="idVisualizaciones">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Codigo</th>
+
+          <td mat-cell *matCellDef="let element">{{element.idVisualizaciones}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="alumno">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Alumno</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.alumno.nombre}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="videosRutinario">
+          <th mat-header-cell *matHeaderCellDef class="header-border">Videos Rutinario</th>
+
+          <td mat-cell *matCellDef="let element">{{ element.videosRutinario.descripcion}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="comentario">
+          <th mat-header-cell *matHeaderCellDef class="header-border"> Comentario </th>
+          <td mat-cell *matCellDef="let element"> {{element.comentario}} </td>
+        </ng-container>
+        <!-- Name Column -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
+    </div>
+    <div style="text-align: center;" class="my-5">
+      <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="/visualizaciones/nuevo">Agregar</button>
+    </div>
+    </div>
+  </body>
+</html>
