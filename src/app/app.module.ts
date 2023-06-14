@@ -65,6 +65,9 @@ import { DocumentoventaCreaeditaComponent } from './component/documentoventa/doc
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaListarComponent } from './component/rutinaasignada/rutinaasignada-listar/rutinaasignada-listar.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
+import { SuscripcionListarComponent } from './component/suscripcion/suscripcion-listar/suscripcion-listar.component';
+import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
 
 
 
@@ -109,7 +112,10 @@ import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rut
     DocumentoventaCreaeditaComponent,
     RutinaasignadaComponent,
     RutinaasignadaListarComponent,
-    RutinaasignadaCreaeditaComponent
+    RutinaasignadaCreaeditaComponent,
+    SuscripcionComponent,
+    SuscripcionListarComponent,
+    SuscripcionCreaeditaComponent
   ],
   imports: [
     BrowserModule,
