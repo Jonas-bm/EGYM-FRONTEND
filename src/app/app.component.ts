@@ -13,6 +13,7 @@ export class AppComponent {
 
   ngOnInit() {
     const segments = this.route.snapshot.url;
-     this.ruta = segments[segments.length - 1].path;
+     //this.ruta = segments[segments.length - 1];
+     console.log(segments);
   }
 }

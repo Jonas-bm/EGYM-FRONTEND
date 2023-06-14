@@ -30,7 +30,7 @@ export class NutricionistaCreaeditaComponent implements OnInit {
     })
     //crear
     this.form=new FormGroup({
-      idNutricionista: new FormControl(),
+      id: new FormControl(),
       nombreNutricionista: new FormControl(),
       apellidosNutricionista: new FormControl(),
       dni: new FormControl(),

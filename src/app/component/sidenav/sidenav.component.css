@@ -21,7 +21,7 @@ mat-toolbar{
 }
 
 mat-sidenav{
-  width: 250px;
+  width: 380px;
   border-right: none;
   background: #909025;
   color: white;
@@ -73,7 +73,7 @@ mat-divider{
 .hero-container {
   background-image: url('src/assets/img/hero.jpg');
   background-size: cover;
-  height: 800px;
+  height: 500px;
   position: relative;
   opacity: 0.8; /* Ajusta el valor de opacidad según tus preferencias */
 }
