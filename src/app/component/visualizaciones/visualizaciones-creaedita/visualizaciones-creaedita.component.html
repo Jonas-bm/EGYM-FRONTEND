@@ -33,6 +33,16 @@
           </mat-form-field>
           <br>
 
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Videos Rutinarios</mat-label>
+            <mat-select formControlName="videosRutinario" [(value)]="idVideosRutinariosSeleccionado" required>
+              <mat-option *ngFor="let ru of listaRu" [value]="ru.idVideosRutinarios">
+                {{ru.descripcion}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+
           <mat-form-field class="example-full-width">
             <mat-label>Comentario</mat-label>
             <input matInput placeholder="Comentario" formControlName="comentario">
