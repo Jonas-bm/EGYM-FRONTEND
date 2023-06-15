@@ -70,6 +70,18 @@ import { VisualizacionesCreaeditaComponent } from './component/visualizaciones/v
 import { VisualizacionesListarComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-listar.component';
 import { VisualizacionesDialogoComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-dialogo/visualizaciones-dialogo.component';
 
+import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
+import { VideorutinarioListarComponent } from './component/videorutinario/videorutinario-listar/videorutinario-listar.component';
+import { VideorutinarioCreaeditaComponent } from './component/videorutinario/videorutinario-creaedita/videorutinario-creaedita.component';
+import { DetalleventaComponent } from './component/detalleventa/detalleventa.component';
+import { DetalleventaListarComponent } from './component/detalleventa/detalleventa-listar/detalleventa-listar.component';
+import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+
+import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
+import { SuscripcionListarComponent } from './component/suscripcion/suscripcion-listar/suscripcion-listar.component';
+import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
+
+
 
 
 @NgModule({
@@ -117,7 +129,19 @@ import { VisualizacionesDialogoComponent } from './component/visualizaciones/vis
     VisualizacionesComponent,
     VisualizacionesCreaeditaComponent,
     VisualizacionesListarComponent,
-    VisualizacionesDialogoComponent
+    VisualizacionesDialogoComponent,
+    VideorutinarioComponent,
+    VideorutinarioListarComponent,
+    VideorutinarioCreaeditaComponent,
+    DetalleventaComponent,
+    DetalleventaListarComponent,
+    DetalleventaCreaeditaComponent,
+
+
+    SuscripcionComponent,
+    SuscripcionListarComponent,
+    SuscripcionCreaeditaComponent
+
   ],
   imports: [
     BrowserModule,
