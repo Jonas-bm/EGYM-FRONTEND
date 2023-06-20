@@ -74,7 +74,7 @@ export class NutricionistaCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['nutricionista'])
+      this.router.navigate(['/egym/nutricionista'])
     }else{
       this.ingresarTodosDatos();
 

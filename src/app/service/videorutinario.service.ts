@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { VideoRutinario } from '../model/videorutinario';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const base_url=environment.base;
 
@@ -16,10 +16,16 @@ export class VideorutinarioService {
 
   constructor(private http:HttpClient) { }
   list() {
-    return this.http.get<VideoRutinario[]>(this.url);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<VideoRutinario[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   insert(video: VideoRutinario) {
-    return this.http.post(this.url, video);
+    let token = sessionStorage.getItem("token");
+    return this.http.post(this.url, video,{
+      headers: new HttpHeaders().set('Authorization',`Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   setList(listaNueva: VideoRutinario[]) {
     this.listaCambio.next(listaNueva);

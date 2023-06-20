@@ -52,7 +52,7 @@ export class ResetaasignadaCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['recetasAsignadas']);
+      this.router.navigate(['/egym/recetasAsignadas']);
   }
 }
 

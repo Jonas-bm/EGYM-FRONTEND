@@ -59,7 +59,7 @@ export class DetalleventaCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['detalleVentas']);
+      this.router.navigate(['/egym/detalleVentas']);
   }
 }
 }

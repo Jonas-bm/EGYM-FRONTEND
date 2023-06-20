@@ -56,7 +56,7 @@ export class CalificacionCreaeditaComponent implements OnInit {
           })
         })
       }
-    this.router.navigate(['calificaciones']);
+    this.router.navigate(['/egym/calificaciones']);
   }
   else {
     this.ingresarTodosDatos();

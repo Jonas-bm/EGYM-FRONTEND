@@ -61,7 +61,7 @@ export class CnutricionistaCreaeditaComponent implements OnInit {
           })
         })
 
-      this.router.navigate(['citaNutricionistas']);
+      this.router.navigate(['/egym/citaNutricionistas']);
   }
 }
 }

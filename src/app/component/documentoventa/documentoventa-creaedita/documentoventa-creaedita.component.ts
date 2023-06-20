@@ -50,7 +50,7 @@ export class DocumentoventaCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['documentoVentas']);
+      this.router.navigate(['/egym/documentoVentas']);
   }
 }
 

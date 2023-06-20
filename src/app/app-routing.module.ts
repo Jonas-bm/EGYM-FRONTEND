@@ -33,48 +33,13 @@ import { VideorutinarioCreaeditaComponent } from './component/videorutinario/vid
 
 import { DetalleventaComponent } from './component/detalleventa/detalleventa.component';
 import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+import { SidenavComponent } from './component/sidenav/sidenav.component';
 
 
 
 const routes: Routes = [
   {
-    path:'alumnos',component:AlumnoComponent,children:[
-      {
-        path:'new',component:AlumnoCreaeditaComponent
-      },
-      {
-        path:'edicion/:id',component:AlumnoCreaeditaComponent
-      }
-    ]},
-  {
-    path:'nutricionista', component:NutricionistaComponent,children:[
-      {
-        path:'new',component:NutricionistaCreaeditaComponent
-      },
-      {
-        path:'edicion/:id',component:NutricionistaCreaeditaComponent
-      }
-    ]
-  },
-  {
-    path: 'entrenadores',component: EntrenadorComponent, children:[
-      {
-        path:'new', component: EntrenadorCreaeditaComponent
-      },
-      {
-      path:'edicion/:id', component: EntrenadorCreaeditaComponent
-      }
-    ]
-  },
-  {
-    path:'products', component: ProductComponent, children: [
-      {
-        path: 'new', component: ProductCreaeditaComponent
-      },
-      {
-        path: 'edicion/:id', component: ProductCreaeditaComponent
-      }
-    ]
+    path:'',redirectTo:'home',pathMatch:'full'
   },
   {
     path:'home',component:HomeComponent,
@@ -128,11 +93,94 @@ const routes: Routes = [
     },
 
     {
-      path:'suscripcion', component:SuscripcionComponent,children:[
-        {path:'nuevo',component:SuscripcionCreaeditaComponent},
+      path:'egym', component:SidenavComponent,children:[
+        {
+          path:'alumnos',component:AlumnoComponent,children:[
+            {
+              path:'new',component:AlumnoCreaeditaComponent
+            },
+            {
+              path:'edicion/:id',component:AlumnoCreaeditaComponent
+            }
+          ]},
+          {
+            path: 'calificaciones',component: CalificacionComponent,children: [
+               {
+                path: 'new', component: CalificacionCreaeditaComponent,
+               },
+               {
+                path: 'edicion/:id', component: CalificacionCreaeditaComponent,
+              },
+                ]
+              },
+              {path: 'citaEntrenadores', component: CentrenadorComponent, children: [
+                { path: 'nuevo', component: CentrenadorCreaeditaComponent},
+              ]
+              },
+              {path: 'citaNutricionistas', component: CnutricionistaComponent, children: [
+                { path: 'nuevo', component: CnutricionistaCreaeditaComponent},
+              ]
+              },
+              {path: 'recetasAsignadas', component: ResetaasignadaComponent, children: [
+                { path: 'nuevo', component: ResetaasignadaCreaeditaComponent},
+              ]
+              },
+              {path: 'documentoVentas', component: DocumentoventaComponent, children: [
+                { path: 'nuevo', component: DocumentoventaCreaeditaComponent},
+              ]
+              },
+              {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
+                { path: 'nuevo', component: RutinaasignadaCreaeditaComponent},
+              ]
+              },
+
+              {path: 'videosRutinarios', component: VideorutinarioComponent, children: [
+                { path: 'nuevo', component: VideorutinarioCreaeditaComponent},
+              ]
+            },
+
+              {path: 'detalleVentas', component: DetalleventaComponent, children: [
+                { path: 'nuevo', component: DetalleventaCreaeditaComponent},
+              ]
+              },
+
+              {
+                path:'suscripcion', component:SuscripcionComponent,children:[
+                  {path:'nuevo',component:SuscripcionCreaeditaComponent},
+                ]
+              },
+              {
+                path:'nutricionista', component:NutricionistaComponent,children:[
+                  {
+                    path:'new',component:NutricionistaCreaeditaComponent
+                  },
+                  {
+                    path:'edicion/:id',component:NutricionistaCreaeditaComponent
+                  }
+                ]
+              },
+              {
+                path: 'entrenadores',component: EntrenadorComponent, children:[
+                  {
+                    path:'new', component: EntrenadorCreaeditaComponent
+                  },
+                  {
+                  path:'edicion/:id', component: EntrenadorCreaeditaComponent
+                  }
+                ]
+              },
+              {
+                path:'products', component: ProductComponent, children: [
+                  {
+                    path: 'new', component: ProductCreaeditaComponent
+                  },
+                  {
+                    path: 'edicion/:id', component: ProductCreaeditaComponent
+                  }
+                ]
+              },
       ]
     }
-
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
