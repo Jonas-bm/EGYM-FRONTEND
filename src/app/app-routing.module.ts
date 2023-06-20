@@ -47,50 +47,6 @@ const routes: Routes = [
 {
   path:'login',component:LoginComponent,
 },
- {
-  path: 'calificaciones',component: CalificacionComponent,children: [
-     {
-      path: 'new', component: CalificacionCreaeditaComponent,
-     },
-     {
-      path: 'edicion/:id', component: CalificacionCreaeditaComponent,
-    },
-      ]
-    },
-    {path: 'citaEntrenadores', component: CentrenadorComponent, children: [
-      { path: 'nuevo', component: CentrenadorCreaeditaComponent},
-    ]
-    },
-    {path: 'citaNutricionistas', component: CnutricionistaComponent, children: [
-      { path: 'nuevo', component: CnutricionistaCreaeditaComponent},
-    ]
-    },
-    {path: 'recetasAsignadas', component: ResetaasignadaComponent, children: [
-      { path: 'nuevo', component: ResetaasignadaCreaeditaComponent},
-    ]
-    },
-    {path: 'documentoVentas', component: DocumentoventaComponent, children: [
-      { path: 'nuevo', component: DocumentoventaCreaeditaComponent},
-    ]
-    },
-    {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
-      { path: 'nuevo', component: RutinaasignadaCreaeditaComponent},
-    ]
-    },
-    {path: 'visualizaciones', component: VisualizacionesComponent, children: [
-      { path: 'nuevo', component: VisualizacionesCreaeditaComponent},
-    ]
-    },
-
-    {path: 'videosRutinarios', component: VideorutinarioComponent, children: [
-      { path: 'nuevo', component: VideorutinarioCreaeditaComponent},
-    ]
-  },
-
-    {path: 'detalleVentas', component: DetalleventaComponent, children: [
-      { path: 'nuevo', component: DetalleventaCreaeditaComponent},
-    ]
-    },
 
     {
       path:'egym', component:SidenavComponent,children:[
