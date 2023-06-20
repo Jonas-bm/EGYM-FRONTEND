@@ -61,7 +61,7 @@ export class SuscripcionCreaeditaComponent implements OnInit {
           this.sS.setList(data);
         })
       })
-      this.router.navigate(['suscripcion']);
+      this.router.navigate(['/egym/suscripcion']);
     }
   }
 

@@ -11,62 +11,54 @@
   <br>
   <br>
 
-
   <div class="container" style="text-align:center;">
-    <div style="text-align: center;">
-      <h1 style="color: #7b7b1e;">Registro de Productos</h1>
-    </div>
-    <br>
-    <form [formGroup]="form" (submit)="aceptar()">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Código</mat-label>
-        <input matInput placeholder="Código" formControlName="id">
-      </mat-form-field>
-
+    <mat-card class="card">
       <br>
-
-      <mat-form-field class="example-full-width">
-
-        <mat-label>Precio</mat-label>
-
-        <input matInput placeholder="Precio" formControlName="precio" required>
-
-      </mat-form-field>
-
-      <br>
-
-      <mat-form-field class="example-full-width">
-
-        <mat-label>Nombre</mat-label>
-
-        <input matInput placeholder="Nombre" formControlName="nombre" required>
-
-      </mat-form-field>
-
-      <br>
-
-      <mat-form-field class="example-full-width">
-
-        <mat-label>Descripcion</mat-label>
-
-        <input matInput placeholder="Descripcion" formControlName="descripcion" required >
-
-      </mat-form-field>
-
-      <br>
-
-      <div class="d-flex justify-content-center gap-4 mt-4">
-        <button  mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
-        <button  mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/products">Cancelar</button>
+      <div style="text-align: center;">
+        <h1 style="color: #7b7b1e;">Registro de Productos</h1>
       </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
 
-      <p>{{mensaje}}</p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Código</mat-label>
+          <input matInput placeholder="Código" formControlName="id">
+        </mat-form-field>
 
-    </form>
+        <br>
 
+        <mat-form-field class="example-full-width">
+          <mat-label>Precio</mat-label>
+          <input matInput placeholder="Precio" formControlName="precio" required>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="nombre" required>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Descripcion</mat-label>
+          <input matInput placeholder="Descripcion" formControlName="descripcion" required>
+        </mat-form-field>
+
+        <br>
+
+        <div class="d-flex justify-content-center gap-4 mt-4">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }">Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }" routerLink="/egym/products">Cancelar</button>
+        </div>
+
+        <p>{{mensaje}}</p>
+
+      </form>
+    </mat-card>
   </div>
 
 </body>
-
 </html>

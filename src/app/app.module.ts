@@ -76,7 +76,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
 import { SuscripcionListarComponent } from './component/suscripcion/suscripcion-listar/suscripcion-listar.component';
 import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -132,7 +132,7 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 
     SuscripcionComponent,
     SuscripcionListarComponent,
-    SuscripcionCreaeditaComponent
+    SuscripcionCreaeditaComponent,
 
   ],
   imports: [
@@ -166,7 +166,8 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
     MatButtonModule,
     MatSelectModule,
     MatDividerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

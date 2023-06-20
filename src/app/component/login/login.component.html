@@ -22,13 +22,13 @@
                 <form method="POST" class="d-flex flex-column align-items-center justify-content-center gap-3 w-50">
                     <div class=" w-100">
                         <label for="usuario">Usuario</label>
-                        <input type="text" id="usuario" name="usuario" class="form-control mt-2">
+                        <input matInput type="text" id="usuario" name="usuario" class="form-control mt-2" [(ngModel)]="username">
                     </div>
                     <div class="w-100">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control mt-2">
+                        <input type="password" id="password" matInput name="password" class="form-control mt-2" [(ngModel)]="password">
                     </div>
-                    <a class="btn bg-amarillo text-light fs-6 text-uppercase p-2 fw-bold mt-4 mt-2 w-100 text-light fw-bold" routerLink="/alumnos">Ingresar</a>
+                    <a class="btn bg-amarillo text-light fs-6 text-uppercase p-2 fw-bold mt-4 mt-2 w-100 text-light fw-bold" (click)="login()">Ingresar</a>
                 </form>
                 <p class="text-center position-absolute bottom-0" style="color: #989696">&copy; 2023 Todos los derechos reservados | E-GYM</p>
             </div>

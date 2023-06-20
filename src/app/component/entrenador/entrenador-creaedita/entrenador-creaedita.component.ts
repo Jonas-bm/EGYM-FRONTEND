@@ -81,7 +81,7 @@ export class EntrenadorCreaeditaComponent implements OnInit {
         });
       }
 
-      this.router.navigate(['entrenadores']);
+      this.router.navigate(['/egym/entrenadores']);
     } else {
       this.ingresarTodosDatos();
     }

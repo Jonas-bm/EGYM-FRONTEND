@@ -74,7 +74,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
             })
           })
         }
-        this.router.navigate(['alumnos']);
+        this.router.navigate(['/egym/alumnos']);
       }
       else
       {

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DocumentoVenta } from '../model/documentoVenta';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const base_url = environment.base;
 
@@ -16,10 +16,17 @@ export class DocumentoventaService {
 
   constructor(private http:HttpClient) { }
   list() {
-    return this.http.get<DocumentoVenta[]>(this.url);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<DocumentoVenta[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   insert(cita: DocumentoVenta) {
-    return this.http.post(this.url, cita);
+    let token = sessionStorage.getItem("token");
+    return this.http.post(this.url, cita,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   setList(listaNueva: DocumentoVenta[]) {
     this.listaCambio.next(listaNueva);
