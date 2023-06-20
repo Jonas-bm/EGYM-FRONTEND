@@ -96,6 +96,7 @@ const routes: Routes = [
     },
     {path: 'citaNutricionistas', component: CnutricionistaComponent, children: [
       { path: 'nuevo', component: CnutricionistaCreaeditaComponent},
+      { path: 'edicion/:id',component: CnutricionistaCreaeditaComponent},
     ]
     },
     {path: 'recetasAsignadas', component: ResetaasignadaComponent, children: [

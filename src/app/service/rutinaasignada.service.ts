@@ -12,6 +12,7 @@ export class RutinaasignadaService {
 
   private url = `${base_url}/rutinaAsignada`
   private listaCambio = new Subject<RutinaAsignada[]>()
+  private confirmaEliminar=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -25,5 +26,20 @@ export class RutinaasignadaService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  listID(id:number){
+    return this.http.get<RutinaAsignada>(`${this.url}/${id}`);
+  }
+  update(rua:RutinaAsignada){
+    return this.http.put(this.url,rua);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
   }
 }

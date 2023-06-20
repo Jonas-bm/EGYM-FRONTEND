@@ -13,6 +13,8 @@ export class CitaNutricionistaService {
 
   private url = `${base_url}/citaNutricionista`
   private listaCambio = new Subject<CitaNutricionista[]>()
+  //eliminar
+  private confirmaEliminar = new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -27,4 +29,25 @@ export class CitaNutricionistaService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  //trae la id
+  listId(id:number){
+    return this.http.get<CitaNutricionista>(`${this.url}/${id}`);
+  }
+  //actualiza
+  update(cn:CitaNutricionista){
+    return this.http.put(this.url,cn);
+  }
+  //delete
+  eliminar(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  //pregunta del eliminar
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
+  }
+
+
 }

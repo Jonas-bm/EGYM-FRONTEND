@@ -13,6 +13,7 @@ export class DocumentoventaService {
 
   private url = `${base_url}/documentoVenta`
   private listaCambio = new Subject<DocumentoVenta[]>()
+  private confirmaEliminar=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -26,5 +27,20 @@ export class DocumentoventaService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  listID(id:number){
+    return this.http.get<DocumentoVenta>(`${this.url}/${id}`);
+  }
+  update(dov:DocumentoVenta){
+    return this.http.put(this.url,dov);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
   }
 }

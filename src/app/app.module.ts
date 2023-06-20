@@ -76,6 +76,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
 import { SuscripcionListarComponent } from './component/suscripcion/suscripcion-listar/suscripcion-listar.component';
 import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
+import { CnutricionistaDialogoComponent } from './component/cnutricionista/cnutricionista-listar/cnutricionista-dialogo/cnutricionista-dialogo.component';
 
 
 
@@ -132,7 +133,8 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 
     SuscripcionComponent,
     SuscripcionListarComponent,
-    SuscripcionCreaeditaComponent
+    SuscripcionCreaeditaComponent,
+    CnutricionistaDialogoComponent
 
   ],
   imports: [

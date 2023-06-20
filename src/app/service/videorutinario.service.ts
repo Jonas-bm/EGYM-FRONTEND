@@ -13,6 +13,7 @@ export class VideorutinarioService {
 
   private url = `${base_url}/videoRutinario`
   private listaCambio = new Subject<VideoRutinario[]>()
+  private confirmaEliminar=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -26,5 +27,20 @@ export class VideorutinarioService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  listID(id:number){
+    return this.http.get<VideoRutinario>(`${this.url}/${id}`);
+  }
+  update(vr:VideoRutinario){
+    return this.http.put(this.url,vr);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
   }
 }

@@ -13,6 +13,7 @@ export class DetalleventaService {
 
   private url = `${base_url}/detalleVenta`//tiene que ser igual en el controlador del backend de detalleventa
   private listaCambio = new Subject<DetalleVenta[]>()
+  private confirmaEliminar=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -27,4 +28,20 @@ export class DetalleventaService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  listID(id:number){
+    return this.http.get<DetalleVenta>(`${this.url}/${id}`);
+  }
+  update(dv:DetalleVenta){
+    return this.http.put(this.url,dv);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
+  }
+
 }

@@ -12,6 +12,7 @@ const base_url = environment.base;
 export class CitaEntrenadorService {
   private url = `${base_url}/citaEntrenador`
   private listaCambio = new Subject<CitaEntrenador[]>()
+  private confirmaEliminar = new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -25,6 +26,24 @@ export class CitaEntrenadorService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  //traer id
+  listID(id:number){
+    return this.http.get<CitaEntrenador>(`${this.url}/${id}`);
+  }
+  //modificar
+  update(ce:CitaEntrenador){
+    return this.http.put(this.url,ce);
+  }
+  //delete
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est)
   }
 
 }

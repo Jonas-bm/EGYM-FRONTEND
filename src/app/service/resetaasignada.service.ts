@@ -13,6 +13,7 @@ export class ResetaasignadaService {
 
   private url = `${base_url}/recetaAsignada`
   private listaCambio = new Subject<RecetaAsignada[]>()
+  private confirmaEliminar=new Subject<Boolean>();
 
   constructor(private http:HttpClient) { }
   list() {
@@ -26,5 +27,20 @@ export class ResetaasignadaService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  listID(id:number){
+    return this.http.get<RecetaAsignada>(`${this.url}/${id}`);
+  }
+  update(rea:RecetaAsignada){
+    return this.http.put(this.url,rea);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+  getConfirmDelete(){
+    return this.confirmaEliminar.asObservable();
+  }
+  setConfirmDelete(est:Boolean){
+    this.confirmaEliminar.next(est);
   }
 }
