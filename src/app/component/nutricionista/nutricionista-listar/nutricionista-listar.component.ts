@@ -5,6 +5,7 @@ import { NutricionistaService } from 'src/app/service/nutricionista.service';
 import {MatDialog} from '@angular/material/dialog'
 import { NutricionistaDialogoComponent } from './nutricionista-dialogo/nutricionista-dialogo.component';
 import {MatPaginator} from '@angular/material/paginator'
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-nutricionista-listar',
@@ -12,7 +13,10 @@ import {MatPaginator} from '@angular/material/paginator'
   styleUrls: ['./nutricionista-listar.component.css']
 })
 export class NutricionistaListarComponent implements OnInit {
-
+  role:string="";//
+  shouldRun = false; /////////NAV/////////
+  opened = false;
+  events = ['close', 'open'];
   //para eliminar
   idSelec:number=0
   totalItems: number = 0;
@@ -20,10 +24,11 @@ export class NutricionistaListarComponent implements OnInit {
   dataSource: MatTableDataSource<ClassNutricionista> = new MatTableDataSource();
   displayedColumns: string[] = ["codigo", "nombre", "apellidos", "dni", "telefono", "sexo", "descripcion", "disponibilidad", "accion01","accion02"];
 
-  constructor(private aS: NutricionistaService, private dialoN:MatDialog) {
+  constructor(private aS: NutricionistaService, private dialoN:MatDialog,private ls:LoginService) {
   }
   @ViewChild(MatPaginator) paginator!:MatPaginator;
   ngOnInit(): void {
+    this.role=this.ls.showRole();//
     this.aS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator=this.paginator;

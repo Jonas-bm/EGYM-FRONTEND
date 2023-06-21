@@ -5,6 +5,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog'
 import { ProductDialogoComponent } from './product-dialogo/product-dialogo.component';
 import {MatPaginator} from '@angular/material/paginator'
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-product-listar',
@@ -12,6 +13,7 @@ import {MatPaginator} from '@angular/material/paginator'
   styleUrls: ['./product-listar.component.css']
 })
 export class ProductListarComponent implements OnInit {
+  role:string="";//
   shouldRun = false; /////////NAV/////////
   opened = false;
   events = ['close', 'open'];
@@ -21,13 +23,14 @@ export class ProductListarComponent implements OnInit {
   idMayor: number = 0
   displayedColumns: string[] = ['codigo', 'nombre', 'descripcion', 'precio', 'acciones', 'acciones2'];
 
-  constructor (private pS: ProductService, private dialog: MatDialog ) {
+  constructor (private pS: ProductService, private dialog: MatDialog,private ls:LoginService) {
 
   }  @ViewChild(MatPaginator) paginator!:MatPaginator;
 
 
   ngOnInit(): void {
 
+    this.role=this.ls.showRole();// 
     this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator=this.paginator;

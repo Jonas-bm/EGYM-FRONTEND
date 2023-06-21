@@ -52,7 +52,7 @@ export class RutinaasignadaCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['rutinasAsignadas']);
+      this.router.navigate(['/egym/rutinasAsignadas']);
   }
 }
 

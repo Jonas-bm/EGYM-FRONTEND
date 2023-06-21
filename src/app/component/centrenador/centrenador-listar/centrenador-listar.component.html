@@ -10,7 +10,7 @@
     <br>
     <div class="container px-5 py-2">
       <h1 style="text-align: center; color: #7b7b1e;" class="color">
-        Cita Entrenadores
+        Mis Citas
       </h1>
 
       <div class="mat-elevation-z8 container" style="text-align:left;">
@@ -54,7 +54,7 @@
       <mat-paginator [pageSizeOptions]="[5, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements" [length]="totalItems"></mat-paginator>
     </div>
     <div style="text-align: center;" class="my-5">
-      <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="/citaEntrenadores/nuevo">Agregar</button>
+      <button mat-raised-button [hidden]="role!='ENTRENADOR'" [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="nuevo">Agregar</button>
     </div>
     </div>
   </body>

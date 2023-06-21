@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <div class="container" style="text-align:center;">
+      <div style="text-align: center;">
+        <h1 style="color: #7b7b1e;">Suscripcion</h1>
+      </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
+        <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="idSusripcion">
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Alumno</mat-label>
+            <mat-select formControlName="alumno" [(value)]="idAlumnoSeleccionado" required>
+              <mat-option *ngFor="let a of listaA" [value]="a.id">
+                {{a.nombre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Tipo de pago</mat-label>
+              <mat-select formControlName="Pago" required>
+                <mat-option value="Efectivo">Efectivo</mat-option>
+                <mat-option value="Tarjeta">Tarjeta</mat-option>
+                <mat-option value="Plin">Plin</mat-option>
+                <mat-option value="Yape">Yape</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Tipo de Suscripión</mat-label>
+              <mat-select formControlName="tipoSuscripcion" required>
+                <mat-option value="Premium">Premium</mat-option>
+                <mat-option value="Avanzado">Avanzado</mat-option>
+                <mat-option value="Basico">Basico</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Cantidad de pago</mat-label>
+              <mat-select formControlName="precio" required>
+                <mat-option value=40.00>40.00</mat-option>
+                <mat-option value=25.00>25.00</mat-option>
+                <mat-option value=15.00>15.00</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Fecha de Inscripcion</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="fechaSuscripcion" [max]="maxFecha" autocomplete="off">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="example-full">
+              <mat-label>Fecha de Expiración</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="fechaExpiracion" [max]="maxFecha" autocomplete="off">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            <br>
+
+
+
+        <div class="d-flex justify-content-center gap-4 pt-5">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/egym/suscripcion">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </body>
+</html>

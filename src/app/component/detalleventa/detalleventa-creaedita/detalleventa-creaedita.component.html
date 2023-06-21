@@ -40,14 +40,6 @@
           <br>
 
           <mat-form-field appearance="fill" class="example-full">
-            <mat-label>Fecha</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="fechaVenta" [max]="maxFecha" autocomplete="off">
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="example-full">
             <mat-label>Documento Venta</mat-label>
             <mat-select formControlName="documentoVenta" [(value)]="idDocumentoVentaSeleccionado" required>
               <mat-option *ngFor="let dv of listaDVE" [value]="dv.idDocumentoventa">
@@ -60,7 +52,7 @@
 
         <div class="d-flex justify-content-center gap-4 pt-5">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
-          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/detalleVentas">Cancelar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/egym/detalleVentas">Cancelar</button>
         </div>
         <p>{{mensaje}}</p>
       </form>

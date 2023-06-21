@@ -50,7 +50,7 @@ export class VideorutinarioCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['videosRutinarios']);
+      this.router.navigate(['/egym/videosRutinarios']);
   }
 }
 

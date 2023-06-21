@@ -61,7 +61,7 @@ export class CentrenadorCreaeditaComponent implements OnInit{
           })
         })
 
-      this.router.navigate(['citaEntrenadores']);
+      this.router.navigate(['/egym/citaEntrenadores']);
   }
 }
 }

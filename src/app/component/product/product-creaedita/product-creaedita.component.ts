@@ -64,7 +64,7 @@ export class ProductCreaeditaComponent implements OnInit {
 
             }
 
-        this.router.navigate(['products'])
+        this.router.navigate(['/egym/products'])
       }
       else {
 
