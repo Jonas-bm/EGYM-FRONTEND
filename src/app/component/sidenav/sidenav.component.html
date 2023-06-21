@@ -34,8 +34,6 @@
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
 
 
     <button mat-button routerLink="/" class="menu-button"style="color: #fff;">
@@ -63,7 +61,7 @@
         Productos
       </span>
     </button>
-    <button mat-button *ngIf="role=='ENTRENADOR' || role=='ALUMNO'"  routerLink="/egym/citaEntrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='ENTRENADOR' || role=='ALUMNO'  || role=='ADMIN'"  routerLink="/egym/citaEntrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
@@ -71,7 +69,7 @@
         Cita Entrenador
       </span>
     </button>
-    <button mat-button *ngIf="role=='ALUMNO' || role=='NUTRICIONISTA'" routerLink="/egym/citaNutricionistas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='ALUMNO' || role=='NUTRICIONISTA' || role=='ADMIN'" routerLink="/egym/citaNutricionistas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
@@ -87,7 +85,7 @@
        Mis Resetas Asignadas
       </span>
     </button>
-    <button mat-button *ngIf="role=='ALUMNO' || role=='ADMIN'" routerLink="/egym/documentoVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='VENTA' || role=='ADMIN' || role=='ALUMNO'" routerLink="/egym/documentoVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
@@ -104,7 +102,7 @@
       </span>
     </button>
 
-    <button mat-button *ngIf="role=='ALUMNO' || role=='ADMIN'" routerLink="/egym/detalleVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='VENTA' || role=='ADMIN' || role=='ALUMNO'" routerLink="/egym/detalleVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
@@ -120,7 +118,7 @@
        Videos Rutinarios
       </span>
     </button>
-    <button mat-button *ngIf="role=='ALUMNO' || role=='ADMIN'" routerLink="/egym/suscripcion" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/suscripcion" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>

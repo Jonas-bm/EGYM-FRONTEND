@@ -71,15 +71,15 @@
       </ng-container>
 
       <ng-container matColumnDef="accion01">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Editar </th>
-        <td mat-cell *matCellDef="let element">
+        <th mat-header-cell [hidden]="role!='ADMIN' || 'ALUMNO'" *matHeaderCellDef class="header-border"> Editar</th>
+        <td mat-cell [hidden]="role!='ADMIN' || 'ALUMNO'" *matCellDef="let element">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }"  [routerLink]="['edicion', element.id]"><i class="bi bi-pencil fs-4" ></i></button>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="accion02">
-        <th mat-header-cell *matHeaderCellDef class="header-border"> Eliminar </th>
-        <td mat-cell *matCellDef="let element">
+        <th mat-header-cell [hidden]="role!='ADMIN' || 'ALUMNO'" *matHeaderCellDef class="header-border">Eliminar </th>
+        <td mat-cell [hidden]="role!='ADMIN' || 'ALUMNO'" *matCellDef="let element" >
           <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }" (click)="confirm(element.id)">
             <span class="material-icons">delete</span>
           </button>
@@ -94,7 +94,7 @@
       </div>
 
       <div style="text-align: center;" class="pt-5">
-        <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="new">Agregar</button>
+        <button mat-raised-button [hidden]="role!='ADMIN' || 'ALUMNO'" [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff'}"  routerLink="new">Agregar</button>
       </div>
 
 </div>
