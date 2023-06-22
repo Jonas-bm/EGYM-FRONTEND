@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { CitaNutricionista } from 'src/app/model/citaNutricionista';
 import { CitaNutricionistaService } from 'src/app/service/cita-nutricionista.service';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-cnutricionista-listar',
@@ -9,14 +10,19 @@ import { CitaNutricionistaService } from 'src/app/service/cita-nutricionista.ser
   styleUrls: ['./cnutricionista-listar.component.css']
 })
 export class CnutricionistaListarComponent implements OnInit{
+  role:string="";//
+  shouldRun = false; /////////NAV/////////
+  opened = false;
+  events = ['close', 'open'];
   totalItems:number=0
   lista:CitaNutricionista[]=[];
   dataSource:MatTableDataSource<CitaNutricionista>=new MatTableDataSource();
-  displayedColumns:string[]=['codigo','alumno','nutricionista','fecha','descripcion']
+  displayedColumns:string[]=['codigo','alumno','nutricionista','fecha']
 
-  constructor(private cnS:CitaNutricionistaService){}
+  constructor(private cnS:CitaNutricionistaService,private ls:LoginService){}
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();//
     this.cnS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })

@@ -22,7 +22,7 @@ mat-toolbar{
 }
 
 mat-sidenav{
-  width: 400px;
+  width: 360px;
   border-right: none;
   background: #253037;
   color: white;

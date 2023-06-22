@@ -73,6 +73,7 @@ export class AlumnoCreaeditaComponent implements OnInit {
               this.as.setList(data)
             })
           })
+
         }
         this.router.navigate(['/egym/alumnos']);
       }
@@ -108,4 +109,5 @@ export class AlumnoCreaeditaComponent implements OnInit {
       verticalPosition:'bottom'
     })
   }
+
 }
