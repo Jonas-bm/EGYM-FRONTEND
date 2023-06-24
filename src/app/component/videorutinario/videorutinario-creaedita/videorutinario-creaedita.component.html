@@ -27,7 +27,7 @@
             <mat-label>Entrenador</mat-label>
             <mat-select formControlName="entrenador" [(value)]="idEntrenadorSeleccionado" required>
               <mat-option *ngFor="let e of listaE" [value]="e.id">
-                {{e.nombre}}
+                {{e.nombre}} {{e.apellidoPaterno}} {{e.apellidoMaterno}}
               </mat-option>
             </mat-select>
           </mat-form-field>

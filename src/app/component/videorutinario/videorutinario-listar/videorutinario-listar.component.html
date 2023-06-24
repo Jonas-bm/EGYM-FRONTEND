@@ -27,7 +27,7 @@
 
         <ng-container matColumnDef="entrenador">
           <th mat-header-cell *matHeaderCellDef> Entrenador </th>
-          <td mat-cell *matCellDef="let element"> {{element.entrenador.nombre}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.entrenador.nombre}} {{element.entrenador.apellidoPaterno}} {{element.entrenador.apellidoMaterno}}</td>
         </ng-container>
 
         <ng-container matColumnDef="tipo">

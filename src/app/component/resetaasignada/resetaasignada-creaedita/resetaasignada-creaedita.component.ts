@@ -38,7 +38,7 @@ export class ResetaasignadaCreaeditaComponent implements OnInit{
   }
   aceptar(): void {
     this.receta.idRecetaAsignada = this.form.value['idRecetaAsignada'];
-    this.receta.citaNutricionista.nutricionista= this.form.value['citaNutricionista.nutricionista.nombreNutricionista'];
+    this.receta.citaNutricionista.idCitaNutricionista= this.form.value['citaNutricionista.idCitaNutricionista'];
     this.receta.nombreReceta = this.form.value['nombreReceta'];
     this.receta.descripcion = this.form.value['descripcion'];
 

@@ -48,10 +48,10 @@
           <br>
 
           <mat-form-field appearance="fill" class="example-full">
-            <mat-label>Entrenador - Cita</mat-label>
+            <mat-label>Codigo de Cita</mat-label>
             <mat-select formControlName="CitaEntrenador" [(value)]="idCitaEntrenadorSeleccionado" required>
               <mat-option *ngFor="let ce of listaCE" [value]="ce.idCita">
-                {{ce.entrenador.nombre}}
+                {{ce.idCita}}
               </mat-option>
             </mat-select>
           </mat-form-field>

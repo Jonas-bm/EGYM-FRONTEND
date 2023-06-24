@@ -41,7 +41,7 @@ export class RutinaasignadaCreaeditaComponent implements OnInit{
     this.rutina.descripcion = this.form.value['descripcion'];
     this.rutina.repeticiones=this.form.value['repeticiones']
     this.rutina.tiempoRutina = this.form.value['tiempoRutina'];
-    this.rutina.citaEntrenador.entrenador=this.form.value['citaEntrenador.entrenador.nombre'];
+    this.rutina.citaEntrenador.idCita=this.form.value['citaEntrenador.idCita'];
     if (this.idCitaEntrenadorSeleccionado>0) {
       let ce = new CitaEntrenador();
       ce.idCita = this.idCitaEntrenadorSeleccionado;
