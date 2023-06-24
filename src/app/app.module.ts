@@ -86,7 +86,12 @@ import { RolCreaeditaComponent } from './component/rol/rol-creaedita/rol-creaedi
 import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
-
+import { ProductoalumnoComponent } from './component/productoalumno/productoalumno.component';
+import { ProductocompradoporalumnoComponent } from './component/productoalumno/productocompradoporalumno/productocompradoporalumno.component';
+import { RdocumentoComponent } from './component/rdocumento/rdocumento.component';
+import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
+import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
+import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
 
 
 @NgModule({
@@ -151,6 +156,14 @@ import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita
     ChatGPTComponent,
     UsuarioListarComponent,
     UsuarioCreaeditaComponent,
+    ProductoalumnoComponent,
+    ProductocompradoporalumnoComponent,
+    RdocumentoComponent,
+    DocumentodetalleComponent,
+    RdisponibleComponent,
+    EntrenadordisponibleComponent,
+
+
 
   ],
   imports: [

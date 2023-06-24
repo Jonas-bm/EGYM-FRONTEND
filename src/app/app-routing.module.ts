@@ -35,6 +35,15 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
+import { RolComponent } from './component/rol/rol.component';
+import { RolCreaeditaComponent } from './component/rol/rol-creaedita/rol-creaedita.component';
+import { ProductoalumnoComponent } from './component/productoalumno/productoalumno.component';
+import { ProductocompradoporalumnoComponent } from './component/productoalumno/productocompradoporalumno/productocompradoporalumno.component';
+import { RdocumentoComponent } from './component/rdocumento/rdocumento.component';
+import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
+import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
+import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+
 
 
 
@@ -144,7 +153,35 @@ const routes: Routes = [
               },
               {
                 path:'chat',component:ChatGPTComponent
-              }
+              },
+              {
+                path: 'roles',component: RolComponent,children: [
+                   {
+                    path: 'new', component: RolCreaeditaComponent,
+                   },
+                   {
+                    path: 'edicion/:id', component: RolCreaeditaComponent,
+                  },
+                    ]
+                  },
+                  {
+                    path:'productosporalumno',component:ProductoalumnoComponent,children:[
+
+                    { path: 'product-count-alumn', component: ProductocompradoporalumnoComponent },
+                  ]
+                  },
+                  {
+                    path:'documentodetalleventa',component:RdocumentoComponent,children:[
+
+                    { path: 'detalle-documento-venta', component: DocumentodetalleComponent },
+                  ]
+                  },
+                  {
+                    path:'entrenadoresdisponibles',component:RdisponibleComponent,children:[
+
+                    { path: 'disponibles', component: EntrenadordisponibleComponent },
+                  ]
+                  },
       ]
     }
 ]

@@ -1,30 +1,48 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Injectable } from '@angular/core';
-import { ChatResponse } from '../model/chatResponse';
-/*import { ChatGPT } from 'chatgpt-api';
+import { Configuration, OpenAIApi } from 'openai';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatGPTService {
-   // Create a new instance of ChatGPT class with your API key
-   private chatgpt = new ChatGPT('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');
+  private openai: OpenAIApi;
+  configuration = new Configuration({
+    apiKey: "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",
+  });
 
-   // Define a method to send a message and receive a response from ChatGPT
-   public async chat(message: string): Promise<string> {
-     try {
-       // Use chatgpt.query method with optional parameters
-       const response = await this.chatgpt.query(message, {temperature: 0.8, max_tokens: 32});
-       // Return the response text
-       return response.text;
-     } catch (error) {
-       // Handle any errors
-       console.error(error);
-       return 'Something went wrong.';
-     }
-   }
+  constructor() {
+    this.openai = new OpenAIApi(this.configuration);
+    this.chatGpt();
+  }
 
+  generateText(prompt: string):Promise<string | undefined>{
+   return this.openai.createCompletion({
+        model: "gpt-3.5-turbo",
+        prompt: prompt,
+        max_tokens: 256
+      }).then(response => {
+        return response.data.choices[0].text;
+      }).catch(error=>{
+        return '';
+      });
+  }
+
+  async chatGpt(){
+
+const configuration = new Configuration({
+  apiKey: "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",
+});
+const openai = new OpenAIApi(configuration);
+
+const chatCompletion = await openai.createChatCompletion({
+  model: "gpt-3.5-turbo",
+  messages: [{role: "user", content: "Hello world"}],
+});
+console.log(chatCompletion.data.choices[0].message);
+  }
 }
-*/
+
 
 

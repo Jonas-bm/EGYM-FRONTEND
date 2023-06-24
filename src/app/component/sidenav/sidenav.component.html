@@ -130,7 +130,31 @@
         check
       </mat-icon>
        <span>
-        Reportes
+        Cantidad de Citas-entrenador
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/productosporalumno" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+       Productos comprados-alumno
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/documentodetalleventa/detalle-documento-venta" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+       Documentos de Venta
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/entrenadoresdisponibles/disponibles" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+       Entrenadores Disponibles
       </span>
     </button>
   </mat-sidenav>

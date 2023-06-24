@@ -1,1 +1,49 @@
-<p>rol-creaedita works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <div class="container" style="text-align:center;">
+      <div style="text-align: center;">
+        <h1 style="color: #7b7b1e;">Registrar Reportes</h1>
+      </div>
+      <br>
+      <form [formGroup]="form" (submit)="aceptar()">
+        <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="id">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full">
+            <mat-label>Rol</mat-label>
+            <input matInput placeholder="Rol" formControlName="rol" autocomplete="off" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill" class="example-full">
+            <mat-label>Código de Usuario</mat-label>
+            <mat-select formControlName="user" [(value)]="idUsuarioSeleccionado" required>
+              <mat-option *ngFor="let u of listaU" [value]="u.id">
+                {{u.id}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            <br>
+
+        <div class="d-flex justify-content-center gap-4 pt-5">
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
+          <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/egym/roles">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </body>
+</html>

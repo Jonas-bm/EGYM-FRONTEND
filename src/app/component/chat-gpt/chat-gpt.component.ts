@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { ChatGPTService } from 'src/app/service/chat-gpt.service';
+export class textResponse{
+  sno:number=1;
+  text:string='';
+  response:any='';
+}
 
 @Component({
   selector: 'app-chat-gpt',
@@ -7,20 +12,16 @@ import { ChatGPTService } from 'src/app/service/chat-gpt.service';
   styleUrls: ['./chat-gpt.component.css']
 })
 export class ChatGPTComponent {
-  userInput: string="";
-  chatHistory: string[] = [];
+  textList:textResponse[]=[{sno:1,text:'',response:''}];
 
-  constructor(private chatService: ChatGPTService) { }
+  constructor(private openaiService: ChatGPTService) {}
 
-  sendMessage() {
-    if (this.userInput) {
-      this.chatHistory.push('User: ' + this.userInput);
-      this.chatService.sendMessage(this.userInput).subscribe(response => {
-        const reply = response['choices'][0]['text'];
-        this.chatHistory.push('ChatGPT: ' + reply);
-      });
-
-      this.userInput = '';
-    }
+  generateText(data:textResponse) {
+    this.openaiService.generateText(data.text).then(text => {
+      data.response = text;
+      if(this.textList.length===data.sno){
+        this.textList.push({sno:1,text:'',response:''});
+      }
+    });
   }
 }

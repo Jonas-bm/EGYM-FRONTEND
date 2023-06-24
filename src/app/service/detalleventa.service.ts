@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { DetalleVenta } from '../model/detalleventa';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { docVentaDetVentaDTO } from '../model/docVentaDetVentaDTO';
 
 const base_url = environment.base;
 
@@ -32,5 +33,9 @@ export class DetalleventaService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  getDocuVentaDetalleVenta(): Observable<docVentaDetVentaDTO[]> {
+    let token = sessionStorage.getItem("token");
+    return this.http.get<docVentaDetVentaDTO[]>(`${this.url}/detalleVenta-doc`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 }
