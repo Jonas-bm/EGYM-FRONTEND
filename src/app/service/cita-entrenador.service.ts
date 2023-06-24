@@ -35,7 +35,8 @@ export class CitaEntrenadorService {
     return this.listaCambio.asObservable();
   }
   getDateTrainerCountByTrainer(): Observable<entrenadorCitaEntrenadorDTO[]> {
-    return this.http.get<entrenadorCitaEntrenadorDTO[]>(`${this.url}/citaEntrenador-count`);
+    let token = sessionStorage.getItem("token");
+    return this.http.get<entrenadorCitaEntrenadorDTO[]>(`${this.url}/citaEntrenador-count`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 
 }

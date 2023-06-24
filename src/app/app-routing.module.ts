@@ -34,6 +34,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
 
 
 
@@ -140,6 +141,9 @@ const routes: Routes = [
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
               ]
+              },
+              {
+                path:'chat',component:ChatGPTComponent
               }
       ]
     }
