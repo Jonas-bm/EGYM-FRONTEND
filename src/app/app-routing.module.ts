@@ -45,6 +45,7 @@ import { RdocumentoComponent } from './component/rdocumento/rdocumento.component
 import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+import { Reporte05Component } from './component/reportes/reporte05/reporte05.component';
 
 
 
@@ -95,6 +96,10 @@ const routes: Routes = [
               },
               {path: 'documentoVentas', component: DocumentoventaComponent, children: [
                 { path: 'nuevo', component: DocumentoventaCreaeditaComponent},
+              ]
+              },
+              {path: 'visualizaciones', component: VisualizacionesComponent, children: [
+                { path: 'nuevo', component: VisualizacionesCreaeditaComponent},
               ]
               },
               {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
@@ -151,6 +156,7 @@ const routes: Routes = [
                 path:'reportes',component:ReportesComponent,children:[
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
+                { path: 'producto-mas-ingreso', component: Reporte05Component },
               ]
               },
               {

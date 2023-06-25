@@ -44,7 +44,7 @@ export class VisualizacionesCreaeditaComponent implements OnInit {
   aceptar(): void {
     this.visu.idVisualizaciones = this.form.value['idVisualizaciones'];
     this.visu.alumno.nombre=this.form.value['alumno.nombre']
-    this.visu.videosRutinario = this.form.value['videosRutinario.descripcion'];
+    this.visu.videosRutinario.descripcion = this.form.value['videosRutinario.descripcion'];
     this.visu.comentario=this.form.value['comentario'];
     if (this.idAlumnoSeleccionado>0 && this.idVideosRutinariosSeleccionado>0) {
       let a = new Alumno();
@@ -59,7 +59,7 @@ export class VisualizacionesCreaeditaComponent implements OnInit {
           })
         })
 
-      this.router.navigate(['visualizaciones']);
+      this.router.navigate(['/egym/visualizaciones']);
   }
 }
 

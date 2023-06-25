@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Visualizaciones } from '../model/visualizaciones';
 import { Subject } from 'rxjs';
@@ -16,11 +16,17 @@ export class VisualizacionesService {
   private listaCambio = new Subject<Visualizaciones[]>();
   constructor(private http:HttpClient) { }
   list(){
-    return this.http.get<Visualizaciones[]>(this.url)
+    let token = sessionStorage.getItem("token");
+    return this.http.get<Visualizaciones[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   insert(visualizaciones: Visualizaciones) {
-    return this.http.post(this.url, visualizaciones)
+    let token = sessionStorage.getItem("token");
+    return this.http.post(this.url, visualizaciones,{
+      headers: new HttpHeaders().set('Authorization',`Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   setList (ListaNueva: Visualizaciones[]) {

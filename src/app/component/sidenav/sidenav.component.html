@@ -29,105 +29,12 @@
         Nutricionistas
       </span>
     </button>
-<<<<<<< HEAD
-    <button mat-button routerLink="/products" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        shopping_basket
-      </mat-icon>
-      <span>
-        Productos
-      </span>
-    </button>
-    <button mat-button routerLink="/calificaciones" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-        Calificaciones
-      </span>
-    </button>
-    <button mat-button routerLink="/citaEntrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-        Cita con mi Entrenador
-      </span>
-    </button>
-    <button mat-button routerLink="/citaNutricionistas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-        Cita con mi Nutricionista
-      </span>
-    </button>
-    <button mat-button routerLink="/recetasAsignadas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Reseta Asignada
-      </span>
-    </button>
-    <button mat-button routerLink="/documentoVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Documentos de Ventas
-      </span>
-    </button>
-    <button mat-button routerLink="/rutinasAsignadas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Rutinas Asignadas
-      </span>
-    </button>
-    <button mat-button routerLink="/visualizaciones" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Visualizaciones
-      </span>
-    </button>
-    <button mat-button routerLink="/detalleVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Visualizaciones
-       Detalle Ventas
-      </span>
-    </button>
-    <button mat-button routerLink="/videosRutinarios" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Videos Rutinarios
-      </span>
-    </button>
-    <button mat-button routerLink="/suscripcion" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-       <span>
-        Suscripciones
-      </span>
-    </button>
-    <mat-divider></mat-divider>
-=======
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
     <mat-toolbar></mat-toolbar>
 
->>>>>>> alumno
 
     <button mat-button routerLink="/" class="menu-button"style="color: #fff;">
       <mat-icon>
@@ -240,6 +147,14 @@
       </mat-icon>
        <span>
        Documentos de Venta
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/visualizaciones" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+       Visualizaciones
       </span>
     </button>
     <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/entrenadoresdisponibles/disponibles" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">

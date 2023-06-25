@@ -14,7 +14,8 @@ export class VisualizacionesListarComponent implements OnInit {
   dataSource:MatTableDataSource<Visualizaciones>=new MatTableDataSource();
   displayedColumns:string[]=['idVisualizaciones','alumno','videosRutinario','comentario']
 
-  constructor(private dvS:VisualizacionesService){}
+  constructor(private dvS:VisualizacionesService){
+  }
 
   ngOnInit(): void {
     this.dvS.list().subscribe(data => {
