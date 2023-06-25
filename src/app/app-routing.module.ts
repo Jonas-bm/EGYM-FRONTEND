@@ -34,6 +34,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
 
 
 
@@ -139,6 +140,7 @@ const routes: Routes = [
                 path:'reportes',component:ReportesComponent,children:[
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
+                { path: 'cita-count-nutricionista',component:ReportebaComponent}
               ]
               }
       ]

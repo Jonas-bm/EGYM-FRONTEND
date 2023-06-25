@@ -79,6 +79,8 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 import { MatCardModule } from '@angular/material/card';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
+import { Reporteba2Component } from './component/reportes/reporteba2/reporteba2.component';
 
 
 
@@ -137,6 +139,8 @@ import { Reporte01Component } from './component/reportes/reporte01/reporte01.com
     SuscripcionCreaeditaComponent,
     ReportesComponent,
     Reporte01Component,
+    ReportebaComponent,
+    Reporteba2Component,
 
   ],
   imports: [
