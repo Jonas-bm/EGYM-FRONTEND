@@ -37,6 +37,6 @@ export class DocumentoventaService {
   }
   getProductCountByAlumn(): Observable<productoAlumnoDTO[]> {
     let token = sessionStorage.getItem("token");
-    return this.http.get<productoAlumnoDTO[]>(`${this.url}/documentoVenta-count`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
+    return this.http.get<productoAlumnoDTO[]>(`${this.url}/producto-count`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 }
