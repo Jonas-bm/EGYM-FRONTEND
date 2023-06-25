@@ -97,6 +97,7 @@ import { DocumentodetalleComponent } from './component/rdocumento/documentodetal
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
 import { Reporte05Component } from './component/reportes/reporte05/reporte05.component';
+import { Reporte06Component } from './component/reportes/reporte06/reporte06.component';
 
 
 @NgModule({
@@ -172,6 +173,7 @@ import { Reporte05Component } from './component/reportes/reporte05/reporte05.com
     RdisponibleComponent,
     EntrenadordisponibleComponent,
     Reporte05Component,
+    Reporte06Component,
 
 
 

@@ -46,6 +46,7 @@ import { DocumentodetalleComponent } from './component/rdocumento/documentodetal
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
 import { Reporte05Component } from './component/reportes/reporte05/reporte05.component';
+import { Reporte06Component } from './component/reportes/reporte06/reporte06.component';
 
 
 
@@ -157,6 +158,7 @@ const routes: Routes = [
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
                 { path: 'producto-mas-ingreso', component: Reporte05Component },
+                { path: 'entrenador-rutinas', component: Reporte06Component },
               ]
               },
               {
