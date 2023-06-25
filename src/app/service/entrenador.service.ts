@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Entrenador } from '../model/entrenador';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { entrenadorDisponibleDTO } from '../model/entrenadorDisponibleDTO';
+
 
 const base_url = environment.base;
 
@@ -60,5 +62,9 @@ export class EntrenadorService {
   }
   setConfirmDelete(estado:Boolean){
     this.confirmarEliminacion.next(estado);
+  }
+  getEntrenadorDisponible(): Observable<entrenadorDisponibleDTO[]> {
+    let token = sessionStorage.getItem("token");
+    return this.http.get<entrenadorDisponibleDTO[]>(`${this.url}/citaEntrenador-disponible`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 }

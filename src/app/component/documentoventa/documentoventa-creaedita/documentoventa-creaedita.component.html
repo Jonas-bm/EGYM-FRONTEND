@@ -35,7 +35,7 @@
             <mat-label>Alumno</mat-label>
             <mat-select formControlName="alumno" [(value)]="idAlumnoSeleccionado" required>
               <mat-option *ngFor="let a of listaA" [value]="a.id">
-                {{a.nombre}}
+                {{a.nombre}} {{a.apellidoPaterno}} {{a.apellidoMaterno}}
               </mat-option>
             </mat-select>
           </mat-form-field>

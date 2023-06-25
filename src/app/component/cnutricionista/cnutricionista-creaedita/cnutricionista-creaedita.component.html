@@ -27,7 +27,7 @@
             <mat-label>Alumno</mat-label>
             <mat-select formControlName="alumno" [(value)]="idAlumnoSeleccionado" required>
               <mat-option *ngFor="let a of listaA" [value]="a.id">
-                {{a.nombre}}
+                {{a.nombre}} {{a.apellidoPaterno}} {{a.apellidoMaterno}}
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -37,7 +37,7 @@
             <mat-label>Nutricionista</mat-label>
             <mat-select formControlName="nutricionista" [(value)]="idNutricionistaSeleccionado" required>
               <mat-option *ngFor="let n of listaN" [value]="n.id">
-                {{n.nombreNutricionista}}
+                {{n.nombreNutricionista}} {{n.apellidosNutricionista}}
               </mat-option>
             </mat-select>
           </mat-form-field>

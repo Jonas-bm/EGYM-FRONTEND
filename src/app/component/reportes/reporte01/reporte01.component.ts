@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Entrenador } from 'src/app/model/entrenador';
+
 import { entrenadorCitaEntrenadorDTO } from 'src/app/model/entrenadorCitaEntrenadorDTO';
 import { CitaEntrenadorService } from 'src/app/service/cita-entrenador.service';
 
@@ -9,9 +11,15 @@ import { CitaEntrenadorService } from 'src/app/service/cita-entrenador.service';
   styleUrls: ['./reporte01.component.css']
 })
 export class Reporte01Component implements OnInit {
+  role:string="";//
+  shouldRun = false; /////////NAV/////////
+  opened = false;
+  events = ['close', 'open'];
+  totalItems:number=0
   citaEntrenadorCounts: entrenadorCitaEntrenadorDTO[] = [];
   dataSource: MatTableDataSource<entrenadorCitaEntrenadorDTO> = new MatTableDataSource();
-
+  entrenador:Entrenador=new Entrenador();
+  lista:Entrenador[]=[];
   displayedColumns: string[] = ['entrenador','cantidad']
 
   constructor(private ceS: CitaEntrenadorService) { }

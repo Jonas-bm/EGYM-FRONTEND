@@ -83,7 +83,19 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 import { MatCardModule } from '@angular/material/card';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
-
+import { UsuarioComponent } from './component/usuario/usuario.component';
+import { RolComponent } from './component/rol/rol.component';
+import { RolListarComponent } from './component/rol/rol-listar/rol-listar.component';
+import { RolCreaeditaComponent } from './component/rol/rol-creaedita/rol-creaedita.component';
+import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
+import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
+import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
+import { ProductoalumnoComponent } from './component/productoalumno/productoalumno.component';
+import { ProductocompradoporalumnoComponent } from './component/productoalumno/productocompradoporalumno/productocompradoporalumno.component';
+import { RdocumentoComponent } from './component/rdocumento/rdocumento.component';
+import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
+import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
+import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
 
 
 @NgModule({
@@ -145,6 +157,21 @@ import { Reporte01Component } from './component/reportes/reporte01/reporte01.com
     SuscripcionCreaeditaComponent,
     ReportesComponent,
     Reporte01Component,
+    UsuarioComponent,
+    RolComponent,
+    RolListarComponent,
+    RolCreaeditaComponent,
+    ChatGPTComponent,
+    UsuarioListarComponent,
+    UsuarioCreaeditaComponent,
+    ProductoalumnoComponent,
+    ProductocompradoporalumnoComponent,
+    RdocumentoComponent,
+    DocumentodetalleComponent,
+    RdisponibleComponent,
+    EntrenadordisponibleComponent,
+
+
 
   ],
   imports: [
