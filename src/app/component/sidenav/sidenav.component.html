@@ -157,6 +157,24 @@
        Entrenadores Disponibles
       </span>
     </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/cita-count-nutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+        Reportes de Nutricionista más solicitado
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/cita-count-citaxnutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+        Reporte de Citas del dia de hoy
+      </span>
+    </button>
+
+
   </mat-sidenav>
 <mat-sidenav-content>
   <router-outlet></router-outlet>
