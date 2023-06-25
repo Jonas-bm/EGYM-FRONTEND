@@ -79,6 +79,7 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 import { MatCardModule } from '@angular/material/card';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { RolComponent } from './component/rol/rol.component';
 import { RolListarComponent } from './component/rol/rol-listar/rol-listar.component';
@@ -92,6 +93,11 @@ import { RdocumentoComponent } from './component/rdocumento/rdocumento.component
 import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
+import { Reporteba2Component } from './component/reportes/reporteba2/reporteba2.component';
+
+
 
 
 @NgModule({
@@ -162,7 +168,8 @@ import { EntrenadordisponibleComponent } from './component/rdisponible/entrenado
     DocumentodetalleComponent,
     RdisponibleComponent,
     EntrenadordisponibleComponent,
-
+    ReportebaComponent,
+    Reporteba2Component,
 
 
   ],

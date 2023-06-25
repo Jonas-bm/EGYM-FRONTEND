@@ -34,6 +34,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+
 import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
 import { RolComponent } from './component/rol/rol.component';
 import { RolCreaeditaComponent } from './component/rol/rol-creaedita/rol-creaedita.component';
@@ -43,6 +44,9 @@ import { RdocumentoComponent } from './component/rdocumento/rdocumento.component
 import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+
+
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
 
 
 
@@ -149,6 +153,7 @@ const routes: Routes = [
                 path:'reportes',component:ReportesComponent,children:[
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
+                { path: 'cita-count-nutricionista',component:ReportebaComponent}
               ]
               },
               {

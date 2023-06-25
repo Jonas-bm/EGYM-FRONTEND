@@ -20,7 +20,7 @@ export class CnutricionistaCreaeditaComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   cita: CitaNutricionista=new CitaNutricionista();
   mensaje: string = ""
-  maxFecha: Date = moment().add(-1, 'days').toDate();
+  maxFecha: Date = moment().add(+30, 'days').toDate();
   listaN: ClassNutricionista[] = [];
   listaA: Alumno[] = [];
   idAlumnoSeleccionado: number = 0;
