@@ -4,6 +4,7 @@ import { CitaEntrenador } from '../model/citaEntrenador';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { entrenadorCitaEntrenadorDTO } from '../model/entrenadorCitaEntrenadorDTO';
+import { CitaxFechaDTO } from '../model/CitaxFechaDTO';
 
 
 const base_url = environment.base;
@@ -38,6 +39,10 @@ export class CitaEntrenadorService {
   getDateTrainerCountByTrainer(): Observable<entrenadorCitaEntrenadorDTO[]> {
     let token = sessionStorage.getItem("token");
     return this.http.get<entrenadorCitaEntrenadorDTO[]>(`${this.url}/citaEntrenador-count`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
+  }
+  getCitasxfecha(): Observable<CitaxFechaDTO[]> {
+    let token = sessionStorage.getItem("token");
+    return this.http.get<CitaxFechaDTO[]>(`${this.url}/ng`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 
 

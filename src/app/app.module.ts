@@ -65,6 +65,10 @@ import { DocumentoventaCreaeditaComponent } from './component/documentoventa/doc
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaListarComponent } from './component/rutinaasignada/rutinaasignada-listar/rutinaasignada-listar.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { VisualizacionesComponent } from './component/visualizaciones/visualizaciones.component';
+import { VisualizacionesCreaeditaComponent } from './component/visualizaciones/visualizaciones-creaedita/visualizaciones-creaedita.component';
+import { VisualizacionesListarComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-listar.component';
+import { VisualizacionesDialogoComponent } from './component/visualizaciones/visualizaciones-listar/visualizaciones-dialogo/visualizaciones-dialogo.component';
 
 import { VideorutinarioComponent } from './component/videorutinario/videorutinario.component';
 import { VideorutinarioListarComponent } from './component/videorutinario/videorutinario-listar/videorutinario-listar.component';
@@ -79,6 +83,7 @@ import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripci
 import { MatCardModule } from '@angular/material/card';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { RolComponent } from './component/rol/rol.component';
 import { RolListarComponent } from './component/rol/rol-listar/rol-listar.component';
@@ -92,6 +97,13 @@ import { RdocumentoComponent } from './component/rdocumento/rdocumento.component
 import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+import { Reporte05Component } from './component/reportes/reporte05/reporte05.component';
+import { Reporte06Component } from './component/reportes/reporte06/reporte06.component';
+
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
+import { Reporteba2Component } from './component/reportes/reporteba2/reporteba2.component';
+
+
 
 
 @NgModule({
@@ -136,6 +148,10 @@ import { EntrenadordisponibleComponent } from './component/rdisponible/entrenado
     RutinaasignadaComponent,
     RutinaasignadaListarComponent,
     RutinaasignadaCreaeditaComponent,
+    VisualizacionesComponent,
+    VisualizacionesCreaeditaComponent,
+    VisualizacionesListarComponent,
+    VisualizacionesDialogoComponent,
     VideorutinarioComponent,
     VideorutinarioListarComponent,
     VideorutinarioCreaeditaComponent,
@@ -162,6 +178,13 @@ import { EntrenadordisponibleComponent } from './component/rdisponible/entrenado
     DocumentodetalleComponent,
     RdisponibleComponent,
     EntrenadordisponibleComponent,
+
+    ReportebaComponent,
+    Reporteba2Component,
+
+    Reporte05Component,
+    Reporte06Component,
+
 
 
 

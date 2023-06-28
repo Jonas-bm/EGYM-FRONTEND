@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { docVentaDetVentaDTO } from 'src/app/model/docVentaDetVentaDTO';
 import { Alumno } from 'src/app/model/alumno';
 import { Product } from 'src/app/model/product';
 import { DetalleventaService } from 'src/app/service/detalleventa.service';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-documentodetalle',
@@ -23,10 +24,12 @@ export class DocumentodetalleComponent implements OnInit {
   displayedColumns: string[] = ['alumno','producto','monto','fecha']
 
   constructor(private dS: DetalleventaService) { }
+  @ViewChild(MatPaginator) paginator!:MatPaginator;
 
   ngOnInit(): void {
     this.dS.getDocuVentaDetalleVenta().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     })
   }
 

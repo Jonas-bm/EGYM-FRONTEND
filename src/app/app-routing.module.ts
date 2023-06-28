@@ -23,6 +23,8 @@ import { DocumentoventaComponent } from './component/documentoventa/documentoven
 import { DocumentoventaCreaeditaComponent } from './component/documentoventa/documentoventa-creaedita/documentoventa-creaedita.component';
 import { RutinaasignadaComponent } from './component/rutinaasignada/rutinaasignada.component';
 import { RutinaasignadaCreaeditaComponent } from './component/rutinaasignada/rutinaasignada-creaedita/rutinaasignada-creaedita.component';
+import { VisualizacionesComponent } from './component/visualizaciones/visualizaciones.component';
+import { VisualizacionesCreaeditaComponent } from './component/visualizaciones/visualizaciones-creaedita/visualizaciones-creaedita.component';
 import { SuscripcionComponent } from './component/suscripcion/suscripcion.component';
 import { SuscripcionCreaeditaComponent } from './component/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
 
@@ -34,6 +36,7 @@ import { DetalleventaCreaeditaComponent } from './component/detalleventa/detalle
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+
 import { ChatGPTComponent } from './component/chat-gpt/chat-gpt.component';
 import { RolComponent } from './component/rol/rol.component';
 import { RolCreaeditaComponent } from './component/rol/rol-creaedita/rol-creaedita.component';
@@ -43,6 +46,12 @@ import { RdocumentoComponent } from './component/rdocumento/rdocumento.component
 import { DocumentodetalleComponent } from './component/rdocumento/documentodetalle/documentodetalle.component';
 import { RdisponibleComponent } from './component/rdisponible/rdisponible.component';
 import { EntrenadordisponibleComponent } from './component/rdisponible/entrenadordisponible/entrenadordisponible.component';
+import { Reporte05Component } from './component/reportes/reporte05/reporte05.component';
+import { Reporte06Component } from './component/reportes/reporte06/reporte06.component';
+
+
+import { ReportebaComponent } from './component/reportes/reporteba/reporteba.component';
+import { Reporteba2Component } from './component/reportes/reporteba2/reporteba2.component';
 
 
 
@@ -93,6 +102,10 @@ const routes: Routes = [
               },
               {path: 'documentoVentas', component: DocumentoventaComponent, children: [
                 { path: 'nuevo', component: DocumentoventaCreaeditaComponent},
+              ]
+              },
+              {path: 'visualizaciones', component: VisualizacionesComponent, children: [
+                { path: 'nuevo', component: VisualizacionesCreaeditaComponent},
               ]
               },
               {path: 'rutinasAsignadas', component: RutinaasignadaComponent, children: [
@@ -149,6 +162,13 @@ const routes: Routes = [
                 path:'reportes',component:ReportesComponent,children:[
 
                 { path: 'cita-count-entrenador', component: Reporte01Component },
+
+                { path: 'cita-count-nutricionista',component:ReportebaComponent},
+                {path:'ng',component:Reporteba2Component},
+
+                { path: 'producto-mas-ingreso', component: Reporte05Component },
+                { path: 'entrenador-rutinas', component: Reporte06Component },
+
               ]
               },
               {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <br>
+  <br>
+  <div class="container">
+    <div style=" text-align: center; color: #7b7b1e;" class="color">
+      <h1 class="mt-4">ENTRENADORES QUE MÁS RUTINAS ASIGNADAS TIENEN</h1>
+      <br>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Entrenador </th>
+        <td mat-cell *matCellDef="let element"> {{element.nameEntrenador}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="idRutina">
+        <th mat-header-cell *matHeaderCellDef> Número de rutinas asignadas </th>
+        <td mat-cell *matCellDef="let element"> {{element.idRutina}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+</body>
+
+</html>

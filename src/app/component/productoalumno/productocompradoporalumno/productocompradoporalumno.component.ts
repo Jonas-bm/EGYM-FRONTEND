@@ -17,7 +17,7 @@ export class ProductocompradoporalumnoComponent implements OnInit {
   totalItems:number=0
   dataSource: MatTableDataSource<productoAlumnoDTO> = new MatTableDataSource();
 
-  displayedColumns: string[] = ['alumno','cantidad']
+  displayedColumns: string[] = ['alumno','apellidoP','apellidoM','cantidad']
 
   constructor(private dvS: DocumentoventaService) { }
 

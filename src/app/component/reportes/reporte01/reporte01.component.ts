@@ -20,7 +20,7 @@ export class Reporte01Component implements OnInit {
   dataSource: MatTableDataSource<entrenadorCitaEntrenadorDTO> = new MatTableDataSource();
   entrenador:Entrenador=new Entrenador();
   lista:Entrenador[]=[];
-  displayedColumns: string[] = ['entrenador','cantidad']
+  displayedColumns: string[] = ['entrenador','apellidoP','apellidoM','cantidad']
 
   constructor(private ceS: CitaEntrenadorService) { }
 

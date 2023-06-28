@@ -65,6 +65,6 @@ export class EntrenadorService {
   }
   getEntrenadorDisponible(): Observable<entrenadorDisponibleDTO[]> {
     let token = sessionStorage.getItem("token");
-    return this.http.get<entrenadorDisponibleDTO[]>(`${this.url}/citaEntrenador-disponible`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
+    return this.http.get<entrenadorDisponibleDTO[]>(`${this.url}/entrenador-disponible`,{headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')});
   }
 }
