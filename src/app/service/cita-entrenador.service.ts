@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CitaEntrenador } from '../model/citaEntrenador';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { entrenadorCitaEntrenadorDTO } from '../model/entrenadorCitaEntrenadorDTO';
 
 const base_url = environment.base;
 
@@ -32,6 +33,9 @@ export class CitaEntrenadorService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  getDateTrainerCountByTrainer(): Observable<entrenadorCitaEntrenadorDTO[]> {
+    return this.http.get<entrenadorCitaEntrenadorDTO[]>(`${this.url}/citaEntrenador-count`);
   }
 
 }

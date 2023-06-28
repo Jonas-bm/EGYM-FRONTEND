@@ -48,7 +48,7 @@
           <br>
 
           <mat-form-field appearance="fill" class="example-full">
-            <mat-label>Entrenador</mat-label>
+            <mat-label>Entrenador - Cita</mat-label>
             <mat-select formControlName="CitaEntrenador" [(value)]="idCitaEntrenadorSeleccionado" required>
               <mat-option *ngFor="let ce of listaCE" [value]="ce.idCita">
                 {{ce.entrenador.nombre}}
@@ -56,8 +56,6 @@
             </mat-select>
           </mat-form-field>
             <br>
-
-
         <div class="d-flex justify-content-center gap-4 pt-5">
           <button mat-raised-button [ngStyle]="{ 'background-color': '#adad42', 'color': '#fff' }" >Aceptar</button>
           <button mat-raised-button [ngStyle]="{ 'background-color': '#7b7b1e', 'color': '#fff' }"  routerLink="/egym/rutinasAsignadas">Cancelar</button>

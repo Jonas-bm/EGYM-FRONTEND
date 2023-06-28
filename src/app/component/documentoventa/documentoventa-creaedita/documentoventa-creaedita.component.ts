@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { Alumno } from 'src/app/model/alumno';
@@ -22,7 +23,7 @@ export class DocumentoventaCreaeditaComponent implements OnInit{
 
   constructor(private dvS: DocumentoventaService,
     private router: Router,
-    private route: ActivatedRoute, private aS:AlumnoService) {
+    private route: ActivatedRoute, private aS:AlumnoService, private _snackvar:MatSnackBar) {
   }
 
   ngOnInit(): void {
@@ -49,9 +50,16 @@ export class DocumentoventaCreaeditaComponent implements OnInit{
             this.dvS.setList(data);
           })
         })
-
+        this.agregarDetalleVenta();
       this.router.navigate(['/egym/documentoVentas']);
   }
+}
+agregarDetalleVenta():void{
+  this._snackvar.open("Ahora debe dirigirse a Detalle de Venta y agregar los campos correspondientes",'',{
+    duration:8000,
+    horizontalPosition:'center',
+    verticalPosition:'bottom'
+  })
 }
 
 }

@@ -30,7 +30,7 @@ export class ProductListarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.role=this.ls.showRole();//
+    this.role=this.ls.showRole();// 
     this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator=this.paginator;

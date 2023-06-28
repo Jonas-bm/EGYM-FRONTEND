@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { Alumno } from 'src/app/model/alumno';
@@ -27,7 +28,7 @@ export class CnutricionistaCreaeditaComponent implements OnInit {
 
   constructor(private cnS: CitaNutricionistaService,
     private router: Router,
-    private route: ActivatedRoute, private nS:NutricionistaService,private aS:AlumnoService) {
+    private route: ActivatedRoute, private nS:NutricionistaService,private aS:AlumnoService, private _snackvar:MatSnackBar ) {
   }
 
   ngOnInit(): void {
@@ -58,10 +59,18 @@ export class CnutricionistaCreaeditaComponent implements OnInit {
       this.cnS.insert(this.cita).subscribe(() => {
       this.cnS.list().subscribe(data => {
             this.cnS.setList(data);
+            this.asignarRutina();
           })
         })
 
       this.router.navigate(['/egym/citaNutricionistas']);
   }
+}
+asignarRutina():void{
+  this._snackvar.open("Ahora debe dirigirse a mis Resetas Asignadas y llenar los detalles correspondientes a la Receta del Alumno",'',{
+    duration:9000,
+    horizontalPosition:'center',
+    verticalPosition:'bottom'
+  })
 }
 }
