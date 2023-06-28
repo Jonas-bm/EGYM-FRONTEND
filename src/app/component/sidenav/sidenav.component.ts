@@ -24,7 +24,7 @@ export class SidenavComponent implements OnInit {
   }
   mostrarAlumnos(): void {
     this.showAlumnos = true;
-    this.router.navigate(['alumnos']); // Navegar a la ruta '/alumnos'
+    this.router.navigate(['/']); // Navegar a la ruta '/alumnos'
   }
   cerrarSidenav(): void {
     this.opened = false;

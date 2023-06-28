@@ -1,4 +1,4 @@
-<mat-toolbar *ngIf="verificar()">
+<mat-toolbar *ngIf="verificar() ">
   <mat-toolbar-row>
     <button mat-button (click)="opened=!opened" class="menu">
       <mat-icon>
@@ -29,14 +29,15 @@
         Nutricionistas
       </span>
     </button>
-    <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
-    <mat-toolbar></mat-toolbar>
-
-
-    <button mat-button routerLink="/" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='ALUMNO' || role=='ADMIN'"  routerLink="/egym/products" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        shopping_basket
+      </mat-icon>
+      <span>
+        Productos
+      </span>
+    </button>
+    <button mat-button routerLink="/" class="salir"style="color: #fff;">
       <mat-icon>
         logout
       </mat-icon>
@@ -47,26 +48,30 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
+
+
+
 <mat-sidenav-container>
   <mat-sidenav [(opened)]="opened" mode="over" *ngIf="verificar()">
     <div>
       <img src="./assets/img/logo1.png" style="height: 12rem; width: 12rem;">
     </div>
     <mat-divider></mat-divider>
-    <button *ngIf="role=='ALUMNO' || role=='ADMIN'" mat-button routerLink="/egym/products" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        shopping_basket
-      </mat-icon>
-      <span>
-        Productos
-      </span>
-    </button>
     <button mat-button *ngIf="role=='ENTRENADOR' || role=='ALUMNO'  || role=='ADMIN'"  routerLink="/egym/citaEntrenadores" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
       <span>
         Cita Entrenador
+      </span>
+    </button>
+
+    <button mat-button *ngIf="role=='ALUMNO' || role=='ENTRENADOR' || role=='ADMIN'" routerLink="/egym/rutinasAsignadas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+      <span>
+       Rutinas Asignadas
       </span>
     </button>
     <button mat-button *ngIf="role=='ALUMNO' || role=='NUTRICIONISTA' || role=='ADMIN'" routerLink="/egym/citaNutricionistas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
@@ -82,7 +87,7 @@
         check
       </mat-icon>
       <span>
-       Mis Resetas Asignadas
+       Resetas Asignadas
       </span>
     </button>
     <button mat-button *ngIf="role=='VENTA' || role=='ADMIN' || role=='ALUMNO'" routerLink="/egym/documentoVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
@@ -90,15 +95,7 @@
         check
       </mat-icon>
       <span>
-      Mis Documentos de Venta
-      </span>
-    </button>
-    <button mat-button *ngIf="role=='ALUMNO' || role=='ENTRENADOR'" routerLink="/egym/rutinasAsignadas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
-      <mat-icon>
-        check
-      </mat-icon>
-      <span>
-       Mis Rutinas Asignadas
+      Documentos de Venta
       </span>
     </button>
     <button mat-button *ngIf="role=='VENTA' || role=='ADMIN' || role=='ALUMNO'" routerLink="/egym/detalleVentas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
@@ -115,6 +112,14 @@
       </mat-icon>
       <span>
        Videos Rutinarios
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/visualizaciones" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+       Visualizaciones
       </span>
     </button>
     <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/suscripcion" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
@@ -162,15 +167,31 @@
         check
       </mat-icon>
        <span>
-        Reportes de Nutricionista más solicitado
+      Nutricionista más solicitado
       </span>
     </button>
-    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/cita-count-nutricionista" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/ng" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
       <mat-icon>
         check
       </mat-icon>
        <span>
-        Reporte de Citas del dia de hoy
+        Citas del dia de hoy
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/entrenador-rutinas" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+        Rutinas Entrenador
+      </span>
+    </button>
+    <button mat-button *ngIf="role=='ADMIN'" routerLink="/egym/reportes/producto-mas-ingreso" (click)="cerrarSidenav()" class="menu-button"style="color: #fff;">
+      <mat-icon>
+        check
+      </mat-icon>
+       <span>
+        Producto con más ingreso
       </span>
     </button>
 
